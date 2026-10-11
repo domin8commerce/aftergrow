@@ -17,8 +17,13 @@ HW, HC, SC, O40, HAB, CHK, PRD, PP = ("Hair shedding explained", "Hair care ingr
     "Postpartum hair care")
 HIW, GUIDE, ING_P, CHK_P, PDP = "/pages/how-it-works", "/pages/month-three-guide", "/pages/ingredients", "/pages/the-check-in", "/products/scalp-serum"
 # Pages verified live (real content) on 2026-10-11. A pin may only link to a page on this list.
-LIVE_PAGES = {HIW, GUIDE, ING_P, CHK_P, PDP, "/blogs/journal/hair-serum-or-scalp-serum",
-              "/blogs/journal/how-to-read-a-scalp-serum-label"}
+J = "/blogs/journal/"
+LIVE_PAGES = {HIW, GUIDE, ING_P, CHK_P, PDP} | {J + p for p in (
+    "hair-serum-or-scalp-serum", "how-to-read-a-scalp-serum-label", "hair-shedding-vs-hair-loss",
+    "why-is-my-hair-falling-out", "breakage-or-shedding", "make-hair-look-thicker", "why-is-my-hair-so-dry",
+    "oily-scalp-dry-hair", "types-of-scalp-treatments", "scalp-serum-or-scalp-oil", "fragrance-free-hair-routine",
+    "natural-scalp-serum", "scalp-serum-or-hair-supplement", "scalp-serum-for-dry-scalp",
+    "what-to-look-for-in-a-scalp-serum", "how-to-use-a-scalp-serum")}
 
 # id, slug, board, title, description, link, alt
 W1 = [
