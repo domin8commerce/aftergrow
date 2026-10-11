@@ -6,12 +6,13 @@
   "form": "https://help.pinterest.com/contact?creators=site_blocked&origin=pbc&site_blocked_issue=siteblocked_clickthrough_spam&current_page=about_you_page&origin=pbc#no-back",
   "who": "George (needs his Pinterest login). Claude cannot file it.",
   "filed_on": "2026-10-11",
-  "result": null
+  "result": "denied 2026-10-11 (automated reply from pinbot@legal.pinterest.com about 4 hours after filing)"
  },
  "canary_rule": "While blocked: at most ONE canary queued at a time and at most 2 canary attempts in any 7 days (an attempt = a canary whose publish time passed; a deleted or missed canary does not count). The next canary is chosen by engine/autopilot.py next-canary: a ready pin that was never blocked, on a page not yet tried in this block. If George reports the appeal approved, test at once. When a canary publishes, mode becomes live.",
  "last_success_at": null,
  "notes": [
-  "2026-10-11: A01 failed blocked_spam at 17:35 UTC. The other 33 queued posts were deleted before they could fail, except B04, kept as the canary (Tue Oct 13, 6:09 PM ET). Deleting a queued post does not refund its Tailwind credit."
+  "2026-10-11: A01 failed blocked_spam at 17:35 UTC. The other 33 queued posts were deleted before they could fail, except B04, kept as the canary (Tue Oct 13, 6:09 PM ET). Deleting a queued post does not refund its Tailwind credit.",
+  "2026-10-11: Pinterest denied the appeal about 4 hours after filing (automated). The B04 canary was deleted. The autopilot is paused; one check-in runs Nov 9, 2026 (see RUNBOOK 'Paused after a denied appeal')."
  ],
  "autopilot": {
   "task": "Aftergrow Pinterest autopilot",
@@ -31,7 +32,17 @@
    "page": "/pages/month-three-guide",
    "post_id": "6acbc870tmoc66O25EVA6",
    "send_at_utc": "2026-10-13T22:09:00Z",
-   "result": "pending"
+   "result": "deleted"
   }
+ ],
+ "retest_after": "2026-11-09T13:47:00Z",
+ "reappeal_text": "Thank you for reviewing. Please escalate getaftergrow.com to a human reviewer. Aftergrow is the new direct-to-consumer brand of a company that has been in business for 10 years. The domain is new because our online store launched on September 30, 2026. The site is a real store with 16 original articles on hair and scalp care that cite the American Academy of Dermatology, the FDA and Cleveland Clinic. It has no redirects, no affiliate links and no pop-ups, and the domain is claimed on this business account through the Pinterest app for Shopify. We have not published a single Pin yet. We're happy to provide any verification you need.",
+ "reappeal_checklist": [
+  "George's call: the homepage line '4.6 / 5 - 3,927 formula reviews' on a store launched Sept 30, 2026. A brand-new store showing thousands of reviews reads as untrustworthy, the word Pinterest's spam rules use.",
+  "George's call: 'engineered for real hair growth' and review quotes about growth or regrowth. Pinterest's merchant rules bar healthcare products that make unrealistic promises; growth claims are also drug claims for a cosmetic.",
+  "George's call: the 'Clinically Tested' badge, which sits on a 31-person self-assessment survey.",
+  "Already fine: 16 original sourced Journal articles, returns page, contact email, privacy and terms pages, no redirects, no pop-ups.",
+  "After the cleanup: send ONE Help Center message asking for a human review (reappeal_text). Not a new appeal.",
+  "If still blocked on Nov 9: re-appeal once with reappeal_text, and cancel Tailwind before it renews on Nov 10 unless Pinterest has said yes."
  ]
 }

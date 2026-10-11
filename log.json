@@ -44,5 +44,17 @@
   "at": "2026-10-11T18:13:19Z",
   "action": "appeal filed",
   "day": "2026-10-11"
+ },
+ {
+  "at": "2026-10-11T22:27:02Z",
+  "id": "B04",
+  "action": "resolved deleted",
+  "post_id": "6acbc870tmoc66O25EVA6",
+  "reason": "appeal denied Oct 11; canary cancelled, a test would only add another blocked attempt"
+ },
+ {
+  "at": "2026-10-11T22:27:02Z",
+  "action": "appeal denied",
+  "day": "2026-10-11"
  }
 ]

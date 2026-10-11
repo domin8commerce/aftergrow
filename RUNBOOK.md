@@ -54,6 +54,20 @@ Pinterest blocked getaftergrow.com as spam on the first pin (Oct 11, 2026). The 
    - Filed 7+ days ago and still blocked: "Reply to Pinterest's email and ask for a human review. Mention the domain is new and claimed through the Pinterest app for Shopify."
    - Never ask him to file a second appeal the same week.
 
+### Paused after a denied appeal (since Oct 11, 2026)
+
+Pinterest denied the appeal about 4 hours after George filed it. The reply was automated (pinbot@legal.pinterest.com). Testing again before something changes would only add blocked attempts, so the system is paused:
+- No canaries before `retest_after` in `status.json` (`autopilot.py` enforces this).
+- The Monday and Thursday runs are off. One check-in runs Nov 9, 2026, the day before Tailwind renews. It reminds George to re-appeal (the text is `reappeal_text` in `status.json`), reports the Tailwind plan and credits, and schedules nothing.
+- What George can change meanwhile is listed in `reappeal_checklist` in `status.json`.
+
+### Restart (George says Pinterest approved the domain)
+
+1. Run `AP appeal approved`, then `AP status`. It allows a canary at once.
+2. Do **Blocked mode** step 1: the canary.
+3. Re-arm the scheduled task with `update_trigger`. Use the cron and prompt in `autopilot_prompt.md`.
+4. When a run finds the canary published, it does **Release**.
+
 ### Release (the canary published)
 
 `AP resolve <ID> sent` prints "BLOCK LIFTED" and switches the mode to `live`, with 14 days of probation.

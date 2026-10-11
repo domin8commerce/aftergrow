@@ -122,7 +122,8 @@ def url_ok(url):
 def cmd_status(R):
     s, sch = R.s, R.scheduled()
     print(f"MODE {s['mode']}  (since {s.get('since') or s.get('live_since') or '-'})")
-    print(f"appeal: filed_on={s['appeal'].get('filed_on')} result={s['appeal'].get('result')}")
+    print(f"appeal: filed_on={s['appeal'].get('filed_on')} result={s['appeal'].get('result')}"
+          + (f"  paused until {s['retest_after']}" if s.get("retest_after") else ""))
     print(f"queue: {len(R.ready())} ready, {len(sch)} scheduled, {sum(r['status'] == 'posted' for r in R.q)} posted")
     for r in sch:
         late = " (TIME PASSED: get_post it, then resolve)" if parse_time(r["send_at_utc"]) <= now() else ""
@@ -148,6 +149,9 @@ def can_canary(R):
         return False, "a canary is already queued"
     if R.s["appeal"].get("result") == "approved":
         return True, "appeal approved: test now"
+    paused = R.s.get("retest_after")
+    if paused and now() < parse_time(paused):
+        return False, f"paused after the appeal was denied; no canary before {paused}"
     used = R.attempts_last_7_days()
     if len(used) >= CANARY_BUDGET:
         nxt = min(parse_time(a["send_at_utc"]) for a in used) + dt.timedelta(days=7)
