@@ -184,17 +184,18 @@ CAROUSELS = [
         dict(t="checklist", title="See a dermatologist if", items=[
             "There are patches or bald&nbsp;spots.", "Your scalp is painful or scaly.", "It&#39;s still heavy after 12&nbsp;months."]),
         dict(t="sources", items=[("American Academy of Dermatology", "Dermatologist tips for new moms"),
-                                 ("getaftergrow.com", "How it works: the month-three shed")]),
+                                 ("getaftergrow.com", "How it works: the month-three shed")],
+             note="Education, not medical advice. If shedding is still heavy after your child&#39;s first birthday, see a&nbsp;dermatologist."),
         SAVE],
       hashtags=["postpartumhair", "postpartum", "newmom", "hairshedding", "momlife"],
       ig="Postpartum hair shedding usually peaks about four months after giving birth, according to the American Academy of Dermatology.\n\n"
          "It's called telogen effluvium, which means excessive hair shedding, and it's common. Most women see their hair return to "
-         "its normal fullness by their child's first birthday, and many sooner.\n\n"
+         "its normal fullness by their child's first birthday.\n\n"
          "Two dermatologist tips for the months in between: use a shampoo and conditioner that add volume, and try a new hairstyle.\n\n"
          "Save this, and send it to a new mom who needs to hear it.",
       fb="Postpartum hair shedding usually peaks about four months after giving birth, according to the American Academy of Dermatology.\n\n"
          "It's called telogen effluvium, which means excessive hair shedding, and it's common. Most women see their hair return to "
-         "its normal fullness by their child's first birthday, and many sooner.\n\n"
+         "its normal fullness by their child's first birthday.\n\n"
          "Two dermatologist tips for the months in between: use a shampoo and conditioner that add volume, and try a new hairstyle.\n\n"
          "Why shedding comes months later is explained in the first comment.",
       fb_comment="Why hair sheds months after a big change, like having a baby: {link}"),
