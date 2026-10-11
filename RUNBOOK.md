@@ -4,6 +4,8 @@ This repository runs Aftergrow's Pinterest without manual work. A Claude schedul
 
 Pinterest account: **getaftergrow**. Tailwind account ID: **1658425**. Use no other account.
 
+**Status, Oct 11, 2026:** Pinterest is paused (domain blocked, appeal denied). The active channel is Instagram and Facebook, run from **META.md**. META.md uses this file's **Fact sheet** and **Journal page map**, so keep them current.
+
 ## What is here
 
 | Path | What it is |

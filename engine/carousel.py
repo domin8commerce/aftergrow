@@ -354,13 +354,16 @@ IG_HASHTAG_MAX = 5  # Instagram's limit since December 2025
 IG_SLIDES_MAX = 20
 
 
-def link(c, network):
-    """The tracked landing-page link for a carousel, so Shopify can attribute the visit."""
+def link(c, network, kind="post"):
+    """The tracked landing-page link, so Shopify can attribute the visit to the network, topic, post and format."""
     return (f"https://getaftergrow.com{c['page']}?utm_source={network}&utm_medium=social"
-            f"&utm_campaign={c['pillar']}&utm_content={c['id']}")
+            f"&utm_campaign={c['pillar']}&utm_content={c['id']}{'-reel' if kind == 'reel' else ''}")
 
 
-BIO_LINE = "The free Month-Three Guide is at the link in our bio."
+# The Instagram bio link goes to /products/scalp-serum today (Shopify sessions, utm_content=link_in_bio), so the
+# caption sends people to the profile without promising what the link holds. When George adds the Month-Three
+# Guide to the bio links, switch to: "The free Month-Three Guide is at the link in our bio."
+BIO_LINE = "Follow @getaftergrow for more hair care, explained simply."
 
 
 def ig_text(c):

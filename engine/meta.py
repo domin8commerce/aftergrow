@@ -7,8 +7,9 @@ Usage (from the repo root):
   python3 -I engine/meta.py plan [days]          the open slots in the next N days (default 14) and what goes in each
   python3 -I engine/meta.py payload <ID> <instagram|facebook> <post|reel> <YYYY-MM-DDTHH:MM>
                                                   prints the "info" JSON for Metricool's createScheduledPost
-  python3 -I engine/meta.py logged <ID> <instagram|facebook> <post|reel> <YYYY-MM-DDTHH:MM> <metricool id>
+  python3 -I engine/meta.py logged <ID> <instagram|facebook> <post|reel> <YYYY-MM-DDTHH:MM> <metricool id> <uuid>
                                                   records a post Metricool accepted (do this right after each one)
+  python3 -I engine/meta.py date <YYYY-MM-DDTHH:MM>   the same time with New York's UTC offset, for the "date" field
   python3 -I engine/meta.py status               what is logged so far
 
 Metricool: blogId 7369576, timezone America/New_York. Times in this file are New York time.
@@ -38,7 +39,7 @@ SLOTS = {
     5: [("facebook", "reel", "09:52"), ("instagram", "reel", "10:47")],
     6: [("facebook", "post", "17:52"), ("instagram", "post", "19:17")],
 }
-REEL_MIN_GAP_DAYS = 2  # a Reel goes out at least this many days after its carousel on the same network
+REEL_MIN_GAP_DAYS = 1  # a Reel goes out at least a day after its carousel on the same network
 
 
 def read_log():
@@ -49,12 +50,29 @@ def write_log(log):
     LOG.write_text(json.dumps(log, indent=1) + "\n")
 
 
+# Calm instrumentals from Instagram's music library for business accounts (found through Metricool's audio
+# search on Oct 11, 2026). Reels rotate through them; a carousel can pin its own with audio="<id>".
+TRACKS = [("1386811643506297", "Home", "Giulio Cercato"),
+          ("2271125906413476", "Gently", "Giulio Cercato"),
+          ("2477944699150252", "Peaceful Piano", "Dr. Pheel"),
+          ("1549201939908190", "Orange Trees", "Jesse Robitaille"),
+          ("592271352837708", "Beautiful", "Giulio Cercato"),
+          ("587460186676938", "Guitar Peace", "Lance Taber")]
+
+
+def track_for(c):
+    if c.get("audio"):
+        return str(c["audio"])
+    n = int("".join(ch for ch in c["id"] if ch.isdigit()) or 0)
+    return TRACKS[(n - 1) % len(TRACKS)][0]
+
+
 def reel_url(cid):
     return f"{C.RAW}reels/{cid}.mp4"
 
 
 def reel_ready(c):
-    return (REPO / "reels" / f"{c['id']}.mp4").exists() and bool(c.get("audio"))
+    return all((REPO / "reels" / f).exists() for f in (f"{c['id']}.mp4", f"{c['id']}_cover.jpg"))
 
 
 def payload(cid, network, kind, when):
@@ -67,16 +85,16 @@ def payload(cid, network, kind, when):
         info.update(media=C.media_urls(c), mediaAltText=C.alt_texts(c))
     else:
         if not reel_ready(c):
-            raise SystemExit(f"{cid}: no Reel yet (reels/{cid}.mp4 and an 'audio' id are both needed)")
-        info.update(media=[reel_url(cid)], videoThumbnailUrl=C.media_urls(c)[0])
+            raise SystemExit(f"{cid}: no Reel yet (make it with engine/reel.py reels {cid}, then push)")
+        info.update(media=[reel_url(cid)], videoThumbnailUrl=f"{C.RAW}reels/{cid}_cover.jpg")
     if network == "instagram":
         info.update(text=C.ig_text(c), firstCommentText="")
         ig = {"type": "POST" if kind == "post" else "REEL", "isAiGenerated": False}
         if kind == "reel":
-            ig.update(showReelOnFeed=True, audioConfiguration={"audioId": str(c["audio"]), "audioVolume": 100, "videoVolume": 0})
+            ig.update(showReelOnFeed=True, audioConfiguration={"audioId": track_for(c), "audioVolume": 100, "videoVolume": 0})
         info["instagramData"] = ig
     else:
-        info.update(text=c["fb"], firstCommentText=c["fb_comment"].format(link=C.link(c, "facebook")))
+        info.update(text=c["fb"], firstCommentText=c["fb_comment"].format(link=C.link(c, "facebook", kind)))
         info["facebookData"] = {"type": "POST" if kind == "post" else "REEL"}
     return info
 
@@ -119,17 +137,21 @@ def plan(days=14, now=None):
 def main(a):
     cmd = a[0] if a else "status"
     if cmd == "plan":
-        for at, network, kind, cid in plan(int(a[1]) if len(a) > 1 else 14):
+        for at, network, kind, cid in sorted(plan(int(a[1]) if len(a) > 1 else 14)):
             print(at, network.ljust(9), kind.ljust(4), cid or "EMPTY (make more carousels or Reels)")
+    elif cmd == "date":
+        from zoneinfo import ZoneInfo
+        print(dt.datetime.fromisoformat(a[1]).replace(tzinfo=ZoneInfo(TZ)).isoformat())
     elif cmd == "payload":
         cid, network, kind, when = a[1:5]
         print(json.dumps(payload(cid, network, kind, when)))
     elif cmd == "logged":
         cid, network, kind, when, mid = a[1:6]
+        uuid = a[6] if len(a) > 6 else ""
         log = read_log()
         if any(p["id"] == cid and p["network"] == network and p["kind"] == kind for p in log["posts"]):
             raise SystemExit(f"{cid} {network} {kind} is already logged")
-        log["posts"].append(dict(id=cid, network=network, kind=kind, at=when, metricool_id=mid,
+        log["posts"].append(dict(id=cid, network=network, kind=kind, at=when, metricool_id=mid, uuid=uuid,
                                  logged=dt.datetime.now().strftime("%Y-%m-%dT%H:%M")))
         log["posts"].sort(key=lambda p: p["at"])
         write_log(log)
