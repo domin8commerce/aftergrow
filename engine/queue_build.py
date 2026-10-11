@@ -1,15 +1,24 @@
-"""Build the full posting queue (Week 1 + batch 2), validate copy, assign dates.
-Usage: python3 -I queue_build.py <start YYYY-MM-DD> <out_dir>"""
-import csv, datetime as dt, json, re, sys, pathlib
+"""Build the Aftergrow posting queue: copy for every pin, validated against the brand rules,
+then sequenced strongest hook first so no board repeats inside any 3 pins in a row (3 pins a day).
+Tailwind assigns the actual times (next open slot), so this file sets ORDER, not dates.
+Usage (from the repo): python3 -I engine/queue_build.py <repo_root>"""
+import csv, json, re, sys, pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
 
 U = "https://getaftergrow.com"
 def L(path, camp, pid):
     return f"{U}{path}?utm_source=pinterest&utm_medium=social&utm_campaign={camp}&utm_content={pid}"
 
-HW, HC, SC, O40, ING, HAB, CHK, PRD, PP = ("Hair shedding explained", "Hair care ingredients", "Scalp care routine",
-    "Hair care over 40", "Hair care ingredients", "Healthy hair habits", "The Aftergrow Check-in", "Aftergrow Scalp Serum",
+# Board names must match boards.json exactly.
+HW, HC, SC, O40, HAB, CHK, PRD, PP = ("Hair shedding explained", "Hair care ingredients", "Scalp care routine",
+    "Hair care tips for women over 40", "Healthy hair habits", "Hair progress photos", "Aftergrow Scalp Serum",
     "Postpartum hair care")
 HIW, GUIDE, ING_P, CHK_P, PDP = "/pages/how-it-works", "/pages/month-three-guide", "/pages/ingredients", "/pages/the-check-in", "/products/scalp-serum"
+# Pages verified live (real content) on 2026-10-11. A pin may only link to a page on this list.
+LIVE_PAGES = {HIW, GUIDE, ING_P, CHK_P, PDP, "/blogs/journal/hair-serum-or-scalp-serum",
+              "/blogs/journal/how-to-read-a-scalp-serum-label"}
 
 # id, slug, board, title, description, link, alt
 W1 = [
@@ -64,9 +73,9 @@ B2 = [
  ("A10", "5-questions-for-your-dermatologist", HW, "What to ask a dermatologist about hair shedding: 5 questions",
   "Going to a dermatologist about hair shedding? Bring these five questions, plus your part photos and a short list of recent changes. A simple prep list you can save and screenshot.",
   L(GUIDE, "shedding", "A10"), "Checklist of five questions to ask a dermatologist about hair shedding."),
- ("B01", "postpartum-shedding-peaks-month-3-4", PP, "Postpartum hair shedding: why it peaks at 3 to 4 months",
-  "Postpartum hair shedding usually peaks three to four months after birth. Why pregnancy hair sheds later, how long it tends to last, and why most women see it ease by the baby's first birthday.",
-  L(HIW, "postpartum", "B01"), "Curve showing postpartum shedding rising after birth, peaking at months 3 to 4 and easing by the first birthday."),
+ ("B01", "postpartum-shedding-peaks-around-month-4", PP, "Postpartum hair shedding: why it peaks around month 4",
+  "Postpartum hair shedding usually peaks about four months after birth. Why pregnancy hair sheds later, how long it tends to last, and why most women see it ease by the baby's first birthday.",
+  L(HIW, "postpartum", "B01"), "Curve showing postpartum shedding rising after birth, peaking around month 4 and easing by the first birthday."),
  ("B02", "postpartum-shedding-normal-or-not", PP, "Postpartum hair shedding: what is normal and what is not",
   "Postpartum hair shedding checklist: what is normal in the fourth trimester and beyond, and the signs that mean you should see a dermatologist. Calm, clear and worth saving.",
   L(HIW, "postpartum", "B02"), "Two-column checklist of normal postpartum shedding signs and signs to see a dermatologist."),
@@ -125,56 +134,95 @@ BANNED = ["weight loss", "lose weight", "diet", "slim", "before and after", "reg
           "semaglutide", "glp", "—"]
 
 
-def validate(rows):
+def banned_hits(text):
+    hits = []
+    for b in BANNED:
+        pat = (r"\b" + re.escape(b)) if b[0].isalnum() else re.escape(b)
+        if re.search(pat, text.lower()): hits.append(b)
+    return hits
+
+
+def validate(rows, board_names, pins_dir=None):
     probs = []
     for pid, slug, board, title, desc, url, alt in rows:
         if len(title) > 100: probs.append(f"{pid} title {len(title)}")
         if not 150 <= len(desc) <= 280: probs.append(f"{pid} desc {len(desc)}")
         if len(alt) > 500: probs.append(f"{pid} alt")
         for f in (title, desc, alt):
-            for b in BANNED:
-                pat = (r"\b" + re.escape(b)) if b[0].isalnum() else re.escape(b)
-                if re.search(pat, f.lower()): probs.append(f"{pid} banned '{b}'")
+            probs += [f"{pid} banned '{b}'" for b in banned_hits(f)]
         if f"utm_content={pid}" not in url: probs.append(f"{pid} utm")
+        path = url.split("?")[0].replace(U, "")
+        if path not in LIVE_PAGES: probs.append(f"{pid} links to unverified page {path}")
+        if board not in board_names: probs.append(f"{pid} board '{board}' not in boards.json")
+        if pins_dir and not (pins_dir / f"aftergrow_pin_{pid}_{slug}_v1.png").exists():
+            probs.append(f"{pid} image missing")
     return probs
 
 
-def schedule(start):
-    # Week 1 keeps its approved order; batch 2 is interleaved so no board repeats within a day.
-    order = [r[0] for r in W1]
-    pool = {r[0]: r for r in B2}
-    first_b2 = ["A02", "H02", "C04", "D01", "A05", "E05", "B01", "G03", "A08", "E01", "C03", "D06",
-                "A06", "E03", "B02", "F05", "A10", "E04", "C07", "D05", "A07", "E07", "B07", "H03"]
-    assert sorted(first_b2) == sorted(pool), "batch 2 order mismatch"
-    order += first_b2
-    rows = {r[0]: r for r in W1 + B2}
-    out, d = [], dt.date.fromisoformat(start)
-    for i in range(0, len(order), 2):
-        day = d + dt.timedelta(days=i // 2)
-        a, b = rows[order[i]], rows[order[i + 1]]
-        assert a[2] != b[2], f"same board on {day}: {a[0]} {b[0]}"
-        # 1:00 PM and 8:30 PM US Eastern (EDT until Nov 1, EST after)
-        off = 4 if day < dt.date(2026, 11, 1) else 5
-        for r, (hh, mm) in ((a, (13, 0)), (b, (20, 30))):
-            utc = dt.datetime(day.year, day.month, day.day, hh, mm) + dt.timedelta(hours=off)
-            out.append(dict(id=r[0], image=f"aftergrow_pin_{r[0]}_{r[1]}_v1.png", board=r[2], title=r[3],
-                            description=r[4], link=r[5], alt_text=r[6], day=day.isoformat(),
-                            time_et=f"{hh % 12 or 12}:{mm:02d} {'PM' if hh >= 12 else 'AM'}",
-                            send_at_utc=utc.strftime("%Y-%m-%dT%H:%M:00Z"), status="ready"))
+# Strongest hooks first: search demand evidence, then how saveable the format is, then brand fit.
+PRIORITY = ["A01", "C01", "B01", "A02", "E01", "D04", "A04", "B04", "E02", "A03", "C04", "F01",
+            "A08", "G02", "E06", "D01", "H02", "A05", "B02", "C03", "E05", "A06", "F05", "D05",
+            "E03", "A07", "G03", "C07", "E04", "B07", "A10", "H03", "D06", "E07"]
+
+
+def sequence(rows, fields, window=3, lookahead=4):
+    """Order pins so no board repeats inside any `window` consecutive pins (so never twice in a day
+    at 3 a day, wherever the day boundary falls). Prefer, but do not force: a different landing page
+    and a different background color from the pin before."""
+    by_id = {r[0]: r for r in rows}
+    left = [p for p in PRIORITY if p in by_id] + [r[0] for r in rows if r[0] not in PRIORITY]
+    out = []
+    while left:
+        recent = out[-(window - 1):]
+        ok = [p for p in left if by_id[p][2] not in {by_id[q][2] for q in recent}]
+        if not ok:
+            raise SystemExit(f"cannot sequence: {left} after {out[-3:]}")
+        def soft(p):
+            prev = out[-1] if out else None
+            same_page = any(by_id[p][5].split("?")[0] == by_id[q][5].split("?")[0] for q in recent)
+            same_field = prev is not None and fields.get(p) == fields.get(prev)
+            return same_page or same_field
+        pick = next((p for p in ok[:lookahead] if not soft(p)), ok[0])
+        out.append(pick)
+        left.remove(pick)
     return out
 
 
+def build(repo):
+    import pinengine, batch2
+    fields = {p["id"]: p["field"] for p in pinengine.PINS + batch2.PINS}
+    boards = json.loads((repo / "boards.json").read_text())
+    board_id = {b["name"]: b["tailwind_board_id"] for b in boards}
+    rows = W1 + B2
+    probs = validate(rows, set(board_id), repo / "pins")
+    order = sequence(rows, fields)
+    by_id = {r[0]: r for r in rows}
+    q = []
+    for n, pid in enumerate(order, 1):
+        _, slug, board, title, desc, link, alt = by_id[pid]
+        q.append(dict(order=n, id=pid, image=f"aftergrow_pin_{pid}_{slug}_v1.png", board=board, board_id=board_id[board],
+                      title=title, description=desc, link=link, alt_text=alt, field=fields.get(pid), status="ready"))
+    return q, probs
+
+
 if __name__ == "__main__":
-    start, outdir = sys.argv[1], pathlib.Path(sys.argv[2])
-    probs = validate(W1 + B2)
+    repo = pathlib.Path(sys.argv[1]).resolve()
+    q, probs = build(repo)
     print("problems:", probs or "none")
-    q = schedule(start)
-    outdir.mkdir(parents=True, exist_ok=True)
-    (outdir / "queue.json").write_text(json.dumps(q, indent=1, ensure_ascii=False))
-    with open(outdir / "aftergrow_pinterest_queue.csv", "w", newline="", encoding="utf-8") as fh:
+    for i in range(0, len(q), 3):
+        print(f"day {i // 3 + 1:>2}: " + " | ".join(f"{r['id']} {r['board'][:18]:<18}" for r in q[i:i + 3]))
+    old = {}
+    if (repo / "queue.json").exists():
+        old = {r["id"]: r for r in json.loads((repo / "queue.json").read_text())}
+    for r in q:  # keep anything Tailwind already told us
+        for k in ("status", "post_id", "send_at_utc"):
+            if k in old.get(r["id"], {}) and old[r["id"]].get("status") in ("scheduled", "posted"):
+                r[k] = old[r["id"]][k]
+    (repo / "queue.json").write_text(json.dumps(q, indent=1, ensure_ascii=False) + "\n")
+    with open(repo / "queue.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
-        w.writerow(["Day", "Time (ET)", "Pin", "Image file", "Board", "Pin title", "Description", "Link", "Alt text"])
+        w.writerow(["Order", "Pin", "Image file", "Board", "Pin title", "Description", "Link", "Alt text", "Status"])
         for r in q:
-            w.writerow([dt.date.fromisoformat(r["day"]).strftime("%a %b %d"), r["time_et"], r["id"], r["image"], r["board"],
-                        r["title"], r["description"], r["link"], r["alt_text"]])
-    print(len(q), "pins |", q[0]["day"], "->", q[-1]["day"], "| boards:", len({r["board"] for r in q}))
+            w.writerow([r["order"], r["id"], r["image"], r["board"], r["title"], r["description"], r["link"],
+                        r["alt_text"], r["status"]])
+    print(len(q), "pins | boards:", len({r["board"] for r in q}))

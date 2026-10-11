@@ -104,7 +104,7 @@ def a_ruler(p):
 def a_curve(p):
     W, H = 840, 330
     bx, by = 20, 270
-    px, py = 20 + (W - 40) * 3.5 / 12, 64
+    px, py = 20 + (W - 40) * p.get("peak_m", 3.5) / 12, 64
     ex = W - 20
     path = (f"M{bx} {by} C {bx + 120} {by - 10}, {px - 110} {py}, {px} {py} "
             f"S {px + 260} {by - 70}, {ex} {by - 6}")
@@ -386,10 +386,10 @@ PINS = [
          items=["Is this shedding,<br>or something else?", "Do I need any blood tests?", "What should I expect<br>over 6 months?",
                 "Which habits help right now?", "When should I come back?"],
          note="Bring your part photos and a short list of recent changes."),
-    dict(id="B01", slug="postpartum-shedding-peaks-month-3-4", field="butter", arch="curve", h_size=104,
-         headline="Postpartum<br>shedding peaks<br>at month 3 to 4.", l_start="Birth", l_peak="Months 3 to 4", l_end="First birthday",
+    dict(id="B01", slug="postpartum-shedding-peaks-around-month-4", field="butter", arch="curve", h_size=104, peak_m=4,
+         headline="Postpartum<br>shedding peaks<br>around month&nbsp;4.", l_start="Birth", l_peak="About month 4", l_end="First birthday",
          items=["Pregnancy keeps more hairs growing.", "After birth, they rest together.",
-                "They shed 3 to 4 months later.", "Most see it ease by the first birthday."]),
+                "The shed peaks about 4&nbsp;months in.", "Most see it ease by the first birthday."]),
     dict(id="B02", slug="postpartum-shedding-normal-or-not", field="white", arch="split", h_size=104, band_h=470, split_top=150,
          headline="Postpartum<br>shedding: normal<br>or not?",
          left=("Normal", ["More hair in the<br>brush and shower", "Short new hairs at the hairline", "A shed that eases over months"]),
