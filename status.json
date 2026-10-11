@@ -5,7 +5,7 @@
  "appeal": {
   "form": "https://help.pinterest.com/contact?creators=site_blocked&origin=pbc&site_blocked_issue=siteblocked_clickthrough_spam&current_page=about_you_page&origin=pbc#no-back",
   "who": "George (needs his Pinterest login). Claude cannot file it.",
-  "filed_on": null,
+  "filed_on": "2026-10-11",
   "result": null
  },
  "canary_rule": "While blocked: at most ONE canary queued at a time and at most 2 canary attempts in any 7 days (an attempt = a canary whose publish time passed; a deleted or missed canary does not count). The next canary is chosen by engine/autopilot.py next-canary: a ready pin that was never blocked, on a page not yet tried in this block. If George reports the appeal approved, test at once. When a canary publishes, mode becomes live.",

@@ -39,5 +39,10 @@
   "id": "C03",
   "action": "unscheduled",
   "reason": "deleted to keep one canary in flight (RUNBOOK rule)"
+ },
+ {
+  "at": "2026-10-11T18:13:19Z",
+  "action": "appeal filed",
+  "day": "2026-10-11"
  }
 ]
