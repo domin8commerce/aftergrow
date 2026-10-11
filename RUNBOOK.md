@@ -124,6 +124,38 @@ Every pin needs a page that answers it. Today 7 live pages carry all 34 pins. Ea
 - **New designs** go in a new file `engine/batchN.py` (N = 3, 4, ...). Copy the header and the `__main__` block of `engine/batch2.py`, and `import batch2` so all 25 layouts are available.
 - **The file defines** `PINS` (designs, same format as `batch2.PINS`) and `COPY`, a list of rows `(id, slug, board, title, description, link, alt)`. Import `L` and the board and page constants from `queue_build`.
 - **Render** with `python3 -I engine/batchN.py pins <IDs>`, then run `python3 -I engine/queue_build.py .`. It finds the new batch, validates it and orders the ready queue.
+- **Start from a working pin.** Each layout has its own fields, so copy the dict of a pin that already uses the layout and change the text. Never invent field names.
+
+| Layout | Copy from |
+|---|---|
+| timeline | A01 |
+| ledger | E02 |
+| viewfinder | G02 |
+| checklist | A03, A10 |
+| contrast | E06 |
+| swap | D04 |
+| cycle | A04 |
+| list | B04 |
+| steps | C01 |
+| strand | F01 |
+| bignum | A02 |
+| definition | A05 |
+| list2 | A06, A07, D01, D06, F05 |
+| ruler | A08 |
+| curve | B01 |
+| split | B02, C04 |
+| frames | B07 |
+| parts | C03 |
+| grid4 | C07, E04 |
+| schedule | D05 |
+| ledger2 | E01, E03, H02 |
+| label | E05 |
+| grid6 | E07 |
+| weekline | G03 |
+| protocol | H03 |
+
+The first ten layouts live in `pinengine.py`. The rest live in `batch2.py`.
+- **Fields:** `butter`, `espresso`, `white` and `porcelain`. Use `<br>` for deliberate line breaks and `&nbsp;` to keep "6&nbsp;months" together.
 
 ## Quality gate (every new pin, before it is pushed)
 

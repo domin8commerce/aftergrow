@@ -173,21 +173,28 @@ def sequence(rows, fields, window=3, lookahead=4, prefix=()):
     by_id = {r[0]: r for r in list(rows) + list(prefix)}
     left = [p for p in PRIORITY if p in {r[0] for r in rows}] + [r[0] for r in rows if r[0] not in PRIORITY]
     out = [r[0] for r in prefix][-(window - 1):]
-    start = len(out)
+    start, warnings = len(out), []
     while left:
         recent = out[-(window - 1):]
         ok = [p for p in left if by_id[p][2] not in {by_id[q][2] for q in recent}]
-        if not ok:
-            raise SystemExit(f"cannot sequence: {left} after {out[-3:]}")
+        if not ok:  # only one board left: place it anyway and say so
+            warnings.append(f"{left[0]} repeats its board within {window} pins (too many pins on one board)")
+            ok = [left[0]]
         def soft(p):
             prev = out[-1] if out else None
             same_page = any(by_id[p][5].split("?")[0] == by_id[q][5].split("?")[0] for q in recent)
             same_field = prev is not None and fields.get(p) == fields.get(prev)
             return same_page or same_field
-        pick = next((p for p in ok[:lookahead] if not soft(p)), ok[0])
+        # A board with c pins left needs (c - 1) * window + 1 slots to stay spaced out.
+        # If that is all the slots left, it has to go now or it will bunch up at the end.
+        count = {}
+        for p in left:
+            count[by_id[p][2]] = count.get(by_id[p][2], 0) + 1
+        critical = [p for p in ok if (count[by_id[p][2]] - 1) * window + 1 >= len(left)]
+        pick = critical[0] if critical else next((p for p in ok[:lookahead] if not soft(p)), ok[0])
         out.append(pick)
         left.remove(pick)
-    return out[start:]
+    return out[start:], warnings
 
 
 def load_batches():
@@ -219,7 +226,10 @@ def build(repo):
     kept = sorted((r for r in rows if old.get(r[0], {}).get("status") in ("scheduled", "posted")),
                   key=lambda r: old[r[0]].get("order", 0))
     ready = [r for r in rows if r not in kept]
-    order = [r[0] for r in kept] + sequence(ready, fields, prefix=kept)
+    seq, warnings = sequence(ready, fields, prefix=kept)
+    for w in warnings:
+        print("warning:", w)
+    order = [r[0] for r in kept] + seq
     by_id = {r[0]: r for r in rows}
     q = []
     for n, pid in enumerate(order, 1):
