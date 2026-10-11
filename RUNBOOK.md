@@ -279,14 +279,22 @@ Tailwind returns a search volume of 0 for all 32 of our saved keywords, so no to
 
 ## Backlog: ideas held until a page answers them
 
+**Unlocked by Journal articles that already exist** (build them from the page map):
+- A09 (shedding myths): `hair-shedding-vs-hair-loss`
+- D03 and D07 (fuller-looking styling): `make-hair-look-thicker`
+- F02 (wash-day habits): `oily-scalp-dry-hair`
+- F04 (questions for a clinician): `scalp-serum-or-hair-supplement`
+- The first rosemary pins: `scalp-serum-or-scalp-oil`
+
+**Still held:**
+
 | Ideas | The page they need |
 |---|---|
-| Rosemary cluster (4 to 6 pins) | A Journal article on rosemary for hair: what it is, how it's used, its honest limits. This is the highest-value page to build (+269% trend). |
-| A09, C06, F03 | Short answers on the FAQ page (myths, morning or night, silk pillowcases) |
-| B03, B05, B06 | A postpartum Journal article covering timing, baby hairs and a gentle routine, with "Pregnant or nursing? Ask your clinician first." |
-| C02, F02 | A Journal article on scalp massage and wash-day scalp care |
-| D02, D03, D07 | A Journal article on hair changes after 40 and styling for fuller-looking hair |
-| F04 | A Journal article on nutrition questions to ask a clinician |
+| Postpartum cluster: B03, B05, B06 | A postpartum Journal article covering timing, baby hairs and a gentle routine, with "Pregnant or nursing? Ask your clinician first." The postpartum board has no page of its own yet. This is the most valuable page to write next. |
+| Rosemary, full cluster | A dedicated Journal article on rosemary for hair: what it is, how it's used, its honest limits. Highest trend value (+269%). |
+| C02 | A Journal article on scalp massage |
+| D02 | A Journal article on how hair changes in your 40s and 50s |
+| C06, F03 | Short answers on the FAQ page (morning or night, silk pillowcases) |
 | G01 | A printable 90-day tracker PDF on the Month-Three Guide page |
 | H01, C08 | A real product photo (never an invented label) |
 | C05 | George's call on the word "detox" (banned in the brand book, rising on Pinterest) |
