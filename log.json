@@ -33,5 +33,11 @@
   "at": "2026-10-11T17:50:00Z",
   "action": "paused",
   "note": "Domain blocked as spam on the first pin. Deleted 31 queued Tailwind posts before they could fail (credits are not refunded on delete). Kept B04 and C03 as canaries. All pins stay ready in queue.json."
+ },
+ {
+  "at": "2026-10-11T17:51:55Z",
+  "id": "C03",
+  "action": "unscheduled",
+  "reason": "deleted to keep one canary in flight (RUNBOOK rule)"
  }
 ]

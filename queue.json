@@ -17,19 +17,16 @@
  },
  {
   "order": 2,
-  "id": "C03",
-  "image": "aftergrow_pin_C03_how-to-apply-scalp-serum-part-method_v1.png",
+  "id": "C01",
+  "image": "aftergrow_pin_C01_2-minute-scalp-care-routine_v1.png",
   "board": "Scalp care routine",
   "board_id": "1108448595728308243",
-  "title": "How to apply a scalp serum: the part method",
-  "description": "How to apply a scalp serum so it reaches the scalp, not the lengths: part, add a few drops, move the part an inch over and repeat, then massage and leave it in. The part method, step by step.",
-  "link": "https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=scalp-care&utm_content=C03",
-  "alt_text": "Diagram of three hair parts with drops along each and three steps for applying a scalp serum.",
+  "title": "A 2-minute scalp care routine: part, drop, massage",
+  "description": "A two-minute scalp care routine you can keep: part dry hair, add a few drops of a lightweight scalp serum along the part, massage and leave it in. Once a day, no rinsing.",
+  "link": "https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=scalp-care&utm_content=C01",
+  "alt_text": "Three-step scalp care routine: part clean dry hair, add a few drops along the part, massage for 1 to 2 minutes.",
   "field": "espresso",
-  "status": "scheduled",
-  "post_id": "6acbc8c9vhWPn0Nq3-ClD",
-  "send_at_utc": "2026-10-17T17:52:00Z",
-  "role": "canary"
+  "status": "ready"
  },
  {
   "order": 3,
@@ -80,19 +77,6 @@
  },
  {
   "order": 6,
-  "id": "C01",
-  "image": "aftergrow_pin_C01_2-minute-scalp-care-routine_v1.png",
-  "board": "Scalp care routine",
-  "board_id": "1108448595728308243",
-  "title": "A 2-minute scalp care routine: part, drop, massage",
-  "description": "A two-minute scalp care routine you can keep: part dry hair, add a few drops of a lightweight scalp serum along the part, massage and leave it in. Once a day, no rinsing.",
-  "link": "https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=scalp-care&utm_content=C01",
-  "alt_text": "Three-step scalp care routine: part clean dry hair, add a few drops along the part, massage for 1 to 2 minutes.",
-  "field": "espresso",
-  "status": "ready"
- },
- {
-  "order": 7,
   "id": "B01",
   "image": "aftergrow_pin_B01_postpartum-shedding-peaks-around-month-4_v1.png",
   "board": "Postpartum hair care",
@@ -105,7 +89,7 @@
   "status": "ready"
  },
  {
-  "order": 8,
+  "order": 7,
   "id": "E02",
   "image": "aftergrow_pin_E02_peptides-explained-simply_v1.png",
   "board": "Hair care ingredients",
@@ -118,7 +102,7 @@
   "status": "ready"
  },
  {
-  "order": 9,
+  "order": 8,
   "id": "A02",
   "image": "aftergrow_pin_A02_how-much-hair-shedding-is-normal_v1.png",
   "board": "Hair shedding explained",
@@ -131,7 +115,7 @@
   "status": "ready"
  },
  {
-  "order": 10,
+  "order": 9,
   "id": "C04",
   "image": "aftergrow_pin_C04_scalp-care-vs-hair-care_v1.png",
   "board": "Scalp care routine",
@@ -144,7 +128,7 @@
   "status": "ready"
  },
  {
-  "order": 11,
+  "order": 10,
   "id": "F01",
   "image": "aftergrow_pin_F01_brush-shedding-hair-without-breakage_v1.png",
   "board": "Healthy hair habits",
@@ -157,7 +141,7 @@
   "status": "ready"
  },
  {
-  "order": 12,
+  "order": 11,
   "id": "A04",
   "image": "aftergrow_pin_A04_hair-growth-cycle-3-stages_v1.png",
   "board": "Hair shedding explained",
@@ -170,7 +154,7 @@
   "status": "ready"
  },
  {
-  "order": 13,
+  "order": 12,
   "id": "E06",
   "image": "aftergrow_pin_E06_fragrance-free-vs-unscented_v1.png",
   "board": "Hair care ingredients",
@@ -183,7 +167,7 @@
   "status": "ready"
  },
  {
-  "order": 14,
+  "order": 13,
   "id": "G02",
   "image": "aftergrow_pin_G02_how-to-photograph-your-part_v1.png",
   "board": "Hair progress photos",
@@ -196,7 +180,7 @@
   "status": "ready"
  },
  {
-  "order": 15,
+  "order": 14,
   "id": "A03",
   "image": "aftergrow_pin_A03_shedding-when-to-see-a-dermatologist_v1.png",
   "board": "Hair shedding explained",
@@ -209,7 +193,7 @@
   "status": "ready"
  },
  {
-  "order": 16,
+  "order": 15,
   "id": "D01",
   "image": "aftergrow_pin_D01_fuller-looking-hair-over-40-6-habits_v1.png",
   "board": "Hair care tips for women over 40",
@@ -222,7 +206,7 @@
   "status": "ready"
  },
  {
-  "order": 17,
+  "order": 16,
   "id": "H02",
   "image": "aftergrow_pin_H02_whats-inside-aftergrow-scalp-serum_v1.png",
   "board": "Aftergrow Scalp Serum",
@@ -235,7 +219,7 @@
   "status": "ready"
  },
  {
-  "order": 18,
+  "order": 17,
   "id": "A08",
   "image": "aftergrow_pin_A08_hair-shedding-timeline-month-by-month_v1.png",
   "board": "Hair shedding explained",
@@ -248,20 +232,28 @@
   "status": "ready"
  },
  {
-  "order": 19,
-  "id": "F05",
-  "image": "aftergrow_pin_F05_heat-styling-during-a-shed_v1.png",
-  "board": "Healthy hair habits",
-  "board_id": "1108448595728308246",
-  "title": "Heat styling during a shed: gentler settings that still work",
-  "description": "Heat styling during a hair shed: medium heat, fewer passes, heat protectant every time and air-drying most of the way first. Gentler settings that protect fine hair and still get the look. Get the free guide.",
-  "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=habits&utm_content=F05",
-  "alt_text": "List of four gentler heat styling tips for fine or shedding hair.",
+  "order": 18,
+  "id": "C03",
+  "image": "aftergrow_pin_C03_how-to-apply-scalp-serum-part-method_v1.png",
+  "board": "Scalp care routine",
+  "board_id": "1108448595728308243",
+  "title": "How to apply a scalp serum: the part method",
+  "description": "How to apply a scalp serum so it reaches the scalp, not the lengths: part, add a few drops, move the part an inch over and repeat, then massage and leave it in. The part method, step by step.",
+  "link": "https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=scalp-care&utm_content=C03",
+  "alt_text": "Diagram of three hair parts with drops along each and three steps for applying a scalp serum.",
   "field": "espresso",
-  "status": "ready"
+  "status": "ready",
+  "history": [
+   {
+    "at": "2026-10-11T17:51:55Z",
+    "event": "unscheduled",
+    "post_id": "6acbc8c9vhWPn0Nq3-ClD",
+    "reason": "deleted to keep one canary in flight (RUNBOOK rule)"
+   }
+  ]
  },
  {
-  "order": 20,
+  "order": 19,
   "id": "E05",
   "image": "aftergrow_pin_E05_how-to-read-a-scalp-serum-label_v1.png",
   "board": "Hair care ingredients",
@@ -274,7 +266,7 @@
   "status": "ready"
  },
  {
-  "order": 21,
+  "order": 20,
   "id": "B02",
   "image": "aftergrow_pin_B02_postpartum-shedding-normal-or-not_v1.png",
   "board": "Postpartum hair care",
@@ -287,7 +279,7 @@
   "status": "ready"
  },
  {
-  "order": 22,
+  "order": 21,
   "id": "A06",
   "image": "aftergrow_pin_A06_shedding-after-stress-illness-surgery_v1.png",
   "board": "Hair shedding explained",
@@ -300,7 +292,7 @@
   "status": "ready"
  },
  {
-  "order": 23,
+  "order": 22,
   "id": "E03",
   "image": "aftergrow_pin_E03_eucalyptus-for-scalp-fresh-feel_v1.png",
   "board": "Hair care ingredients",
@@ -313,7 +305,7 @@
   "status": "ready"
  },
  {
-  "order": 24,
+  "order": 23,
   "id": "D05",
   "image": "aftergrow_pin_D05_low-effort-hair-routine-over-40_v1.png",
   "board": "Hair care tips for women over 40",
@@ -326,7 +318,7 @@
   "status": "ready"
  },
  {
-  "order": 25,
+  "order": 24,
   "id": "A05",
   "image": "aftergrow_pin_A05_telogen-effluvium-plain-english_v1.png",
   "board": "Hair shedding explained",
@@ -339,20 +331,20 @@
   "status": "ready"
  },
  {
-  "order": 26,
-  "id": "G03",
-  "image": "aftergrow_pin_G03_three-photo-method-week-0-6-12_v1.png",
-  "board": "Hair progress photos",
-  "board_id": "1108448595728308247",
-  "title": "Week 0, week 6, week 12: the three-photo method for tracking hair",
-  "description": "The three-photo method: week 0 before you start, week 6 as a midpoint and week 12 to compare and decide. Hair changes slowly, so photos taken the same way are the fair judge.",
-  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=check-in&utm_content=G03",
-  "alt_text": "Timeline with three points labeled week 0, week 6 and week 12 for tracking hair with photos.",
+  "order": 25,
+  "id": "F05",
+  "image": "aftergrow_pin_F05_heat-styling-during-a-shed_v1.png",
+  "board": "Healthy hair habits",
+  "board_id": "1108448595728308246",
+  "title": "Heat styling during a shed: gentler settings that still work",
+  "description": "Heat styling during a hair shed: medium heat, fewer passes, heat protectant every time and air-drying most of the way first. Gentler settings that protect fine hair and still get the look. Get the free guide.",
+  "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=habits&utm_content=F05",
+  "alt_text": "List of four gentler heat styling tips for fine or shedding hair.",
   "field": "espresso",
   "status": "ready"
  },
  {
-  "order": 27,
+  "order": 26,
   "id": "C07",
   "image": "aftergrow_pin_C07_edited-scalp-care-shelf-4-things_v1.png",
   "board": "Scalp care routine",
@@ -365,7 +357,33 @@
   "status": "ready"
  },
  {
+  "order": 27,
+  "id": "A07",
+  "image": "aftergrow_pin_A07_why-your-part-looks-wider_v1.png",
+  "board": "Hair shedding explained",
+  "board_id": "1108448595728308241",
+  "title": "Why your part looks wider (and what it usually means)",
+  "description": "A wider part is often the first thing women notice during a shed. Why it happens, when it usually settles, when a widening part needs a dermatologist, and how to track it with one photo every 6 weeks.",
+  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=A07",
+  "alt_text": "Infographic explaining why a part can look wider during a shed and when to see a dermatologist.",
+  "field": "white",
+  "status": "ready"
+ },
+ {
   "order": 28,
+  "id": "G03",
+  "image": "aftergrow_pin_G03_three-photo-method-week-0-6-12_v1.png",
+  "board": "Hair progress photos",
+  "board_id": "1108448595728308247",
+  "title": "Week 0, week 6, week 12: the three-photo method for tracking hair",
+  "description": "The three-photo method: week 0 before you start, week 6 as a midpoint and week 12 to compare and decide. Hair changes slowly, so photos taken the same way are the fair judge.",
+  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=check-in&utm_content=G03",
+  "alt_text": "Timeline with three points labeled week 0, week 6 and week 12 for tracking hair with photos.",
+  "field": "espresso",
+  "status": "ready"
+ },
+ {
+  "order": 29,
   "id": "E04",
   "image": "aftergrow_pin_E04_4-plant-extracts-in-scalp-care_v1.png",
   "board": "Hair care ingredients",
@@ -375,19 +393,6 @@
   "link": "https://getaftergrow.com/pages/ingredients?utm_source=pinterest&utm_medium=social&utm_campaign=ingredients&utm_content=E04",
   "alt_text": "Grid of four plant extracts and their roles in scalp care, with soy and wheat allergen notes.",
   "field": "white",
-  "status": "ready"
- },
- {
-  "order": 29,
-  "id": "B07",
-  "image": "aftergrow_pin_B07_postpartum-hair-photo-habit-week-0-6-12_v1.png",
-  "board": "Postpartum hair care",
-  "board_id": "1108448595728308242",
-  "title": "A photo habit for postpartum hair: week 0, week 6, week 12",
-  "description": "A simple photo habit for postpartum hair: one photo of your part at week 0, week 6 and week 12, taken the same way. It shows real change a mirror cannot. Same window, same part, same angle.",
-  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=postpartum&utm_content=B07",
-  "alt_text": "Three photo frames labeled week 0, week 6 and week 12 for tracking postpartum hair.",
-  "field": "butter",
   "status": "ready"
  },
  {
@@ -405,6 +410,19 @@
  },
  {
   "order": 31,
+  "id": "B07",
+  "image": "aftergrow_pin_B07_postpartum-hair-photo-habit-week-0-6-12_v1.png",
+  "board": "Postpartum hair care",
+  "board_id": "1108448595728308242",
+  "title": "A photo habit for postpartum hair: week 0, week 6, week 12",
+  "description": "A simple photo habit for postpartum hair: one photo of your part at week 0, week 6 and week 12, taken the same way. It shows real change a mirror cannot. Same window, same part, same angle.",
+  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=postpartum&utm_content=B07",
+  "alt_text": "Three photo frames labeled week 0, week 6 and week 12 for tracking postpartum hair.",
+  "field": "butter",
+  "status": "ready"
+ },
+ {
+  "order": 32,
   "id": "H03",
   "image": "aftergrow_pin_H03_the-90-day-protocol_v1.png",
   "board": "Aftergrow Scalp Serum",
@@ -417,7 +435,7 @@
   "status": "ready"
  },
  {
-  "order": 32,
+  "order": 33,
   "id": "D06",
   "image": "aftergrow_pin_D06_judge-your-hair-by-photos-not-moods_v1.png",
   "board": "Hair care tips for women over 40",
@@ -427,19 +445,6 @@
   "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=over-40&utm_content=D06",
   "alt_text": "Four rules for taking a consistent part photo.",
   "field": "butter",
-  "status": "ready"
- },
- {
-  "order": 33,
-  "id": "A07",
-  "image": "aftergrow_pin_A07_why-your-part-looks-wider_v1.png",
-  "board": "Hair shedding explained",
-  "board_id": "1108448595728308241",
-  "title": "Why your part looks wider (and what it usually means)",
-  "description": "A wider part is often the first thing women notice during a shed. Why it happens, when it usually settles, when a widening part needs a dermatologist, and how to track it with one photo every 6 weeks.",
-  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=A07",
-  "alt_text": "Infographic explaining why a part can look wider during a shed and when to see a dermatologist.",
-  "field": "white",
   "status": "ready"
  },
  {
