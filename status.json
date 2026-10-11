@@ -8,7 +8,7 @@
   "filed_on": null,
   "result": null
  },
- "canary_rule": "While blocked: keep at most ONE canary pin queued at a time and at most 2 canary attempts in any 7 days. A canary is the next ready pin (queue order) that links to a different page than the last failed canary. When any canary publishes, set mode to live and release the queue.",
+ "canary_rule": "While blocked: at most ONE canary queued at a time and at most 2 canary attempts in any 7 days (an attempt = a canary whose publish time passed; a deleted or missed canary does not count). The next canary is chosen by engine/autopilot.py next-canary: a ready pin that was never blocked, on a page not yet tried in this block. If George reports the appeal approved, test at once. When a canary publishes, mode becomes live.",
  "last_success_at": null,
  "notes": [
   "2026-10-11: A01 failed blocked_spam at 17:35 UTC. The other 33 queued posts were deleted before they could fail, except B04, kept as the canary (Tue Oct 13, 6:09 PM ET). Deleting a queued post does not refund its Tailwind credit."
@@ -17,5 +17,21 @@
   "task": "Aftergrow Pinterest autopilot",
   "schedule": "Mondays and Thursdays 8:47 AM ET",
   "first_run": "2026-10-12"
- }
+ },
+ "attempts": [
+  {
+   "id": "A01",
+   "page": "/pages/how-it-works",
+   "post_id": "6acbc83eO3Daa1pnw4tjm",
+   "send_at_utc": "2026-10-11T17:35:00Z",
+   "result": "blocked"
+  },
+  {
+   "id": "B04",
+   "page": "/pages/month-three-guide",
+   "post_id": "6acbc870tmoc66O25EVA6",
+   "send_at_utc": "2026-10-13T22:09:00Z",
+   "result": "pending"
+  }
+ ]
 }

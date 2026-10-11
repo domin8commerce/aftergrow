@@ -134,6 +134,12 @@ BANNED = ["weight loss", "lose weight", "diet", "slim", "before and after", "reg
           "semaglutide", "glp", "—"]
 
 
+BANNED += ["minoxidil", "finasteride", "rogaine", "propecia", "spironolactone", "dutasteride", "tirzepatide",
+           "mounjaro", "zepbound", "liraglutide", "saxenda", "rybelsus", "zepbound", "weight-loss"]
+CAPS_OK = {"AAD", "FAQ", "INCI"}
+PAGE_CAP = 8  # at most this many pins per landing page until new pages exist (Tailwind: 3 to 5 designs per URL)
+
+
 def banned_hits(text):
     hits = []
     for b in BANNED:
@@ -142,20 +148,54 @@ def banned_hits(text):
     return hits
 
 
-def validate(rows, board_names, pins_dir=None):
+def style_hits(text, where):
+    """Rules beyond the word list: no exclamation marks, no all-caps words, 'hair loss' only in descriptions."""
+    hits = []
+    if "!" in text: hits.append("exclamation mark")
+    hits += [f"all caps '{w}'" for w in re.findall(r"\b[A-Z]{3,}\b", text) if w not in CAPS_OK]
+    if where != "description" and "hair loss" in text.lower(): hits.append("'hair loss' outside a description")
+    return hits
+
+
+def image_text(pin):
+    """Every piece of text a design puts on the image, without HTML."""
+    out = []
+    def walk(v):
+        if isinstance(v, str): out.append(v)
+        elif isinstance(v, (list, tuple)): [walk(x) for x in v]
+        elif isinstance(v, dict): [walk(x) for x in v.values()]
+    for k, v in pin.items():
+        if k not in ("id", "slug", "field", "arch", "brand_on"):
+            walk(v)
+    text = " ".join(out)
+    text = re.sub(r"<[^>]+>", " ", text).replace("&nbsp;", " ").replace("&amp;", "&")
+    return re.sub(r"\s+", " ", text)
+
+
+def validate(rows, board_names, pins_dir=None, designs=()):
     probs = []
     for pid, slug, board, title, desc, url, alt in rows:
         if len(title) > 100: probs.append(f"{pid} title {len(title)}")
         if not 150 <= len(desc) <= 280: probs.append(f"{pid} desc {len(desc)}")
         if len(alt) > 500: probs.append(f"{pid} alt")
-        for f in (title, desc, alt):
-            probs += [f"{pid} banned '{b}'" for b in banned_hits(f)]
+        for f, where in ((title, "title"), (desc, "description"), (alt, "alt")):
+            probs += [f"{pid} {where}: banned '{b}'" for b in banned_hits(f)]
+            probs += [f"{pid} {where}: {h}" for h in style_hits(f, where)]
         if f"utm_content={pid}" not in url: probs.append(f"{pid} utm")
         path = url.split("?")[0].replace(U, "")
         if path not in LIVE_PAGES: probs.append(f"{pid} links to unverified page {path}")
         if board not in board_names: probs.append(f"{pid} board '{board}' not in boards.json")
         if pins_dir and not (pins_dir / f"aftergrow_pin_{pid}_{slug}_v1.png").exists():
             probs.append(f"{pid} image missing")
+    for d in designs:
+        t = image_text(d)
+        probs += [f"{d['id']} image text: banned '{b}'" for b in banned_hits(t)]
+        probs += [f"{d['id']} image text: {h}" for h in style_hits(t, "image")]
+    per_page = {}
+    for r in rows:
+        p = r[5].split("?")[0].replace(U, "")
+        per_page[p] = per_page.get(p, 0) + 1
+    probs += [f"{p} has {n} pins; cap is {PAGE_CAP} until new pages exist" for p, n in per_page.items() if n > PAGE_CAP]
     return probs
 
 
@@ -215,7 +255,7 @@ def build(repo):
     fields = {p["id"]: p["field"] for p in pins}
     boards = json.loads((repo / "boards.json").read_text())
     board_id = {b["name"]: b["tailwind_board_id"] for b in boards}
-    probs = validate(rows, set(board_id), repo / "pins")
+    probs = validate(rows, set(board_id), repo / "pins", designs=pins)
     ids = [r[0] for r in rows]
     probs += [f"duplicate id {i}" for i in sorted({i for i in ids if ids.count(i) > 1})]
     probs += [f"{p['id']} has a design but no copy" for p in pins if p["id"] not in ids]
