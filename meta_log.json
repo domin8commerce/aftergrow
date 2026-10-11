@@ -1,0 +1,20 @@
+{
+ "posts": [
+  {
+   "id": "AG01",
+   "network": "instagram",
+   "kind": "post",
+   "at": "2026-10-11T19:50",
+   "metricool_id": "393582554",
+   "logged": "2026-10-11T19:14"
+  },
+  {
+   "id": "AG01",
+   "network": "facebook",
+   "kind": "post",
+   "at": "2026-10-11T19:55",
+   "metricool_id": "393582664",
+   "logged": "2026-10-11T19:14"
+  }
+ ]
+}

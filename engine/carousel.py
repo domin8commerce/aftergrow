@@ -233,7 +233,14 @@ def slide_field(c, s, i, n):
     return c.get("inside", "porcelain")
 
 
-def build_slide(c, i):
+# Reels are 1080 x 1920. Instagram's buttons, caption and audio label cover the bottom of the screen and the
+# account name sits at the top, so the slide content lives in the band between them.
+REEL_H = 1920
+REEL_CSS = """html,body{height:1920px}.s{height:1920px;padding:250px 88px 540px}
+.deco{top:60px}"""
+
+
+def build_slide(c, i, fmt="feed"):
     s, n = c["slides"][i], len(c["slides"])
     fld = slide_field(c, s, i, n)
     c = dict(c, slide_field=fld)
@@ -243,6 +250,8 @@ def build_slide(c, i):
     deco = f'<div class="deco">{part(560, mark)}</div>' if i == 0 else ""
     kicker = f'<p class="kicker"><i></i>{esc(c["kicker"])}</p>'
     right = f'<div class="swipe">Swipe {arrow(hlt, 30)}</div>' if i == 0 else (f'<div class="count">{i + 1} / {n}</div>' if i < n - 1 else "")
+    if fmt == "reel":
+        css, right = css + REEL_CSS, ""
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>{font_css()}{CSS}{css}</style></head><body>
 <div class="s" style="--bg:{bg};--fg:{fg};--head:{head};--sub:{sub};--mark:{mark};--rule:{rule};--hl:{hl};--hlt:{hlt};--deco:{deco_op}">
 {deco}<div class="top">{kicker}</div>
@@ -268,9 +277,46 @@ def slide_text(s):
     return plain(" ".join(x for x in out if isinstance(x, str)))
 
 
+SOURCES_NOTE = "Education, not medical advice. If shedding is sudden, patchy or lasts more than six months, see a dermatologist."
+
+
+def alt_for(s):
+    """What a screen reader should hear for one slide, including the words a template adds by default."""
+    p = lambda t: html.unescape(plain(t))
+    end = lambda t: t if t[-1:] in ".?!:" else t + "."
+    t = s["t"]
+    if t == "cover":
+        out = [end(p(s["title"]))] + ([p(s["sub"])] if s.get("sub") else [])
+    elif t == "statement":
+        head = (f"{p(s['num'])}. " if s.get("num") else "") + (f"{p(s['label'])}: " if s.get("label") else "")
+        out = [head + end(p(s["title"]))] + ([p(s["body"])] if s.get("body") else [])
+    elif t == "timeline":
+        out = [end(p(s["title"]))] + [f"{p(x['when'])}: {end(p(x['what']))}" + (f" {p(x['more'])}" if x.get("more") else "")
+                                     for x in s["steps"]]
+    elif t == "compare":
+        out = [end(p(s["title"]))] + [f"{p(x['head'])}: " + "; ".join(p(i) for i in x["items"]) + "."
+                                     for x in (s["left"], s["right"])]
+    elif t == "bignum":
+        out = [(f"{p(s['label'])}: " if s.get("label") else "") + f"{p(s['num'])} {end(p(s['caption']))}"] + [p(x) for x in s.get("lines", [])]
+    elif t == "checklist":
+        out = [p(s["title"]) + ":"] + [p(i) for i in s["items"]] + ([p(s["note"])] if s.get("note") else [])
+    elif t == "swaps":
+        out = [end(p(s["title"]))] + [f"Instead of {p(a)[0].lower() + p(a)[1:]}: {end(p(b))}" for a, b in s["rows"]]
+    elif t == "list":
+        out = [p(s["title"]) + ":"] + [f"{i}. {p(x)}" for i, x in enumerate(s["items"], 1)] + ([p(s["note"])] if s.get("note") else [])
+    elif t == "sources":
+        out = [p(s.get("title", "Where this comes from")) + ":"] + [f"{p(a)}, {end(p(b))}" for a, b in s["items"]] + [p(s.get("note", SOURCES_NOTE))]
+    elif t == "cta":
+        out = [p(s.get("title", "Save this for later.")), p(s.get("line", "Send it to someone who needs it.")),
+               f"{p(s.get('guide', 'The free Month-Three Guide'))} is at {p(s.get('where', 'getaftergrow.com'))}."]
+    else:
+        out = [html.unescape(slide_text(s))]
+    return re.sub(r"(\d)-(\d)", r"\1 to \2", " ".join(x for x in out if x))
+
+
 def alt_texts(c):
     n = len(c["slides"])
-    return [f"Slide {i + 1} of {n}. {slide_text(s)}"[:480] for i, s in enumerate(c["slides"])]
+    return [f"Slide {i + 1} of {n}. {alt_for(s)}"[:1000] for i, s in enumerate(c["slides"])]
 
 
 def load(only=None):
@@ -314,15 +360,19 @@ def link(c, network):
             f"&utm_campaign={c['pillar']}&utm_content={c['id']}")
 
 
+BIO_LINE = "The free Month-Three Guide is at the link in our bio."
+
+
 def ig_text(c):
-    return c["ig"] + "\n\n" + " ".join("#" + h for h in c["hashtags"])
+    """Instagram caption: the copy, one line that sends people to the profile, then at most 5 hashtags."""
+    return c["ig"] + "\n\n" + c.get("bio_line", BIO_LINE) + "\n\n" + " ".join("#" + h for h in c["hashtags"])
 
 
 def media_urls(c):
     return [f"{RAW}ig/{c['id']}/{c['id']}_{i + 1:02d}.jpg" for i in range(len(c["slides"]))]
 
 
-def check(only=None):
+def validate(only=None):
     """Brand and platform rules for every carousel. Prints problems and returns how many there are."""
     from queue_build import banned_hits, style_hits, LIVE_PAGES
     problems, seen = [], set()
@@ -340,6 +390,11 @@ def check(only=None):
             words = slide_text(s) + " " + plain(c["kicker"])
             for h in banned_hits(words) + style_hits(words, "image"):
                 problems.append(f"{cid} slide {i}: {h}")
+        for i, a in enumerate(alt_texts(c), 1):
+            if re.search(r"&(#\d+|[a-z]+);|<", a): problems.append(f"{cid} alt text {i}: leftover HTML")
+            if len(a) < 30: problems.append(f"{cid} alt text {i}: too short")
+            for h in banned_hits(a) + style_hits(a, "image"):
+                problems.append(f"{cid} alt text {i}: {h}")
         tags = c["hashtags"]
         if len(tags) > IG_HASHTAG_MAX: problems.append(f"{cid}: {len(tags)} hashtags, the limit is {IG_HASHTAG_MAX}")
         if len(set(tags)) != len(tags): problems.append(f"{cid}: repeated hashtag")
@@ -359,5 +414,5 @@ def check(only=None):
 
 if __name__ == "__main__":
     if sys.argv[1:2] == ["check"]:
-        sys.exit(1 if check(set(sys.argv[2:]) or None) else 0)
+        sys.exit(1 if validate(set(sys.argv[2:]) or None) else 0)
     render(sys.argv[1], set(sys.argv[2:]) or None)
