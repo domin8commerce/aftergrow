@@ -1,1 +1,37 @@
-[]
+[
+ {
+  "at": "2026-10-11T17:47:08Z",
+  "id": "A01",
+  "action": "scheduled",
+  "post_id": "6acbc83eO3Daa1pnw4tjm",
+  "send_at_utc": "2026-10-11T17:35:00Z",
+  "role": "pin"
+ },
+ {
+  "at": "2026-10-11T17:47:08Z",
+  "id": "A01",
+  "action": "failed",
+  "reason": "blocked_spam: Pinterest blocked this link because it may lead to spam or inappropriate content"
+ },
+ {
+  "at": "2026-10-11T17:47:08Z",
+  "id": "B04",
+  "action": "scheduled",
+  "post_id": "6acbc870tmoc66O25EVA6",
+  "send_at_utc": "2026-10-13T22:09:00Z",
+  "role": "canary"
+ },
+ {
+  "at": "2026-10-11T17:47:08Z",
+  "id": "C03",
+  "action": "scheduled",
+  "post_id": "6acbc8c9vhWPn0Nq3-ClD",
+  "send_at_utc": "2026-10-17T17:52:00Z",
+  "role": "canary"
+ },
+ {
+  "at": "2026-10-11T17:50:00Z",
+  "action": "paused",
+  "note": "Domain blocked as spam on the first pin. Deleted 31 queued Tailwind posts before they could fail (credits are not refunded on delete). Kept B04 and C03 as canaries. All pins stay ready in queue.json."
+ }
+]

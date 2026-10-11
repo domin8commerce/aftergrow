@@ -1,0 +1,16 @@
+{
+ "mode": "blocked",
+ "since": "2026-10-11T17:35:00Z",
+ "why": "Pinterest rejects links to getaftergrow.com as spam (Tailwind failureReason blocked_spam: 'Pinterest blocked this link because it may lead to spam or inappropriate content'). The domain was registered 2026-09-30, and the block hit on the very first pin, the same pattern other brand-new claimed domains reported in Sept-Oct 2026.",
+ "appeal": {
+  "form": "https://help.pinterest.com/contact?creators=site_blocked&origin=pbc&site_blocked_issue=siteblocked_clickthrough_spam&current_page=about_you_page&origin=pbc#no-back",
+  "who": "George (needs his Pinterest login). Claude cannot file it.",
+  "filed_on": null,
+  "result": null
+ },
+ "canary_rule": "While blocked: keep at most ONE canary pin queued at a time and at most 2 canary attempts in any 7 days. A canary is the next ready pin (queue order) that links to a different page than the last failed canary. When any canary publishes, set mode to live and release the queue.",
+ "last_success_at": null,
+ "notes": [
+  "2026-10-11: A01 failed blocked_spam at 17:35 UTC. 31 other queued posts were deleted before they could fail (one in a credit-refund test, then 30), and 2 were kept as canaries: B04 (Tue Oct 13, 6:09 PM ET) and C03 (Sat Oct 17, 1:52 PM ET). Deleting a queued post does not refund its Tailwind credit."
+ ]
+}

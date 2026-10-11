@@ -165,13 +165,15 @@ PRIORITY = ["A01", "C01", "B01", "A02", "E01", "D04", "A04", "B04", "E02", "A03"
             "E03", "A07", "G03", "C07", "E04", "B07", "A10", "H03", "D06", "E07"]
 
 
-def sequence(rows, fields, window=3, lookahead=4):
+def sequence(rows, fields, window=3, lookahead=4, prefix=()):
     """Order pins so no board repeats inside any `window` consecutive pins (so never twice in a day
     at 3 a day, wherever the day boundary falls). Prefer, but do not force: a different landing page
-    and a different background color from the pin before."""
-    by_id = {r[0]: r for r in rows}
-    left = [p for p in PRIORITY if p in by_id] + [r[0] for r in rows if r[0] not in PRIORITY]
-    out = []
+    and a different background color from the pin before. `prefix` = rows already scheduled, so the
+    first new pins also avoid the boards of the last scheduled ones."""
+    by_id = {r[0]: r for r in list(rows) + list(prefix)}
+    left = [p for p in PRIORITY if p in {r[0] for r in rows}] + [r[0] for r in rows if r[0] not in PRIORITY]
+    out = [r[0] for r in prefix][-(window - 1):]
+    start = len(out)
     while left:
         recent = out[-(window - 1):]
         ok = [p for p in left if by_id[p][2] not in {by_id[q][2] for q in recent}]
@@ -185,23 +187,51 @@ def sequence(rows, fields, window=3, lookahead=4):
         pick = next((p for p in ok[:lookahead] if not soft(p)), ok[0])
         out.append(pick)
         left.remove(pick)
-    return out
+    return out[start:]
+
+
+def load_batches():
+    """Week 1 + batch 2 copy lives in this file. Every later batch is engine/batchN.py (N >= 3)
+    with PINS (designs, same format as batch2.PINS) and COPY (rows in the same format as B2)."""
+    import importlib, pinengine, batch2
+    pins, rows = list(pinengine.PINS) + list(batch2.PINS), list(W1) + list(B2)
+    for f in sorted(ROOT.glob("batch*.py"), key=lambda p: int(re.sub(r"\D", "", p.stem) or 0)):
+        if int(re.sub(r"\D", "", f.stem) or 0) >= 3:
+            m = importlib.import_module(f.stem)
+            pins += list(m.PINS)
+            rows += list(m.COPY)
+    return pins, rows
 
 
 def build(repo):
-    import pinengine, batch2
-    fields = {p["id"]: p["field"] for p in pinengine.PINS + batch2.PINS}
+    pins, rows = load_batches()
+    fields = {p["id"]: p["field"] for p in pins}
     boards = json.loads((repo / "boards.json").read_text())
     board_id = {b["name"]: b["tailwind_board_id"] for b in boards}
-    rows = W1 + B2
     probs = validate(rows, set(board_id), repo / "pins")
-    order = sequence(rows, fields)
+    ids = [r[0] for r in rows]
+    probs += [f"duplicate id {i}" for i in sorted({i for i in ids if ids.count(i) > 1})]
+    probs += [f"{p['id']} has a design but no copy" for p in pins if p["id"] not in ids]
+    old = {}
+    if (repo / "queue.json").exists():
+        old = {r["id"]: r for r in json.loads((repo / "queue.json").read_text())}
+    # Scheduled and posted pins keep their place; only ready pins are (re)sequenced behind them.
+    kept = sorted((r for r in rows if old.get(r[0], {}).get("status") in ("scheduled", "posted")),
+                  key=lambda r: old[r[0]].get("order", 0))
+    ready = [r for r in rows if r not in kept]
+    order = [r[0] for r in kept] + sequence(ready, fields, prefix=kept)
     by_id = {r[0]: r for r in rows}
     q = []
     for n, pid in enumerate(order, 1):
         _, slug, board, title, desc, link, alt = by_id[pid]
-        q.append(dict(order=n, id=pid, image=f"aftergrow_pin_{pid}_{slug}_v1.png", board=board, board_id=board_id[board],
-                      title=title, description=desc, link=link, alt_text=alt, field=fields.get(pid), status="ready"))
+        row = dict(order=n, id=pid, image=f"aftergrow_pin_{pid}_{slug}_v1.png", board=board, board_id=board_id[board],
+                   title=title, description=desc, link=link, alt_text=alt, field=fields.get(pid), status="ready")
+        prev = old.get(pid, {})
+        if prev.get("status") in ("scheduled", "posted"):
+            for k in ("status", "post_id", "send_at_utc", "role", "pinterest_pin_id"):
+                if k in prev: row[k] = prev[k]
+        if prev.get("history"): row["history"] = prev["history"]
+        q.append(row)
     return q, probs
 
 
@@ -209,15 +239,12 @@ if __name__ == "__main__":
     repo = pathlib.Path(sys.argv[1]).resolve()
     q, probs = build(repo)
     print("problems:", probs or "none")
-    for i in range(0, len(q), 3):
-        print(f"day {i // 3 + 1:>2}: " + " | ".join(f"{r['id']} {r['board'][:18]:<18}" for r in q[i:i + 3]))
-    old = {}
-    if (repo / "queue.json").exists():
-        old = {r["id"]: r for r in json.loads((repo / "queue.json").read_text())}
-    for r in q:  # keep anything Tailwind already told us
-        for k in ("status", "post_id", "send_at_utc"):
-            if k in old.get(r["id"], {}) and old[r["id"]].get("status") in ("scheduled", "posted"):
-                r[k] = old[r["id"]][k]
+    ready = [r for r in q if r["status"] == "ready"]
+    print(f"{len(q)} pins: {len(q) - len(ready)} scheduled or posted, {len(ready)} ready. Ready, in order, 3 a day:")
+    for i in range(0, len(ready), 3):
+        print(f"  day {i // 3 + 1:>2}: " + " | ".join(f"{r['id']} {r['board'][:18]:<18}" for r in ready[i:i + 3]))
+    if probs:
+        raise SystemExit("fix the problems above; queue.json not written")
     (repo / "queue.json").write_text(json.dumps(q, indent=1, ensure_ascii=False) + "\n")
     with open(repo / "queue.csv", "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
