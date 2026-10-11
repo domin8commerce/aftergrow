@@ -141,7 +141,7 @@ BANNED = ["weight loss", "lose weight", "diet", "slim", "before and after", "reg
 
 BANNED += ["minoxidil", "finasteride", "rogaine", "propecia", "spironolactone", "dutasteride", "tirzepatide",
            "mounjaro", "zepbound", "liraglutide", "saxenda", "rybelsus", "zepbound", "weight-loss"]
-CAPS_OK = {"AAD", "FAQ", "INCI"}
+CAPS_OK = {"AAD", "FAQ", "INCI", "FDA", "USDA", "BAD"}
 PAGE_CAP = 8  # at most this many pins per landing page until new pages exist (Tailwind: 3 to 5 designs per URL)
 
 
