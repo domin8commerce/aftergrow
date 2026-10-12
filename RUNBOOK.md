@@ -243,10 +243,25 @@ Each page below loads with real, sourced content. The facts listed for a page ar
   - "Within six to nine months, the hair tends to regain its normal fullness."
   - The medical term is telogen effluvium.
   - Triggers include giving birth, high fever, an operation, recovering from an illness, lots of stress and stopping birth-control pills. AAD also lists losing 20 pounds or more; pins never say that.
-- **American Academy of Dermatology**, "Hair loss in new moms":
+- **American Academy of Dermatology**, "Hair loss in new moms" (page title "Hair loss in new moms: Dermatologist tips"; on slides call it "Dermatologist tips for new moms"):
   - "Hair shedding usually peaks about four months after giving birth."
   - "Most women see their hair return to its normal fullness by their child's first birthday."
+  - "If your hair does not regain its normal fullness after one year, you may want to see a dermatologist." (checked Oct 11, 2026)
+  - Tips: "Use shampoo and conditioner that add volume." Use conditioner mainly on the ends. "Try a new hairstyle." "Some haircuts make hair look fuller." (checked Oct 11, 2026)
+- **American Academy of Dermatology**, "10 hair care habits that can damage your hair" (checked Oct 11, 2026; habit, then the fix):
+  - Rubbing shampoo into the length: "Gently massage shampoo into your scalp."
+  - Skipping conditioner: "Use conditioner after every shampoo."
+  - Rubbing hair dry with a towel: "Wrap your hair in a towel to absorb the water." "Let your hair air dry."
+  - Brushing wet hair: straight hair, "Let your hair dry a bit before you gently comb it with a wide-tooth comb"; textured hair or tight curls, comb while damp with a wide-tooth comb.
+  - Hot tools: "Use the lowest heat setting." "Use these tools less frequently, aiming for once a week, or even less often."
+  - Long-hold styling products: "Try a hairstyle that does not require this product."
+  - Pulling hair back tightly (ponytail, bun, cornrows): "Wear hair loosely pulled back." "Use covered rubber bands made especially for styling hair."
+  - Color, perms, relaxers: stretch the time between touch-ups (every 8 to 10 weeks or longer in winter); "Have only one service"; if more than one, perm or relax 2 weeks before color.
+  - "Hair never needs 100 brush strokes a day. That's a myth." "Brush and comb your hair only to style it." Use a wide-tooth comb, gently.
 - **/pages/how-it-works:**
+  - "Each hair on your head grows for years, then rests for about three months before it falls out." (checked Oct 11, 2026)
+  - "New hairs grow from the same follicles, but they take months to reach length."
+  - "A shock to the body sends many hairs into the resting phase at once."
   - Hair often sheds "two to four months after a big change in the body."
   - For most people it "settles on its own within six to nine months."
   - Each hair "rests for about three months before it falls out."

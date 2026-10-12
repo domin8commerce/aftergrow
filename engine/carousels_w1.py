@@ -48,7 +48,7 @@ CAROUSELS = [
         dict(t="bignum", label="What&#39;s normal", num="50&ndash;100", caption="hairs a day.",
              lines=["That&#39;s normal shedding, says the American Academy of Dermatology."]),
         dict(t="swaps", title="Habits that break hair, and the fix.", size=80, rows=[
-            ("Rubbing hair dry with a towel", "Blot, or let it air dry"),
+            ("Rubbing hair dry with a towel", "Wrap it, then let it air dry"),
             ("Brushing straight hair while wet", "Wait until it&#39;s partly dry"),
             ("Hot tools most days", "Once a week or less"),
             ("Tight ponytails and buns", "Looser styles, covered elastics"),
@@ -62,15 +62,15 @@ CAROUSELS = [
       ig="Breakage or shedding? Check the end of the hair.\n\n"
          "A shed hair comes out from the root, so it's usually full length with a small white bulb at the end. A broken hair has "
          "no bulb. It snapped somewhere along the strand, so it's usually a shorter piece.\n\n"
-         "Shedding 50 to 100 hairs a day is normal, according to the American Academy of Dermatology. Breakage usually comes down "
-         "to habits, and habits can change.\n\n"
+         "Shedding 50 to 100 hairs a day is normal, according to the American Academy of Dermatology. Everyday habits can break hair, "
+         "and habits can change.\n\n"
          "Which one are you finding more of? Tell us below.\n\n"
          "Save this for wash day.",
       fb="Breakage or shedding? Check the end of the hair.\n\n"
          "A shed hair comes out from the root, so it's usually full length with a small white bulb at the end. A broken hair has "
          "no bulb. It snapped somewhere along the strand, so it's usually a shorter piece.\n\n"
-         "Shedding 50 to 100 hairs a day is normal, according to the American Academy of Dermatology. Breakage usually comes down "
-         "to habits, and habits can change.\n\n"
+         "Shedding 50 to 100 hairs a day is normal, according to the American Academy of Dermatology. Everyday habits can break hair, "
+         "and habits can change.\n\n"
          "The full guide, with more habits to change, is in the first comment.",
       fb_comment="Breakage or shedding? How to tell from the hairs you find: {link}"),
 
@@ -89,12 +89,12 @@ CAROUSELS = [
                                  ("getaftergrow.com", "How it works: the month-three shed")]),
         SAVE],
       hashtags=["hairshedding", "hairhealth", "thinninghair", "scalpcare", "hairtips"],
-      ig="How much hair shedding is normal? Most people lose 50 to 100 hairs a day, according to the American Academy of Dermatology.\n\n"
+      ig="How much hair shedding is normal? It's normal to shed 50 to 100 hairs a day, according to the American Academy of Dermatology.\n\n"
          "During a shed it's more than that, for a few months. It often starts two to four months after a big change in the body "
          "and settles within six to nine months for most people.\n\n"
          "Instead of counting hairs, take one photo of your part every six weeks, the same way each time. It's a fairer way to see real change.\n\n"
          "Save this, and send it to a friend who's been counting.",
-      fb="How much hair shedding is normal? Most people lose 50 to 100 hairs a day, according to the American Academy of Dermatology.\n\n"
+      fb="How much hair shedding is normal? It's normal to shed 50 to 100 hairs a day, according to the American Academy of Dermatology.\n\n"
          "During a shed it's more than that, for a few months. It often starts two to four months after a big change in the body "
          "and settles within six to nine months for most people.\n\n"
          "Instead of counting hairs, take one photo of your part every six weeks, the same way each time.\n\n"
@@ -107,14 +107,14 @@ CAROUSELS = [
              sub="Not the same thing. Here&#39;s the difference, and what to check&nbsp;first."),
         dict(t="statement", label="In a finished product", title="Rosemary extract is one ingredient in a set&nbsp;formula.",
              body="It comes with directions and warnings on the label."),
-        dict(t="statement", label="From a bottle", title="Rosemary essential oil is concentrated.",
-             body="Don&#39;t put neat, undiluted essential oils on your skin. Some can cause an allergic skin reaction."),
+        dict(t="statement", label="From a bottle", title="Rosemary essential oil never goes on skin&nbsp;neat.",
+             body="Neat means undiluted. Some essential oils can cause an allergic skin reaction."),
         dict(t="statement", label="Made at home", title="Homemade rosemary water is on&nbsp;you.",
              body="Whoever makes a cosmetic is responsible for its safety, says the FDA. Throw it out if the color or smell&nbsp;changes."),
         dict(t="checklist", title="Before you try&nbsp;one", items=[
-            "Patch test: a few drops behind the ear, then wait 24&nbsp;hours.",
-            "Stop if you get a rash, redness or another reaction.",
-            "After a reaction, show the full ingredient list to a dermatologist."]),
+            "Patch test a finished product: a few drops behind the ear, then wait 24&nbsp;hours.",
+            "Change one product at a&nbsp;time.",
+            "Stop if you get a rash, redness or a&nbsp;burn."]),
         dict(t="sources", items=[("Aftergrow Journal", "Scalp serum or scalp oil?"),
                                  ("DermNet", "Allergic contact dermatitis to essential oils"),
                                  ("U.S. FDA", "Using cosmetics safely")],
@@ -123,46 +123,44 @@ CAROUSELS = [
       hashtags=["rosemaryforhair", "rosemarywater", "scalpcare", "haircare", "cleanbeauty"],
       ig="Rosemary for hair is everywhere right now. But rosemary oil, rosemary water and rosemary extract are three different things.\n\n"
          "Rosemary extract in a finished product is one ingredient in a set formula, with directions and warnings on the label. "
-         "Rosemary essential oil is concentrated, and neat, undiluted essential oils shouldn't go straight on skin. Homemade rosemary "
+         "Rosemary essential oil should never go on skin neat, meaning undiluted, and some essential oils can cause an allergic skin reaction. Homemade rosemary "
          "water is on you: whoever makes a cosmetic is responsible for its safety, says the FDA.\n\n"
-         "Whatever you try, patch test first: a few drops behind the ear, then wait 24 hours.\n\n"
+         "Trying a finished product? Patch test first: a few drops behind the ear, then wait 24 hours.\n\n"
          "Save this before you try the next rosemary trend.",
       fb="Rosemary for hair is everywhere right now. But rosemary oil, rosemary water and rosemary extract are three different things.\n\n"
          "Rosemary extract in a finished product is one ingredient in a set formula, with directions and warnings on the label. "
-         "Rosemary essential oil is concentrated, and neat, undiluted essential oils shouldn't go straight on skin. Homemade rosemary "
+         "Rosemary essential oil should never go on skin neat, meaning undiluted, and some essential oils can cause an allergic skin reaction. Homemade rosemary "
          "water is on you: whoever makes a cosmetic is responsible for its safety, says the FDA.\n\n"
-         "Whatever you try, patch test first: a few drops behind the ear, then wait 24 hours.\n\n"
+         "Trying a finished product? Patch test first: a few drops behind the ear, then wait 24 hours.\n\n"
          "The full comparison is in the first comment.",
       fb_comment="Rosemary extract vs. rosemary oil vs. rosemary water, compared: {link}"),
 
  dict(id="AG05", pillar="over-40", kicker="Hair care over 40", field="butter", page="/blogs/journal/make-hair-look-thicker",
       slides=[
-        dict(t="cover", title="5 hair habits<br>to retire<br>after 40.", sub="Small swaps that help hair look fuller."),
+        dict(t="cover", title="5 hair habits<br>to retire<br>after 40.", sub="Small swaps that are gentler on your hair."),
         dict(t="swaps", title="Retire this. Try this.", rows=[
-            ("Tight ponytails every day", "Loose styles and soft clips"),
-            ("Daily high heat", "Medium heat, fewer passes"),
-            ("Skipping the scalp", "Two minutes of scalp care a day"),
-            ("Heavy oils on fine hair", "A lightweight leave-on"),
+            ("Shampoo on the lengths", "Shampoo on the scalp only"),
+            ("Long-hold styling products", "Styles that don&#39;t need them"),
+            ("Color touch-ups close together", "More time between them"),
+            ("Color and a perm on one day", "One service at a time"),
             ("Judging by the mirror alone", "A part photo every 6 weeks")]),
         dict(t="statement", title="Fine hair? Conditioner goes on the&nbsp;ends.",
              body="Dry or curly hair can take it along the whole length."),
-        dict(t="statement", title="Stretch the time between color touch-ups.",
-             body="And book just one chemical service at&nbsp;a&nbsp;time."),
         dict(t="checklist", title="See a dermatologist if", items=[
             "Your part is getting wider.", "Your ponytail feels thinner.", "Shedding lasts more than six&nbsp;months."]),
-        dict(t="sources", items=[("Aftergrow Journal", "How to make thinning hair look thicker"),
-                                 ("American Academy of Dermatology", "Tips for healthy hair")]),
+        dict(t="sources", items=[("American Academy of Dermatology", "10 hair care habits that can damage your hair"),
+                                 ("Aftergrow Journal", "How to make thinning hair look thicker")]),
         SAVE],
       hashtags=["haircareover40", "finehair", "thinninghair", "healthyhair", "hairtips"],
       ig="Hair care over 40: five habits to retire, and what to do instead.\n\n"
-         "Swap tight ponytails for looser styles, daily high heat for medium heat and fewer passes, and heavy oils on fine hair for "
-         "a lightweight leave-on. Give your scalp two minutes a day, and judge your hair with a part photo every six weeks, not the "
+         "Shampoo your scalp, not the lengths. Pick styles that don't need long-hold products. Stretch the time between color "
+         "touch-ups, and book one chemical service at a time. And judge your hair with a part photo every six weeks, not the "
          "bathroom mirror.\n\n"
          "If your part is getting wider or your ponytail feels thinner, see a dermatologist.\n\n"
          "Save this, and send it to a friend who'll try it with you.",
       fb="Hair care over 40: five habits to retire, and what to do instead.\n\n"
-         "Swap tight ponytails for looser styles, daily high heat for medium heat and fewer passes, and heavy oils on fine hair for "
-         "a lightweight leave-on. Give your scalp two minutes a day, and judge your hair with a part photo every six weeks, not the "
+         "Shampoo your scalp, not the lengths. Pick styles that don't need long-hold products. Stretch the time between color "
+         "touch-ups, and book one chemical service at a time. And judge your hair with a part photo every six weeks, not the "
          "bathroom mirror.\n\n"
          "If your part is getting wider or your ponytail feels thinner, see a dermatologist.\n\n"
          "More ways to make fine hair look fuller are in the first comment.",
@@ -171,7 +169,7 @@ CAROUSELS = [
  dict(id="AG06", pillar="postpartum", kicker="Postpartum hair", field="espresso", page="/blogs/journal/why-is-my-hair-falling-out",
       slides=[
         dict(t="cover", title="Postpartum<br>shedding usually<br>peaks around<br>month&nbsp;4.", size=116,
-             sub="In it right now? Here&#39;s what&#39;s normal."),
+             sub="Here&#39;s what&#39;s normal, month by&nbsp;month."),
         dict(t="timeline", title="What to expect.", steps=[
             dict(when="A few months after birth", what="Extra shedding starts."),
             dict(when="About month 4", what="It usually peaks.", on=True),
@@ -182,10 +180,10 @@ CAROUSELS = [
             "Use shampoo and conditioner that add volume.", "Try a new hairstyle."],
              note="From the American Academy of Dermatology."),
         dict(t="checklist", title="See a dermatologist if", items=[
-            "There are patches or bald&nbsp;spots.", "Your scalp is painful or scaly.", "It&#39;s still heavy after 12&nbsp;months."]),
+            "It comes out in patches.", "It isn&#39;t back to normal fullness after a&nbsp;year.", "You&#39;re not sure it&#39;s only a&nbsp;shed."]),
         dict(t="sources", items=[("American Academy of Dermatology", "Dermatologist tips for new moms"),
-                                 ("getaftergrow.com", "How it works: the month-three shed")],
-             note="Education, not medical advice. If shedding is still heavy after your child&#39;s first birthday, see a&nbsp;dermatologist."),
+                                 ("Aftergrow Journal", "Why is my hair suddenly falling out?")],
+             note="Education, not medical advice. If your hair isn&#39;t back to its normal fullness after a year, see a&nbsp;dermatologist."),
         SAVE],
       hashtags=["postpartumhair", "postpartum", "newmom", "hairshedding", "momlife"],
       ig="Postpartum hair shedding usually peaks about four months after giving birth, according to the American Academy of Dermatology.\n\n"
@@ -213,19 +211,19 @@ CAROUSELS = [
             "Leave-in conditioner goes on your hair, not your scalp."],
              note="From the American Academy of Dermatology and the FDA."),
         dict(t="checklist", title="Call a dermatologist if", items=[
-            "The itching won&#39;t stop.", "You have a red rash.", "Swollen, warm or painful&nbsp;skin."]),
+            "The itching won&#39;t stop.", "You have a red rash.", "Your skin is swollen, warm or&nbsp;painful."]),
         dict(t="sources", items=[("Cleveland Clinic", "Dry scalp: causes and prevention"),
                                  ("American Academy of Dermatology", "Is your dry scalp something more serious?"),
                                  ("Aftergrow Journal", "Scalp serum for a dry scalp")], note="Education, not medical advice."),
         SAVE],
       hashtags=["dryscalp", "dandruff", "scalpcare", "itchyscalp", "winterhaircare"],
-      ig="Dry scalp or dandruff? They're easy to mix up, but the causes are opposite.\n\n"
+      ig="Dry scalp or dandruff? They're easy to mix up, but the causes are different.\n\n"
          "A dry scalp comes from a loss of moisture. Dandruff comes from excess oil, according to Cleveland Clinic. So the fix for "
          "one isn't the fix for the other.\n\n"
          "For a dry scalp: keep showers to 5 to 10 minutes, choose fragrance-free products, and keep leave-in conditioner on your hair, "
          "not your scalp. If the itching won't stop, or you see a red rash or swelling, call a dermatologist.\n\n"
          "Save this for winter.",
-      fb="Dry scalp or dandruff? They're easy to mix up, but the causes are opposite.\n\n"
+      fb="Dry scalp or dandruff? They're easy to mix up, but the causes are different.\n\n"
          "A dry scalp comes from a loss of moisture. Dandruff comes from excess oil, according to Cleveland Clinic. So the fix for "
          "one isn't the fix for the other.\n\n"
          "For a dry scalp: keep showers to 5 to 10 minutes, choose fragrance-free products, and keep leave-in conditioner on your hair, "
