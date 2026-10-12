@@ -10,6 +10,8 @@ Usage (from the repo root):
   python3 -I engine/meta.py logged <ID> <instagram|facebook> <post|reel> <YYYY-MM-DDTHH:MM> <metricool id> <uuid>
                                                   records a post Metricool accepted (do this right after each one)
   python3 -I engine/meta.py date <YYYY-MM-DDTHH:MM>   the same time with New York's UTC offset, for the "date" field
+  python3 -I engine/meta.py reid <ID> <instagram|facebook> <post|reel> <new metricool id>
+                                                  after updateScheduledPost, which gives the post a new id
   python3 -I engine/meta.py status               what is logged so far
 
 Metricool: blogId 7369576, timezone America/New_York. Times in this file are New York time.
@@ -156,6 +158,16 @@ def main(a):
         log["posts"].sort(key=lambda p: p["at"])
         write_log(log)
         print("logged", cid, network, kind, when)
+    elif cmd == "reid":
+        # After updateScheduledPost, Metricool gives the post a new id (the uuid stays the same).
+        cid, network, kind, mid = a[1:5]
+        log = read_log()
+        hits = [p for p in log["posts"] if p["id"] == cid and p["network"] == network and p["kind"] == kind]
+        if len(hits) != 1:
+            raise SystemExit(f"{cid} {network} {kind}: {len(hits)} log entries")
+        hits[0]["metricool_id"] = mid
+        write_log(log)
+        print("new id", cid, network, kind, mid)
     elif cmd == "status":
         log = read_log()
         for p in log["posts"]:
