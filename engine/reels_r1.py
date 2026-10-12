@@ -125,7 +125,7 @@ _AG08 = caps(
     "Wash as often as your scalp needs, even every day if the oil bothers you. Put shampoo on the scalp only, and conditioner "
     "on the ends: on the scalp it can make things greasy, says Cleveland Clinic.\n\n"
     "And dry shampoo doesn't clean hair, so wash after one or two uses, says the American Academy of Dermatology.",
-    "Save this for wash day.",
+    "Save this for wash day, and send it to someone with oily roots.",
     "A simple routine for oily roots and dry ends is in the first comment.")
 
 REELS = [
