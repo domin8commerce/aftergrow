@@ -1,6 +1,6 @@
 # Aftergrow on Instagram and Facebook: runbook
 
-This file runs Aftergrow's organic Instagram and Facebook without manual work. A Claude scheduled task follows it every Monday at 8:47 AM Eastern. George, the founder, makes the final calls and reads a five-line report after each run. Anything that needs his decision goes in line 4 of the report. Never guess on his behalf.
+This file runs Aftergrow's organic Instagram and Facebook without manual work. A Claude scheduled task (`trig_01C3Cm6o5cGBYcnPHBRWi3ve`, prompt in `meta_autopilot_prompt.md`) follows it every Monday at 8:47 AM Eastern. George, the founder, makes the final calls and reads a five-line report after each run. Anything that needs his decision goes in line 4 of the report. Never guess on his behalf.
 
 - Metricool brand: **blogId 7369576**, timezone **America/New_York**. Instagram **@getaftergrow**, Facebook Page **100613906395691**. Use no other brand.
 - Pinterest is paused (domain blocked, appeal denied Oct 11, 2026). Don't touch it here. RUNBOOK.md covers it, and a one-time check-in runs on Nov 9.

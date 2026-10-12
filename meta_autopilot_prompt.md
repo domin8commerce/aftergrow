@@ -1,6 +1,6 @@
 # Meta autopilot scheduled task: prompt and schedule
 
-Scheduled task "Aftergrow Meta autopilot (Mondays)": cron `CRON_TZ=America/New_York 47 8 * * 1` (Mondays, 8:47 AM Eastern), with this prompt:
+Scheduled task "Aftergrow Meta autopilot (Mondays)", ID `trig_01C3Cm6o5cGBYcnPHBRWi3ve`, created Oct 11, 2026: cron `CRON_TZ=America/New_York 47 8 * * 1` (Mondays, 8:47 AM Eastern), runs approved automatically, with this prompt. If you change the prompt, update both this file and the task (`update_trigger`).
 
 ---
 
