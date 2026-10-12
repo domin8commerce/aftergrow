@@ -103,7 +103,8 @@ def payload(cid, network, kind, when):
 
 def plan(days=14, now=None):
     """Fill the open slots from tomorrow on: carousels in ID order, then each one's Reel two or more days later."""
-    now = now or dt.datetime.now()
+    from zoneinfo import ZoneInfo
+    now = now or dt.datetime.now(ZoneInfo(TZ)).replace(tzinfo=None)  # slots are New York time; the runner may be on UTC
     log = read_log()
     done = {(p["id"], p["network"], p["kind"]): p["at"] for p in log["posts"]}
     taken = {(p["network"], p["at"][:10]) for p in log["posts"]}
