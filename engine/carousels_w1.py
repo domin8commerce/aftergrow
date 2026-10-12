@@ -71,7 +71,7 @@ CAROUSELS = [
          "no bulb. It snapped somewhere along the strand, so it's usually a shorter piece.\n\n"
          "Shedding 50 to 100 hairs a day is normal, according to the American Academy of Dermatology. Breakage usually comes down "
          "to habits, and habits can change.\n\n"
-         "The full guide, with all eight habits, is in the first comment.",
+         "The full guide, with more habits to change, is in the first comment.",
       fb_comment="Breakage or shedding? How to tell from the hairs you find: {link}"),
 
  dict(id="AG03", pillar="shedding", kicker="How much is normal?", field="butter", page="/pages/how-it-works",
@@ -168,7 +168,7 @@ CAROUSELS = [
          "More ways to make fine hair look fuller are in the first comment.",
       fb_comment="How to make thin hair look thicker: products, cut and color: {link}"),
 
- dict(id="AG06", pillar="postpartum", kicker="Postpartum hair", field="espresso", page="/pages/how-it-works",
+ dict(id="AG06", pillar="postpartum", kicker="Postpartum hair", field="espresso", page="/blogs/journal/why-is-my-hair-falling-out",
       slides=[
         dict(t="cover", title="Postpartum<br>shedding usually<br>peaks around<br>month&nbsp;4.", size=116,
              sub="In it right now? Here&#39;s what&#39;s normal."),
@@ -198,7 +198,7 @@ CAROUSELS = [
          "its normal fullness by their child's first birthday.\n\n"
          "Two dermatologist tips for the months in between: use a shampoo and conditioner that add volume, and try a new hairstyle.\n\n"
          "Why shedding comes months later is explained in the first comment.",
-      fb_comment="Why hair sheds months after a big change, like having a baby: {link}"),
+      fb_comment="Why hair sheds a few months after a big event, like giving birth: {link}"),
 
  dict(id="AG07", pillar="scalp-care", kicker="Dry scalp season", field="butter", page="/blogs/journal/scalp-serum-for-dry-scalp",
       slides=[
