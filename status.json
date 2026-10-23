@@ -14,12 +14,15 @@
   "2026-10-11: A01 failed blocked_spam at 17:35 UTC. The other 33 queued posts were deleted before they could fail, except B04, kept as the canary (Tue Oct 13, 6:09 PM ET). Deleting a queued post does not refund its Tailwind credit.",
   "2026-10-11: Pinterest denied the appeal about 4 hours after filing (automated). The B04 canary was deleted. The autopilot is paused; one check-in runs Nov 9, 2026 (see RUNBOOK 'Paused after a denied appeal').",
   "2026-10-23: New evidence. Pinterest's Shopify catalog sync published 6 product pins linking to getaftergrow.com/products/scalp-serum on 2026-10-22 23:14 UTC (Tailwind list_pins, board 'Products'). George asked to relaunch Pinterest, so the Nov 9 pause is lifted early for ONE canary to test whether the domain block is gone.",
-  "2026-10-23: Canary C01 published (Tailwind sent at 11:44:56 UTC, link intact). Mode is live with 14 days of probation."
+  "2026-10-23: Canary C01 published (Tailwind sent at 11:44:56 UTC, link intact). Mode is live with 14 days of probation.",
+  "2026-10-23: George approved the board restructure, deleting 4 risky catalog pins and detaching their images from the products. Autopilot re-armed as a new scheduled task (Mon and Thu 9:43 AM ET)."
  ],
  "autopilot": {
-  "task": "Aftergrow Pinterest autopilot",
-  "schedule": "Mondays and Thursdays 8:47 AM ET",
-  "first_run": "2026-10-12"
+  "task": "Aftergrow Pinterest autopilot (Mon & Thu)",
+  "trigger_id": "trig_01B73irLyXbFsYPiTCjRKC9V",
+  "schedule": "Mondays and Thursdays 9:43 AM ET (after the Meta run at 8:47)",
+  "first_run": "2026-10-26",
+  "replaces": "trig_01MKvbNBiGHHmrhzUTaGTDHP (Nov 9 re-appeal check-in, disabled 2026-10-23: the block lifted)"
  },
  "attempts": [
   {
