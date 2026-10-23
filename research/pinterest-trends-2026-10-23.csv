@@ -1,0 +1,104 @@
+cluster,keyword,last4wk_rel,avg52wk_rel,yoy_pct,share_35_64,share_45_64,peak_month,query
+benchmark,hairstyles for thin hair,11.2,32.0,-90,0.30,0.17,11,B0
+benchmark,thin hair haircuts,10.5,13.0,-30,0.38,0.19,03,B0
+benchmark,fine thin hair over 50,4.5,2.8,2500,0.56,0.51,09,B0
+benchmark,hair growth tips,2.8,3.0,-20,0.26,0.12,01,B0
+benchmark,salt and pepper hair over 50,2.5,1.6,-5,0.69,0.61,09,B0
+benchmark,hairstyles for thin hair fine over 50 shoulder length,2.0,2.0,4,0.57,0.52,03,B0
+benchmark,hairstyles for thin hair fine over 50 short,1.8,1.5,800,0.42,0.38,07,B0
+benchmark,shoulder length hairstyles for thin hair fine,1.8,1.4,60,0.69,0.50,02,B0
+benchmark,hairstyles for thin hair over 50,1.2,1.6,-30,0.60,0.56,05,B0
+benchmark,grey hair over 50,1.2,0.9,200,0.55,0.49,09,B0
+benchmark,haircuts for thinning hair,1.0,1.0,100,0.61,0.29,07,B0
+benchmark,hair oil,1.0,1.0,10,0.25,0.12,11,B0
+benchmark,hair care routine,1.0,1.2,5,0.25,0.12,01,B0
+benchmark,hair over 50,1.0,1.1,-10,0.83,0.79,08,B0
+benchmark,hairstyles for thin hair with bangs,1.0,0.7,5,0.60,0.47,10,B0
+benchmark,haircut for thinning hair women,1.0,0.8,70,0.72,0.34,01,B0
+benchmark,hairstyles for thinning hair,1.0,1.0,20,0.64,0.39,08,B0
+benchmark,thinning hair haircuts,1.0,0.7,200,0.59,0.26,02,B0
+benchmark,head spa,1.0,0.9,20,0.37,0.13,10,B0
+benchmark,rosemary water for hair,1.0,0.3,400,0.44,0.21,09,B0
+benchmark,dry scalp treatment diy,1.0,0.7,-20,0.58,0.22,01,B0
+benchmark,thinning hair,0.8,0.7,0,0.47,0.24,01,B0
+benchmark,hair over 40 look younger,0.8,2.4,-70,0.92,0.51,01,B0
+benchmark,peptides for women,0.8,0.8,400,0.71,0.32,04,B0
+benchmark,itchy scalp,0.5,0.8,70,0.58,0.32,01,B0
+benchmark,half up hairstyles for thin hair,0.5,0.7,-50,0.62,0.34,05,B0
+benchmark,hairstyles for thin hair and round face,0.5,0.7,50,0.70,0.43,02,B0
+absent,hair shedding,,,,,,,"Q1,B0: not in top 50 although included"
+absent,postpartum hair (shedding/care),,,,,,,"Q1,B0: not in top 50; only postpartum haircut/hairstyles exist (B3)"
+absent,telogen effluvium,,,,,,,"Q1: no results"
+absent,menopause hair / perimenopause hair,,,,,,,"Q1,B3: no results"
+absent,scalp serum / peptides for hair / scalp health,,,,,,,"B5: no results (only 'hair serum', 75% aged 18-34)"
+suppressed,hair loss,,,,,,,"B1: Pinterest Trends returns nothing for any 'hair loss' term"
+haircuts,haircuts for thinning hair,34.8,29.0,100,0.61,0.29,07,B2
+haircuts,haircut for thinning hair women,23.0,21.9,70,0.72,0.34,05,B2
+haircuts,thinning hair haircuts,22.8,16.8,200,0.59,0.26,08,B2
+haircuts,haircut for thinning hair,17.2,17.8,40,0.62,0.28,02,B2
+haircuts,haircuts for thinning hair for women,12.8,15.9,-20,0.72,0.38,02,B2
+haircuts,shag haircut for thin hair,6.8,3.2,2000,0.54,0.44,09,Q1
+haircuts,choppy bob hairstyles for fine hair,6.5,6.8,40,0.61,0.51,04,Q1
+haircuts,mid length haircut for thin hair,5.0,1.8,80,0.69,0.36,10,Q1
+haircuts,bobs for thin hair,4.0,5.4,-40,0.66,0.48,08,Q1
+haircuts,best haircut for thin fine hair,3.0,1.2,1500,0.59,0.40,06,Q1
+haircuts,pixie cuts for thin hair,2.8,2.6,1500,0.48,0.39,03,Q1
+haircuts,bob for thin fine hair,2.5,1.9,200,0.70,0.47,07,Q1
+haircuts,short bob thin fine hair,2.5,1.4,300,0.71,0.52,03,Q1
+haircuts,lob for thin hair,2.2,1.6,100,0.79,0.40,09,Q1
+haircuts,layered bob for thin hair,1.5,0.4,2000,0.62,0.50,09,Q1
+haircuts,best bob haircuts for fine hair,1.5,2.5,-80,0.73,0.55,11,Q1
+haircuts,volume haircut for thin hair,17.2,25.0,-20,0.54,0.41,02,B7
+haircuts,haircut for more volume,4.8,5.7,-40,0.56,0.32,02,B7
+hairstyles,hairstyles for thinning hair,22.8,27.2,20,0.64,0.39,06,B2
+hairstyles,hair styles for thinning hair women,15.2,18.9,200,0.69,0.41,02,B2
+hairstyles,thinning hair hairstyles,12.2,19.2,-20,0.63,0.35,03,B2
+hairstyles,updos for fine thin hair,7.0,3.2,90,0.64,0.44,10,Q1
+hairstyles,up do for thin hair,5.5,3.2,-20,0.61,0.39,09,Q1
+hairstyles,very fine hair hairstyles,1.8,0.4,-40,0.64,0.46,10,Q1
+hairstyles,easy updos for thin hair,1.8,6.0,-80,0.65,0.40,05,Q1
+thinning,thinning hair,16.8,19.8,0,0.47,0.24,01,B2
+thinning,hair toppers for thinning hair,22.5,34.4,-20,0.48,0.39,11,B2
+thinning,hair thinning at crown,4.8,9.9,-70,0.46,0.34,11,B2
+over_50,short hair over 60,25.2,30.8,-50,0.41,0.36,06,B4
+over_50,fine thin hair over 50,16.2,10.7,2500,0.56,0.51,09,B4
+over_50,women's hairstyles over 50,12.2,3.6,2500,0.79,0.73,10,B4
+over_50,salt and pepper hair over 50,9.0,6.0,-5,0.69,0.61,09,B4
+over_50,grey hair over 50,5.0,3.2,200,0.55,0.49,09,B4
+over_50,hairstyles for thin hair over 50,4.8,5.9,-30,0.60,0.56,05,B4
+over_50,short hair for women over 50,4.2,3.4,70,0.75,0.69,10,B4
+over_50,edgy short hair for women over 50,4.0,3.1,200,0.71,0.65,03,B4
+over_50,hair over 50,3.8,3.9,-10,0.83,0.79,08,B4
+over_50,hair over 40 look younger,3.5,9.1,-70,0.92,0.51,01,B4
+over_50,long hair over 40,2.8,2.6,-30,0.93,0.47,09,B4
+over_50,hair over 60,1.5,2.1,20,0.56,0.51,02,B4
+dry_scalp,dry scalp treatment diy,32.0,42.2,-20,0.58,0.22,01,B6
+dry_scalp,dandruff removal,30.2,26.3,100,0.40,0.15,04,B6
+dry_scalp,itchy scalp,28.5,39.6,70,0.58,0.32,02,B6
+dry_scalp,dandruff,23.0,24.7,30,0.32,0.13,06,B6
+dry_scalp,how to get rid of dandruff,17.8,23.1,-10,0.33,0.14,02,B6
+dry_scalp,dry scalp,13.8,18.2,-10,0.42,0.16,02,B6
+head_spa,head spa,4.2,4.0,20,0.37,0.13,01,Q2
+head_spa,scalp massage,2.5,2.2,20,0.29,0.12,02,Q2
+head_spa,scalp scrub,1.5,2.4,-60,0.39,0.16,02,Q2
+head_spa,scalp care,1.0,1.6,80,0.32,0.13,02,Q2
+head_spa,head spa aesthetic,1.0,1.2,-30,0.31,0.12,01,Q2
+head_spa,scalp massage techniques,0.8,0.7,60,0.41,0.15,01,Q2
+head_spa,clean scalp build up,0.0,0.0,200,0.64,0.28,02,Q2
+ingredients,peptides,34.5,41.8,100,0.43,0.18,06,Q3
+ingredients,peptides for women,7.2,10.4,400,0.71,0.32,04,Q3
+ingredients,hair oil,14.8,15.3,10,0.25,0.12,11,Q3
+ingredients,rice water for hair growth,14.5,16.4,-30,0.40,0.17,02,Q3
+ingredients,rosemary water for hair,8.5,5.0,400,0.44,0.21,09,Q3
+ingredients,rosemary hair growth,6.2,6.8,200,0.47,0.22,02,Q3
+ingredients,rosemary oil,6.5,10.0,-50,0.39,0.20,01,Q3
+routine,hair care routine,14.0,16.7,5,0.25,0.12,01,Q3
+routine,hair growth tips,34.5,38.8,-20,0.26,0.12,01,Q3
+routine,hair growth recipes,8.2,5.7,800,0.48,0.22,07,Q3
+routine,hair growth routine,5.8,3.1,600,0.25,0.12,09,Q3
+postpartum,postpartum haircut,52.2,63.6,1,0.35,0.12,03,B3
+postpartum,postpartum hairstyles,40.0,37.5,30,0.32,0.12,03,B3
+glp1,glp1 meal ideas,34.8,18.6,10001,,,08,Q5
+glp1,glp-1 recipes easy,27.0,5.0,10001,,,10,Q5
+glp1,glp1 meal plan,18.2,36.0,-30,,,02,Q5
+glp1,ozempic hair loss / glp-1 hair,,,,,,,"Q5: no hair terms among GLP-1 searches"

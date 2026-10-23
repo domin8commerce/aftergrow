@@ -25,6 +25,13 @@ LIVE_PAGES = {HIW, GUIDE, ING_P, CHK_P, PDP} | {J + p for p in (
     "natural-scalp-serum", "scalp-serum-or-hair-supplement", "scalp-serum-for-dry-scalp",
     "what-to-look-for-in-a-scalp-serum", "how-to-use-a-scalp-serum")}
 
+# Pins kept out of the schedule until George decides. They stay validated and ready to release:
+# delete a line here and the pin goes back to "ready" on the next build. (2026-10-23)
+_PP = ("Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer "
+       "(research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board.")
+_RS = "Its board is part of the proposed board restructure (RUNBOOK). Held until George says yes or no."
+HOLD = {"B01": _PP, "B02": _PP, "B04": _PP, "B07": _PP, "G02": _RS, "G03": _RS, "F01": _RS, "F05": _RS}
+
 # id, slug, board, title, description, link, alt
 W1 = [
  ("A01", "why-hair-sheds-3-months-later", HW, "Why hair sheds 3 months after a big change: the timeline explained",
@@ -286,6 +293,8 @@ def build(repo):
             for k in ("status", "post_id", "send_at_utc", "role", "pinterest_pin_id"):
                 if k in prev: row[k] = prev[k]
         if prev.get("history"): row["history"] = prev["history"]
+        if pid in HOLD and row["status"] == "ready":
+            row.update(status="held", hold_reason=HOLD[pid])
         q.append(row)
     return q, probs
 
@@ -295,7 +304,9 @@ if __name__ == "__main__":
     q, probs = build(repo)
     print("problems:", probs or "none")
     ready = [r for r in q if r["status"] == "ready"]
-    print(f"{len(q)} pins: {len(q) - len(ready)} scheduled or posted, {len(ready)} ready. Ready, in order, 3 a day:")
+    held = [r for r in q if r["status"] == "held"]
+    print(f"{len(q)} pins: {len(q) - len(ready) - len(held)} scheduled or posted, {len(held)} held, "
+          f"{len(ready)} ready. Ready, in order, 3 a day:")
     for i in range(0, len(ready), 3):
         print(f"  day {i // 3 + 1:>2}: " + " | ".join(f"{r['id']} {r['board'][:18]:<18}" for r in ready[i:i + 3]))
     if probs:

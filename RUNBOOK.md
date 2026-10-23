@@ -128,21 +128,24 @@ Pinterest denied the appeal about 4 hours after George filed it. The reply was a
 
 ### Trend layer (first run of each month)
 
-- **Check for new reports.** Look at Pinterest's newsroom for new trend reports and Pinterest Predicts. Add up to 4 explore pins for rising terms that fit our boards and our fact sheet.
-- **Current openings.** Pinterest's Beauty Trend Report, published Oct 6, 2026, lists these increases. Pinterest doesn't state the market or the comparison period.
-  - "rosemary water for hair" +269%
-  - "aloe vera for hair mask" +80%
-  - "coconut oil for hair benefits" +42%
-  - "scalp treatment aesthetic" +38%
-  - "scalp scrub recipe" +31%
-  - "scalp detox" +21%
-- **Rosemary.** It's in our formula, so the rosemary cluster is the biggest open trend we can honestly own. It needs a Journal article first (see Backlog).
+- **Pull Pinterest's own search data, not press releases.** Load the Composio tools (ToolSearch "composio", then COMPOSIO_SEARCH_TOOLS for "pinterest keyword trends"). Run `PINTEREST_GET_KEYWORD_TRENDS` with the parameters in `research/README.md` (US, female, ages 35-44 to 55-64, normalized, demographics on). Run it twice for the board clusters below, once with `trend_type: monthly` and once with `growing`. Save the rows as `research/pinterest-trends-YYYY-MM-DD.csv` and compare them with the last file.
+- **Explore pins.** Make up to 4 a month for rising terms. A term qualifies when it's up year over year or month over month, at least 45% of its searchers are 35 to 64, and it fits a board, a live page and the fact sheet.
+- **If Composio isn't available in the run,** say so in line 4 of the report and use Pinterest's newsroom trend reports instead.
+- **Openings in the Oct 23, 2026 data:**
+  - "fine thin hair over 50" +2,500%
+  - "haircuts for thinning hair" +100%
+  - "rosemary water for hair" +400%
+  - "itchy scalp" +70%
+  - "head spa" +20%
+  - "peptides for women" +400%. Most of these searches are about injectable peptides; only ingredient education fits us.
+- **Rosemary.** It's in our formula, so the rosemary cluster is a trend we can honestly own. The scalp-serum-or-scalp-oil page allows no claims about what rosemary does for hair. A full cluster needs a dedicated Journal article (see Backlog).
 - **Banned words.** The brand book bans "treatment" and "detox". Only George can change that.
-- **Seasonal.** Publish 45 to 60 days before the moment, per Tailwind's guidance:
+- **Seasonal.** Publish 45 to 60 days before each peak. Peaks are taken from the Oct 23 data:
+  - Dry and itchy scalp peaks January to February: publish from now through February.
+  - "Hairstyles for thin hair" peaks in November: publish now.
+  - "Head spa" and "scalp massage" peak in January: publish from mid-November.
   - New Year hair routine: from mid-November.
-  - Postpartum push before Mother's Day: from mid-March.
-  - Back-to-routine September: from mid-July.
-- The pack claims postpartum searches peak in January and scalp care rises in late summer. **That isn't verified.** Test it against our own data before acting on it.
+  - Postpartum searches peak in March, but they come from 25 to 34 year olds (see Boards).
 
 ### Pace and credits
 
@@ -160,7 +163,18 @@ The Tailwind plan gives 300 credits a month. One credit is one pin to one board.
 
 ### Landing pages are the fuel
 
-Every pin needs a page that answers it. There are 21 live pages: 5 site pages and 16 Journal articles, all checked on Oct 11, 2026. The first 34 pins use only 7 of them, and `queue_build.py` caps each page at 8 pins. **The next pins come from the Journal page map below.** Each new Journal article opens a new keyword cluster and 5 to 10 more pins. When the map runs low, ask George for the next article from the Backlog in line 4 of the report.
+Every pin needs a page that answers it.
+
+**Since Oct 12, ten more Journal articles have gone up.** They aren't in `LIVE_PAGES` yet. Read each one with WebFetch, confirm it loads with real content that answers the pin, then add it with the date. Never add `hair-shedding-timeline-and-care` (weight-loss surgery). The new articles, by the board they serve:
+- Thinning hair: `is-my-hair-thinning`
+- Dry scalp care: `can-dry-scalp-cause-hair-loss`
+- Head spa at home: `how-to-clean-your-scalp` and `why-is-my-hair-greasy`
+- Fine thin hair over 50: `simple-hair-care-routine` and `color-treated-hair-care`
+- Hair care ingredients: `vitamins-in-hair-serums`, `hyaluronic-acid-hair-serum` and `homemade-hair-serum`
+
+**The highest-demand topics still have no page:** best haircuts for thin hair, hairstyles for thinning hair, and fine thin hair over 50. Ask George for those three articles first (line 4).
+
+As of Oct 11, 2026 there were 21 live pages: 5 site pages and 16 Journal articles. The first 34 pins use only 7 of them, and `queue_build.py` caps each page at 8 pins. **The next pins come from the Journal page map below.** Each new Journal article opens a new keyword cluster and 5 to 10 more pins. When the map runs low, ask George for the next article from the Backlog in line 4 of the report.
 
 ## Journal page map (what to make next)
 
@@ -287,7 +301,38 @@ Each page below loads with real, sourced content. The facts listed for a page ar
   - "The difference is where it goes": a hair serum for the lengths and ends, a scalp serum for the skin of the scalp.
   - Use the scalp serum first, then the hair serum on the lengths.
 
-## Boards and the evidence behind them (checked Oct 11, 2026)
+## Boards and the evidence behind them
+
+### Pinterest's own search data (Oct 23, 2026)
+
+Since Oct 23 we have real numbers: Pinterest Trends, for US women aged 35 to 64, pulled through Composio. They're saved in `research/pinterest-trends-2026-10-23.csv`, and `research/README.md` explains them. They overturn most of the Oct 11 board evidence below.
+
+- **Where the demand is.** By far the biggest demand is **haircuts and hairstyles for thin, fine or thinning hair**. "Hairstyles for thin hair" and "thin hair haircuts" lead the cross-cluster benchmark. The "thinning hair" phrases skew to our buyer: 59 to 72% of their searchers are 35 to 64. "Haircuts for thinning hair" is up 100% year over year.
+- **"Fine thin hair over 50"** is up 2,500% year over year, with 51% of searchers aged 45 to 64. "Hair over 50" draws 83% of its searchers from ages 35 to 64.
+- **Dry and itchy scalp** draws 58% of its searchers from ages 35 to 64 and peaks January to February. **Head spa** and **scalp massage** are growing.
+- **No measurable demand:** hair shedding, telogen effluvium, scalp serum, peptides for hair, menopause hair. "Hair loss" is suppressed (no data at all).
+- **Postpartum hair** searchers are 67 to 70% aged 25 to 34, outside our buyer. GLP-1 searches on Pinterest are meals and recipes, not hair.
+
+### Proposed restructure (waiting for George's yes; the boards are empty, so renaming costs nothing)
+
+| Board now | Proposed name | Why |
+|---|---|---|
+| Hair progress photos | Hairstyles for thin hair | The biggest phrase in our space; peaks in November |
+| Postpartum hair care | Haircuts for thin hair | Second biggest phrase; "haircuts for thinning hair" +100%, up to 72% of searchers aged 35 to 64 |
+| Hair care tips for women over 40 | Fine thin hair over 50 | +2,500% year over year; 51% of searchers aged 45 to 64 |
+| Hair shedding explained | Thinning hair | "Thinning hair" has demand and skews older; "hair shedding" shows none |
+| Healthy hair habits | Dry scalp care | 58% of searchers aged 35 to 64; the season peaks January to February |
+| Scalp care routine | Head spa at home | "Head spa" +20%, "scalp massage" +20%; the routine pins fit |
+| Hair care ingredients | (keep) | Holds rosemary water (+400%) and peptides (+400% for women) |
+| Aftergrow Scalp Serum | (keep) | Brand and product |
+
+Until George says yes, the board names stay as they are. Pins whose board would change meaning are on `HOLD` in `engine/queue_build.py` (the postpartum pins, the progress-photo pins and the habits pins). After a yes:
+- Rename the boards with `update_board`, including the descriptions.
+- Update `boards.json` and the board constants in `queue_build.py`.
+- Move F01 and G02 to Thinning hair, F05 to Hairstyles for thin hair, and G03 to Aftergrow Scalp Serum, then release them from `HOLD`.
+- Keep the postpartum pins held.
+
+### Evidence as of Oct 11, 2026 (kept for the record)
 
 Tailwind returns a search volume of 0 for all 32 of our saved keywords, so no tool here gives real volume numbers. The evidence below combines four sources:
 - Pinterest's own trend report
@@ -330,8 +375,19 @@ Tailwind returns a search volume of 0 for all 32 of our saved keywords, so no to
 | H01, C08 | A real product photo (never an invented label) |
 | C05 | George's call on the word "detox" (banned in the brand book, rising on Pinterest) |
 
+## Catalog pins (the Pinterest app for Shopify)
+
+The Pinterest app for Shopify publishes product pins on its own, from the product's images, to the board "Products". On Oct 22, 2026 it published 6, one per image on the product page. Four of them break this file's quality gate:
+- a "Month 0 / Month 3" hairline before-and-after
+- "Clinically Tested" with 90/87/82% figures from a 31-person self-assessment
+- "Fuller, thicker, denser-looking hair in as little as 6 weeks"
+- a review quoting a "receding hairline", "hair coming back in thicker" and "holy grail"
+
+These are the same claims flagged on Oct 11 as the likely cause of the spam block. Never delete or edit them without George's yes. Flag them in line 4 until George decides. The fix is on his side: remove those images from the product, or limit what the app publishes.
+
 ## Never
 
+- Never link a pin to a page about weight loss or weight-loss surgery (for example `/blogs/journal/hair-shedding-timeline-and-care`), even if the page is otherwise live. Pinterest bans weight-loss content in ads and treats it strictly in organic.
 - Never route around a Pinterest block: no other domains, redirects or link shorteners, and don't post the link through other apps.
 - Never schedule more than one canary at a time, and never outside `AP next-canary`.
 - Never save one image to many boards on the same day.

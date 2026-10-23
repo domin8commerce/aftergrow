@@ -56,5 +56,13 @@
   "at": "2026-10-11T22:27:02Z",
   "action": "appeal denied",
   "day": "2026-10-11"
+ },
+ {
+  "at": "2026-10-23T11:34:27Z",
+  "id": "C01",
+  "action": "scheduled",
+  "post_id": "6adb463dfh7_j8IMhdLvV",
+  "send_at_utc": "2026-10-23T11:44:00Z",
+  "role": "canary"
  }
 ]

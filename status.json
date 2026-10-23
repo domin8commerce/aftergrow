@@ -12,7 +12,8 @@
  "last_success_at": null,
  "notes": [
   "2026-10-11: A01 failed blocked_spam at 17:35 UTC. The other 33 queued posts were deleted before they could fail, except B04, kept as the canary (Tue Oct 13, 6:09 PM ET). Deleting a queued post does not refund its Tailwind credit.",
-  "2026-10-11: Pinterest denied the appeal about 4 hours after filing (automated). The B04 canary was deleted. The autopilot is paused; one check-in runs Nov 9, 2026 (see RUNBOOK 'Paused after a denied appeal')."
+  "2026-10-11: Pinterest denied the appeal about 4 hours after filing (automated). The B04 canary was deleted. The autopilot is paused; one check-in runs Nov 9, 2026 (see RUNBOOK 'Paused after a denied appeal').",
+  "2026-10-23: New evidence. Pinterest's Shopify catalog sync published 6 product pins linking to getaftergrow.com/products/scalp-serum on 2026-10-22 23:14 UTC (Tailwind list_pins, board 'Products'). George asked to relaunch Pinterest, so the Nov 9 pause is lifted early for ONE canary to test whether the domain block is gone."
  ],
  "autopilot": {
   "task": "Aftergrow Pinterest autopilot",
@@ -33,9 +34,16 @@
    "post_id": "6acbc870tmoc66O25EVA6",
    "send_at_utc": "2026-10-13T22:09:00Z",
    "result": "deleted"
+  },
+  {
+   "id": "C01",
+   "page": "/products/scalp-serum",
+   "post_id": "6adb463dfh7_j8IMhdLvV",
+   "send_at_utc": "2026-10-23T11:44:00Z",
+   "result": "pending"
   }
  ],
- "retest_after": "2026-11-09T13:47:00Z",
+ "retest_after": null,
  "reappeal_text": "Thank you for reviewing. Please escalate getaftergrow.com to a human reviewer. Aftergrow is the new direct-to-consumer brand of a company that has been in business for 10 years. The domain is new because our online store launched on September 30, 2026. The site is a real store with 16 original articles on hair and scalp care that cite the American Academy of Dermatology, the FDA and Cleveland Clinic. It has no redirects, no affiliate links and no pop-ups, and the domain is claimed on this business account through the Pinterest app for Shopify. We have not published a single Pin yet. We're happy to provide any verification you need.",
  "reappeal_checklist": [
   "George's call: the homepage line '4.6 / 5 - 3,927 formula reviews' on a store launched Sept 30, 2026. A brand-new store showing thousands of reviews reads as untrustworthy, the word Pinterest's spam rules use.",
