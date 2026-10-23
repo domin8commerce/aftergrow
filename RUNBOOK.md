@@ -373,7 +373,14 @@ Since Oct 23 we have real numbers: Pinterest Trends, for US women aged 35 to 64,
 
 - The four postpartum pins (B01, B02, B04, B07) stay on `HOLD`. Their old board is now "Haircuts for thin hair", so postpartum would need a new board first, and that's George's call.
 - F01 and G02 moved to Thinning hair, F05 to Hairstyles for thin hair, and G03 to Aftergrow Scalp Serum.
-- **Demand gap.** The three biggest boards (haircuts, hairstyles, fine thin hair over 50) have one landing page between them, `make-hair-look-thicker`, which is capped at 8 pins. Line 4 asks George for three articles until they exist: best haircuts for thin hair, hairstyles for thinning hair, and fine thin hair over 50.
+- **Demand gap.** The three biggest boards (haircuts, hairstyles, fine thin hair over 50) have one landing page between them, `make-hair-look-thicker`, which is capped at 8 pins.
+  - Three articles were drafted on Oct 23, 2026 and sent to George's site chat for publishing (prompt in the Project at `claude/journal/pinterest-landing-articles-prompt.md`): `best-haircuts-for-thin-hair`, `hairstyles-for-thinning-hair` and `fine-thin-hair-over-50`.
+  - **Every run, check Shopify for those three handles** (`graphql_query`: `articles(first: 3, query: "handle:best-haircuts-for-thin-hair OR handle:hairstyles-for-thinning-hair OR handle:fine-thin-hair-over-50") { nodes { handle publishedAt body } }`).
+  - When one is published, verify it the usual way, add it to `LIVE_PAGES` and to the page map with the sourced facts on the page, then make its pins first, up to 8 per page:
+    - `best-haircuts-for-thin-hair` feeds Haircuts for thin hair.
+    - `hairstyles-for-thinning-hair` feeds Hairstyles for thin hair, including toppers, fibers and wigs, for the "hair toppers for thinning hair" searches.
+    - `fine-thin-hair-over-50` feeds Fine thin hair over 50.
+  - Until all three are live, line 4 reminds George once a week (Mondays only).
 
 ### Evidence as of Oct 11, 2026 (kept for the record)
 
