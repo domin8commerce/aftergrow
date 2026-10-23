@@ -1,19 +1,20 @@
 {
- "mode": "blocked",
- "since": "2026-10-11T17:35:00Z",
+ "mode": "live",
+ "since": null,
  "why": "Pinterest rejects links to getaftergrow.com as spam (Tailwind failureReason blocked_spam: 'Pinterest blocked this link because it may lead to spam or inappropriate content'). The domain was registered 2026-09-30, and the block hit on the very first pin, the same pattern other brand-new claimed domains reported in Sept-Oct 2026.",
  "appeal": {
   "form": "https://help.pinterest.com/contact?creators=site_blocked&origin=pbc&site_blocked_issue=siteblocked_clickthrough_spam&current_page=about_you_page&origin=pbc#no-back",
   "who": "George (needs his Pinterest login). Claude cannot file it.",
   "filed_on": "2026-10-11",
-  "result": "denied 2026-10-11 (automated reply from pinbot@legal.pinterest.com about 4 hours after filing)"
+  "result": "denied 2026-10-11 (automated reply from pinbot@legal.pinterest.com about 4 hours after filing); block lifted by 2026-10-23 (canary C01 published 11:44 UTC, pin 1108448527071997960)"
  },
  "canary_rule": "While blocked: at most ONE canary queued at a time and at most 2 canary attempts in any 7 days (an attempt = a canary whose publish time passed; a deleted or missed canary does not count). The next canary is chosen by engine/autopilot.py next-canary: a ready pin that was never blocked, on a page not yet tried in this block. If George reports the appeal approved, test at once. When a canary publishes, mode becomes live.",
- "last_success_at": null,
+ "last_success_at": "2026-10-23T11:44:00Z",
  "notes": [
   "2026-10-11: A01 failed blocked_spam at 17:35 UTC. The other 33 queued posts were deleted before they could fail, except B04, kept as the canary (Tue Oct 13, 6:09 PM ET). Deleting a queued post does not refund its Tailwind credit.",
   "2026-10-11: Pinterest denied the appeal about 4 hours after filing (automated). The B04 canary was deleted. The autopilot is paused; one check-in runs Nov 9, 2026 (see RUNBOOK 'Paused after a denied appeal').",
-  "2026-10-23: New evidence. Pinterest's Shopify catalog sync published 6 product pins linking to getaftergrow.com/products/scalp-serum on 2026-10-22 23:14 UTC (Tailwind list_pins, board 'Products'). George asked to relaunch Pinterest, so the Nov 9 pause is lifted early for ONE canary to test whether the domain block is gone."
+  "2026-10-23: New evidence. Pinterest's Shopify catalog sync published 6 product pins linking to getaftergrow.com/products/scalp-serum on 2026-10-22 23:14 UTC (Tailwind list_pins, board 'Products'). George asked to relaunch Pinterest, so the Nov 9 pause is lifted early for ONE canary to test whether the domain block is gone.",
+  "2026-10-23: Canary C01 published (Tailwind sent at 11:44:56 UTC, link intact). Mode is live with 14 days of probation."
  ],
  "autopilot": {
   "task": "Aftergrow Pinterest autopilot",
@@ -40,7 +41,7 @@
    "page": "/products/scalp-serum",
    "post_id": "6adb463dfh7_j8IMhdLvV",
    "send_at_utc": "2026-10-23T11:44:00Z",
-   "result": "pending"
+   "result": "sent"
   }
  ],
  "retest_after": null,
@@ -52,5 +53,6 @@
   "Already fine: 16 original sourced Journal articles, returns page, contact email, privacy and terms pages, no redirects, no pop-ups.",
   "After the cleanup: send ONE Help Center message asking for a human review (reappeal_text). Not a new appeal.",
   "If still blocked on Nov 9: re-appeal once with reappeal_text, and cancel Tailwind before it renews on Nov 10 unless Pinterest has said yes."
- ]
+ ],
+ "live_since": "2026-10-23T11:44:00Z"
 }
