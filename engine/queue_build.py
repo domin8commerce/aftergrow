@@ -11,10 +11,18 @@ U = "https://getaftergrow.com"
 def L(path, camp, pid):
     return f"{U}{path}?utm_source=pinterest&utm_medium=social&utm_campaign={camp}&utm_content={pid}"
 
-# Board names must match boards.json exactly.
-HW, HC, SC, O40, HAB, CHK, PRD, PP = ("Hair shedding explained", "Hair care ingredients", "Scalp care routine",
-    "Hair care tips for women over 40", "Healthy hair habits", "Hair progress photos", "Aftergrow Scalp Serum",
-    "Postpartum hair care")
+# Board names must match boards.json exactly. Restructured on 2026-10-23 from Pinterest Trends data
+# (research/pinterest-trends-2026-10-23.csv); the short names are kept so older batch files still import.
+#   HW  Thinning hair            (was Hair shedding explained)
+#   SC  Head spa at home         (was Scalp care routine)
+#   O40 Fine thin hair over 50   (was Hair care tips for women over 40)
+#   HAB Dry scalp care           (was Healthy hair habits)
+#   CHK Hairstyles for thin hair (was Hair progress photos)
+#   PP  Haircuts for thin hair   (was Postpartum hair care; the postpartum pins stay on HOLD and must never go here)
+HW, HC, SC, O40, HAB, CHK, PRD, PP = ("Thinning hair", "Hair care ingredients", "Head spa at home",
+    "Fine thin hair over 50", "Dry scalp care", "Hairstyles for thin hair", "Aftergrow Scalp Serum",
+    "Haircuts for thin hair")
+THIN, SPA, O50, DRY, STYLE, CUTS = HW, SC, O40, HAB, CHK, PP
 HIW, GUIDE, ING_P, CHK_P, PDP = "/pages/how-it-works", "/pages/month-three-guide", "/pages/ingredients", "/pages/the-check-in", "/products/scalp-serum"
 # Pages verified live (real content) on 2026-10-11. A pin may only link to a page on this list.
 J = "/blogs/journal/"
@@ -23,14 +31,15 @@ LIVE_PAGES = {HIW, GUIDE, ING_P, CHK_P, PDP} | {J + p for p in (
     "why-is-my-hair-falling-out", "breakage-or-shedding", "make-hair-look-thicker", "why-is-my-hair-so-dry",
     "oily-scalp-dry-hair", "types-of-scalp-treatments", "scalp-serum-or-scalp-oil", "fragrance-free-hair-routine",
     "natural-scalp-serum", "scalp-serum-or-hair-supplement", "scalp-serum-for-dry-scalp",
-    "what-to-look-for-in-a-scalp-serum", "how-to-use-a-scalp-serum")}
+    "what-to-look-for-in-a-scalp-serum", "how-to-use-a-scalp-serum",
+    "can-dry-scalp-cause-hair-loss")}  # last one verified 2026-10-23 through the Shopify connector
 
 # Pins kept out of the schedule until George decides. They stay validated and ready to release:
 # delete a line here and the pin goes back to "ready" on the next build. (2026-10-23)
 _PP = ("Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer "
        "(research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board.")
-_RS = "Its board is part of the proposed board restructure (RUNBOOK). Held until George says yes or no."
-HOLD = {"B01": _PP, "B02": _PP, "B04": _PP, "B07": _PP, "G02": _RS, "G03": _RS, "F01": _RS, "F05": _RS}
+# The board they used to sit on is now "Haircuts for thin hair": postpartum would need a new board first.
+HOLD = {"B01": _PP, "B02": _PP, "B04": _PP, "B07": _PP}
 
 # id, slug, board, title, description, link, alt
 W1 = [
@@ -40,7 +49,7 @@ W1 = [
  ("E02", "peptides-explained-simply", HC, "Peptides in scalp care, explained simply",
   "What are peptides in scalp care? Short chains of amino acids, used in skincare for years and now in scalp serums to condition the scalp and support the look of thicker hair. Plus how they appear on a label.",
   L(ING_P, "ingredients", "E02"), "Infographic explaining peptides as short chains of amino acids that condition the scalp, with example label names sh-Polypeptide and sh-Oligopeptide."),
- ("G02", "how-to-photograph-your-part", CHK, "How to photograph your part: 4 rules for a fair comparison",
+ ("G02", "how-to-photograph-your-part", THIN, "How to photograph your part: 4 rules for a fair comparison",
   "How to photograph your part so you can compare fairly: same place, same part, same angle, same settings. Four rules that turn three photos into real evidence over 90 days.",
   L(CHK_P, "check-in", "G02"), "Illustration of a phone photographing a hair part from above, with four rules for consistent part photos and a week 0, 6 and 12 timeline."),
  ("A03", "shedding-when-to-see-a-dermatologist", HW, "Normal shedding vs. see a dermatologist: a simple checklist",
@@ -61,7 +70,7 @@ W1 = [
  ("C01", "2-minute-scalp-care-routine", SC, "A 2-minute scalp care routine: part, drop, massage",
   "A two-minute scalp care routine you can keep: part dry hair, add a few drops of a lightweight scalp serum along the part, massage and leave it in. Once a day, no rinsing.",
   L(PDP, "scalp-care", "C01"), "Three-step scalp care routine: part clean dry hair, add a few drops along the part, massage for 1 to 2 minutes."),
- ("F01", "brush-shedding-hair-without-breakage", HAB, "How to brush shedding hair without breakage",
+ ("F01", "brush-shedding-hair-without-breakage", THIN, "How to brush shedding hair without breakage",
   "How to brush shedding hair without adding breakage: start at the ends and work up, use a wide-tooth comb on wet hair and soft bristles on dry hair. Four small habits that protect the hair you have.",
   L(GUIDE, "habits", "F01"), "Diagram of a hair strand showing brushing from the ends up to the roots, with four gentle brushing tips."),
 ]
@@ -127,10 +136,10 @@ B2 = [
  ("E07", "free-from-list-explained", HC, "What is not in it: the free-from list, explained",
   "What does free-from actually mean on a scalp serum? Parabens, sulfates, silicones, phthalates, mineral oil and added fragrance, each explained in one line, so you know what you are avoiding.",
   L(ING_P, "ingredients", "E07"), "Grid explaining six free-from claims: parabens, sulfates, silicones, phthalates, mineral oil and added fragrance."),
- ("F05", "heat-styling-during-a-shed", HAB, "Heat styling during a shed: gentler settings that still work",
+ ("F05", "heat-styling-during-a-shed", STYLE, "Heat styling during a shed: gentler settings that still work",
   "Heat styling during a hair shed: medium heat, fewer passes, heat protectant every time and air-drying most of the way first. Gentler settings that protect fine hair and still get the look. Get the free guide.",
   L(GUIDE, "habits", "F05"), "List of four gentler heat styling tips for fine or shedding hair."),
- ("G03", "three-photo-method-week-0-6-12", CHK, "Week 0, week 6, week 12: the three-photo method for tracking hair",
+ ("G03", "three-photo-method-week-0-6-12", PRD, "Week 0, week 6, week 12: the three-photo method for tracking hair",
   "The three-photo method: week 0 before you start, week 6 as a midpoint and week 12 to compare and decide. Hair changes slowly, so photos taken the same way are the fair judge.",
   L(CHK_P, "check-in", "G03"), "Timeline with three points labeled week 0, week 6 and week 12 for tracking hair with photos."),
  ("H02", "whats-inside-aftergrow-scalp-serum", PRD, "What is inside Aftergrow: five peptides, six plant extracts, no added fragrance",

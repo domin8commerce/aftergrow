@@ -21,7 +21,7 @@ ET = ZoneInfo("America/New_York")
 PACE = 3                    # pins a day while the account is young (RUNBOOK: Pace and credits)
 CANARY_BUDGET = 2           # blocked mode: at most 2 canary attempts in any 7 days
 PROBATION_DAYS = 14         # after a block lifts, keep only a short queue for 14 days
-RUN_DAYS = (0, 3)           # the scheduled task runs Monday and Thursday, 8:47 AM Eastern
+RUN_DAYS = (0, 3)           # the scheduled task runs Monday and Thursday, 9:43 AM Eastern (after the Meta run)
 SPAM = re.compile(r"spam|blocked", re.I)
 
 
@@ -92,7 +92,7 @@ class Repo:
         t = now().astimezone(ET)
         for d in range(0, 8):
             day = (t + dt.timedelta(days=d)).date()
-            run = dt.datetime(day.year, day.month, day.day, 8, 47, tzinfo=ET)
+            run = dt.datetime(day.year, day.month, day.day, 9, 43, tzinfo=ET)
             if day.weekday() in RUN_DAYS and run > t:
                 return run.astimezone(dt.timezone.utc)
 
