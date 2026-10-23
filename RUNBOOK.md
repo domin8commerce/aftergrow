@@ -206,6 +206,44 @@ Never put "hair loss" in a title or on an image (descriptions only). Never say "
 
 `hair-serum-or-scalp-serum` (C04) and `how-to-read-a-scalp-serum-label` (E05) already have one pin each and take more angles from the Fact sheet.
 
+## Hooks that get saved and shared (George, Oct 23: "holy shit, I didn't know that about hair")
+
+Every run, at least 3 of the new pins come from this bank. Each headline is a true, sourced fact that surprises, and the pin pays it off. That makes people save it and send it to a friend. Never exaggerate, never scare, and never claim beyond the source.
+
+| Hook (headline idea) | Source | Page | Board |
+|---|---|---|---|
+| 100 brush strokes a day is a myth | AAD | `breakage-or-shedding` | Thinning hair |
+| Dry shampoo doesn't clean your hair | AAD | `oily-scalp-dry-hair` | Head spa at home |
+| "Hypoallergenic" has no legal definition | FDA | `what-to-look-for-in-a-scalp-serum` | Hair care ingredients |
+| Taking biotin? It can throw off your blood tests | FDA | `scalp-serum-or-hair-supplement` | Hair care ingredients |
+| "Natural" on a hair label has no rule behind it | FDA | `natural-scalp-serum` | Hair care ingredients |
+| Hair color can make thin hair look thicker | Cleveland Clinic | `make-hair-look-thicker` | Fine thin hair over 50 |
+| A widening part is a reason to see a dermatologist, not to switch shampoo | AAD | `make-hair-look-thicker` | Thinning hair |
+| Your ponytail could be thinning your hair (tight styles pull on fragile hair) | AAD | `make-hair-look-thicker` | Hairstyles for thin hair |
+| A shorter cut or layers can make thin hair look fuller | Cleveland Clinic | `make-hair-look-thicker` | Haircuts for thin hair |
+| Scratching an itchy scalp can loosen hair | AAD | `can-dry-scalp-cause-hair-loss` | Dry scalp care |
+| Blow-drying can dry your scalp even more | AAD | `can-dry-scalp-cause-hair-loss` | Dry scalp care |
+| For 1 in 3 people with telogen effluvium, no cause is found | BAD | `hair-shedding-vs-hair-loss` | Thinning hair |
+| Conditioner on your scalp can make it greasy | Cleveland Clinic | `oily-scalp-dry-hair` | Head spa at home |
+| Ingredients under 1% can be listed in any order | FDA | `how-to-read-a-scalp-serum-label` | Hair care ingredients |
+| A hair growth claim makes a cosmetic a drug, legally | FDA | `make-hair-look-thicker` | Hair care ingredients |
+| Fragrance-free isn't irritation-free | FDA | `fragrance-free-hair-routine` | Hair care ingredients |
+| Wet hair breaks more easily: let it dry a bit before you comb | AAD | Fact sheet | Thinning hair |
+
+**Formats that carry a hook:**
+- myth vs fact (`contrast` or `split`)
+- crossed-out habit and its swap (`swap`)
+- one big number (`bignum`)
+- label callouts (`label`)
+
+**Titles.** Put the board's search phrase, or the hook containing it, in the first 40 characters. Check phrases against `research/`. Examples:
+- "Thinning hair or normal shedding? Losing 100 hairs a day is normal"
+- "Fine thin hair over 40 or 50? Stop these 5 habits"
+
+## Promotion (Pinterest ads) readiness
+
+Pinterest ads ban weight-loss content, and ad review checks the landing page. `/pages/how-it-works` says "such as fast weight loss", so pins linking there are not for promotion until George changes that line. Every other live page is fine to promote. Flag it in line 4 when a winner links to how-it-works.
+
 ## Make
 
 - **New designs** go in a new file `engine/batchN.py` (N = 3, 4, ...). Copy the header and the `__main__` block of `engine/batch2.py`, and `import batch2` so all 25 layouts are available.
