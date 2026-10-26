@@ -221,7 +221,10 @@ def validate(rows, board_names, pins_dir=None, designs=()):
 
 
 # Strongest hooks first: search demand evidence, then how saveable the format is, then brand fit.
-PRIORITY = ["A01", "C01", "B01", "A02", "E01", "D04", "A04", "B04", "E02", "A03", "C04", "F01",
+PRIORITY = ["A01", "C01", "B01", "A02", "E01", "D04", "A04", "B04", "E02", "A03", "C04",
+            # batch 3 (2026-10-26): the high-demand boards and dry-scalp season go first
+            "I01", "I03", "J01", "I05", "I02", "J03", "I04", "I06", "J02", "J04",
+            "F01",
             "A08", "G02", "E06", "D01", "H02", "A05", "B02", "C03", "E05", "A06", "F05", "D05",
             "E03", "A07", "G03", "C07", "E04", "B07", "A10", "H03", "D06", "E07"]
 
