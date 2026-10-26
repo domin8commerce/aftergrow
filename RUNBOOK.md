@@ -4,7 +4,7 @@ This repository runs Aftergrow's Pinterest without manual work. A Claude schedul
 
 Pinterest account: **getaftergrow**. Tailwind account ID: **1658425**. Use no other account.
 
-**Status, Oct 23, 2026:** Pinterest is **live**. The Oct 11 block has lifted: canary C01 published on Oct 23 with its link intact, after Pinterest's Shopify catalog sync published 6 product pins on Oct 22. Probation runs to Nov 6 (`autopilot.py` keeps the queue short). The Tailwind plan was cancelled by George and ends Nov 11, 2026 unless he reactivates it: put that in line 4 until it's resolved. Instagram and Facebook still run from **META.md**, which uses this file's **Fact sheet** and **Journal page map**, so keep them current.
+**Status, Oct 23, 2026:** Pinterest is **live**. The Oct 11 block has lifted: canary C01 published on Oct 23 with its link intact, after Pinterest's Shopify catalog sync published 6 product pins on Oct 22. Probation runs to Nov 6 (`autopilot.py` keeps the queue short). The Tailwind plan is active again: on Oct 26, 2026 `list_subscriptions` showed no pending cancellation (it had been cancelled to end Nov 11). If a cancellation shows again, put it in line 4. Instagram and Facebook still run from **META.md**, which uses this file's **Fact sheet** and **Journal page map**, so keep them current.
 
 ## What is here
 
