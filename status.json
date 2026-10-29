@@ -9,7 +9,7 @@
   "result": "denied 2026-10-11 (automated reply from pinbot@legal.pinterest.com about 4 hours after filing); block lifted by 2026-10-23 (canary C01 published 11:44 UTC, pin 1108448527071997960)"
  },
  "canary_rule": "While blocked: at most ONE canary queued at a time and at most 2 canary attempts in any 7 days (an attempt = a canary whose publish time passed; a deleted or missed canary does not count). The next canary is chosen by engine/autopilot.py next-canary: a ready pin that was never blocked, on a page not yet tried in this block. If George reports the appeal approved, test at once. When a canary publishes, mode becomes live.",
- "last_success_at": "2026-10-26T01:46:00Z",
+ "last_success_at": "2026-10-29T01:12:00Z",
  "notes": [
   "2026-10-11: A01 failed blocked_spam at 17:35 UTC. The other 33 queued posts were deleted before they could fail, except B04, kept as the canary (Tue Oct 13, 6:09 PM ET). Deleting a queued post does not refund its Tailwind credit.",
   "2026-10-11: Pinterest denied the appeal about 4 hours after filing (automated). The B04 canary was deleted. The autopilot is paused; one check-in runs Nov 9, 2026 (see RUNBOOK 'Paused after a denied appeal').",
