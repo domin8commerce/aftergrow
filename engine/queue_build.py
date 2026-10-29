@@ -224,7 +224,10 @@ def validate(rows, board_names, pins_dir=None, designs=()):
 PRIORITY = ["A01", "C01", "B01", "A02", "E01", "D04", "A04", "B04", "E02", "A03", "C04",
             # batch 3 (2026-10-26): the high-demand boards and dry-scalp season go first
             "I01", "I03", "J01", "I05", "I02", "J03", "I04", "I06", "J02", "J04",
+            # batch 4 (2026-10-29): last make-hair-look-thicker slots and dry scalp first, then the hook bank
+            "K01", "K02", "K03", "K04",
             "F01",
+            "K05", "K06", "K07", "K08", "K09", "K10",
             "A08", "G02", "E06", "D01", "H02", "A05", "B02", "C03", "E05", "A06", "F05", "D05",
             "E03", "A07", "G03", "C07", "E04", "B07", "A10", "H03", "D06", "E07"]
 

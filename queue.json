@@ -380,19 +380,32 @@
  },
  {
   "order": 26,
-  "id": "G02",
-  "image": "aftergrow_pin_G02_how-to-photograph-your-part_v1.png",
-  "board": "Thinning hair",
-  "board_id": "1108448595728308241",
-  "title": "Is your hair thinning? How to photograph your part: 4 rules",
-  "description": "How to photograph your part so you can compare fairly: same place, same part, same angle, same settings. Four rules that turn three photos into real evidence over 90 days.",
-  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=check-in&utm_content=G02",
-  "alt_text": "Illustration of a phone photographing a hair part from above, with four rules for consistent part photos and a week 0, 6 and 12 timeline.",
-  "field": "porcelain",
+  "id": "K03",
+  "image": "aftergrow_pin_K03_dry-scalp-blow-drying-dries-it-more_v1.png",
+  "board": "Dry scalp care",
+  "board_id": "1108448595728308246",
+  "title": "Dry scalp? Blow-drying can dry it even more. Let it air dry",
+  "description": "Dry scalp tip from the American Academy of Dermatology: let your hair air dry, because blow drying can dry the scalp more. Keep nails short and smooth, and remove scale gently. An itch that isn’t improving needs a dermatologist. Save it.",
+  "link": "https://getaftergrow.com/blogs/journal/can-dry-scalp-cause-hair-loss?utm_source=pinterest&utm_medium=social&utm_campaign=dry-scalp&utm_content=K03",
+  "alt_text": "Card explaining that blow-drying can dry the scalp more, with air drying and gentle scale removal as swaps.",
+  "field": "butter",
   "status": "ready"
  },
  {
   "order": 27,
+  "id": "K05",
+  "image": "aftergrow_pin_K05_100-brush-strokes-a-day-is-a-myth_v1.png",
+  "board": "Thinning hair",
+  "board_id": "1108448595728308241",
+  "title": "Thinning hair tip: 100 brush strokes a day is a myth",
+  "description": "Thinning hair doesn’t need 100 brush strokes a day. That’s a myth, says the American Academy of Dermatology. Brush and comb only to style, gently, with a wide-tooth comb. Damaged hair is fragile and tends to break. Read more.",
+  "link": "https://getaftergrow.com/blogs/journal/breakage-or-shedding?utm_source=pinterest&utm_medium=social&utm_campaign=breakage&utm_content=K05",
+  "alt_text": "Myth versus fact card: hair does not need 100 brush strokes a day; brush only to style with a wide-tooth comb.",
+  "field": "white",
+  "status": "ready"
+ },
+ {
+  "order": 28,
   "id": "B04",
   "image": "aftergrow_pin_B04_5-gentle-habits-postpartum-hair_v1.png",
   "board": "Haircuts for thin hair",
@@ -414,7 +427,164 @@
   "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
  },
  {
-  "order": 28,
+  "order": 29,
+  "id": "K02",
+  "image": "aftergrow_pin_K02_hairstyles-for-thin-hair-2-signs-to-get-checked_v1.png",
+  "board": "Hairstyles for thin hair",
+  "board_id": "1108448595728308247",
+  "title": "Hairstyles for thin hair: 2 signs it’s time to get checked",
+  "description": "Hairstyles for thin hair can hide a lot, but a widening part and a thinner ponytail are possible signs of female pattern hair loss, says the AAD. See a board-certified dermatologist. Read what helps hair look fuller meanwhile.",
+  "link": "https://getaftergrow.com/blogs/journal/make-hair-look-thicker?utm_source=pinterest&utm_medium=social&utm_campaign=hairstyles&utm_content=K02",
+  "alt_text": "List of two signs to see a dermatologist: a part that's getting wider and a ponytail that's getting thinner.",
+  "field": "porcelain",
+  "status": "ready"
+ },
+ {
+  "order": 30,
+  "id": "K04",
+  "image": "aftergrow_pin_K04_why-is-my-hair-so-dry-4-changes_v1.png",
+  "board": "Dry scalp care",
+  "board_id": "1108448595728308246",
+  "title": "Why is my hair so dry? 4 changes that help dry hair",
+  "description": "Why is my hair so dry? MedlinePlus suggests washing dry hair about once or twice a week. Use conditioner after every wash, air dry when you can and rinse right after swimming. If gentle care doesn’t help, see a provider. Read more.",
+  "link": "https://getaftergrow.com/blogs/journal/why-is-my-hair-so-dry?utm_source=pinterest&utm_medium=social&utm_campaign=dry-hair&utm_content=K04",
+  "alt_text": "List of four changes for dry hair: wash about once or twice a week, condition every wash, air dry, rinse after swimming.",
+  "field": "white",
+  "status": "ready"
+ },
+ {
+  "order": 31,
+  "id": "K06",
+  "image": "aftergrow_pin_K06_dry-shampoo-doesnt-clean-your-hair_v1.png",
+  "board": "Head spa at home",
+  "board_id": "1108448595728308243",
+  "title": "Dry shampoo doesn’t clean your hair: 3 dermatologist rules",
+  "description": "Dry shampoo doesn’t clean your hair, says the American Academy of Dermatology. Wash after one or two uses, go easy so hair isn’t left dry, stiff and gritty, and stop if you get itching or burning. Read the oily scalp guide.",
+  "link": "https://getaftergrow.com/blogs/journal/oily-scalp-dry-hair?utm_source=pinterest&utm_medium=social&utm_campaign=oily-scalp&utm_content=K06",
+  "alt_text": "Card stating dry shampoo doesn't clean hair, with three rules: wash after one or two uses, too much leaves hair gritty, stop if it itches.",
+  "field": "espresso",
+  "status": "ready"
+ },
+ {
+  "order": 32,
+  "id": "K07",
+  "image": "aftergrow_pin_K07_hypoallergenic-has-no-legal-definition_v1.png",
+  "board": "Hair care ingredients",
+  "board_id": "1108448595728308245",
+  "title": "Hypoallergenic hair products: the word has no legal definition",
+  "description": "Hypoallergenic on a hair product has no federal standard, says the FDA, and unscented may still contain fragrance. Read the ingredient list, not the front of the bottle, and look for fragrance or parfum. See eight checks before you buy.",
+  "link": "https://getaftergrow.com/blogs/journal/what-to-look-for-in-a-scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=ingredients&utm_content=K07",
+  "alt_text": "Definition card: hypoallergenic has no federal standard and unscented may still contain fragrance.",
+  "field": "porcelain",
+  "status": "ready"
+ },
+ {
+  "order": 33,
+  "id": "K01",
+  "image": "aftergrow_pin_K01_haircuts-for-thin-hair-what-a-cut-can-do_v1.png",
+  "board": "Haircuts for thin hair",
+  "board_id": "1108448595728308242",
+  "title": "Haircuts for thin hair: what a new cut or color can do, and its limits",
+  "description": "Haircuts for thin hair: a shorter cut or layers may help thinning hair look fuller, and dye can add volume to each strand, says Cleveland Clinic. Hiding thinning with a new part or hairstyle rarely reaches the cause (AAD). Read the guide.",
+  "link": "https://getaftergrow.com/blogs/journal/make-hair-look-thicker?utm_source=pinterest&utm_medium=social&utm_campaign=haircuts&utm_content=K01",
+  "alt_text": "Two columns: what a new haircut can do for thin hair, and what it rarely does, with a note to see a dermatologist about a widening part.",
+  "field": "espresso",
+  "status": "ready"
+ },
+ {
+  "order": 34,
+  "id": "K09",
+  "image": "aftergrow_pin_K09_1-in-3-no-cause-is-found_v1.png",
+  "board": "Thinning hair",
+  "board_id": "1108448595728308241",
+  "title": "Thinning hair from a shed? For 1 in 3 with telogen effluvium, no cause is found",
+  "description": "Thinning hair from a shed, called telogen effluvium, doesn’t always have a clear cause: for 1 in 3 people diagnosed, none is found, says the British Association of Dermatologists. Learn shedding vs hair loss and when to see a dermatologist.",
+  "link": "https://getaftergrow.com/blogs/journal/hair-shedding-vs-hair-loss?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=K09",
+  "alt_text": "Big number card: for 1 in 3 people diagnosed with telogen effluvium, no cause is found.",
+  "field": "porcelain",
+  "status": "ready"
+ },
+ {
+  "order": 35,
+  "id": "K08",
+  "image": "aftergrow_pin_K08_biotin-can-throw-off-blood-tests_v1.png",
+  "board": "Hair care ingredients",
+  "board_id": "1108448595728308245",
+  "title": "Hair vitamins with biotin can throw off blood tests: what to know",
+  "description": "Hair vitamins with biotin can cause falsely high or low blood test results, the FDA says. Check the label for biotin (vitamin B7) and tell your doctor before a blood test. Read what to ask before you start a hair supplement.",
+  "link": "https://getaftergrow.com/blogs/journal/scalp-serum-or-hair-supplement?utm_source=pinterest&utm_medium=social&utm_campaign=supplements&utm_content=K08",
+  "alt_text": "Checklist on biotin and blood tests: results can read falsely high or low, check labels, tell your doctor first.",
+  "field": "butter",
+  "status": "ready"
+ },
+ {
+  "order": 36,
+  "id": "B02",
+  "image": "aftergrow_pin_B02_postpartum-shedding-normal-or-not_v1.png",
+  "board": "Haircuts for thin hair",
+  "board_id": "1108448595728308242",
+  "title": "Postpartum hair shedding: what is normal and what is not",
+  "description": "Postpartum hair shedding checklist: what is normal in the fourth trimester and beyond, and the signs that mean you should see a dermatologist. Calm, clear and worth saving.",
+  "link": "https://getaftergrow.com/pages/how-it-works?utm_source=pinterest&utm_medium=social&utm_campaign=postpartum&utm_content=B02",
+  "alt_text": "Two-column checklist of normal postpartum shedding signs and signs to see a dermatologist.",
+  "field": "white",
+  "status": "held",
+  "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
+ },
+ {
+  "order": 37,
+  "id": "K10",
+  "image": "aftergrow_pin_K10_oily-roots-dry-ends-conditioner-on-scalp_v1.png",
+  "board": "Head spa at home",
+  "board_id": "1108448595728308243",
+  "title": "Oily roots, dry ends? Conditioner on your scalp can make it greasy",
+  "description": "Oily scalp, dry hair? Shampoo the scalp only and put conditioner on the ends, because conditioner on the scalp can make it greasy, says Cleveland Clinic. Wash as often as your scalp needs, even every day. Read the full guide.",
+  "link": "https://getaftergrow.com/blogs/journal/oily-scalp-dry-hair?utm_source=pinterest&utm_medium=social&utm_campaign=oily-scalp&utm_content=K10",
+  "alt_text": "List for oily roots and dry ends: shampoo on the scalp only, conditioner on the ends only, wash as often as needed.",
+  "field": "butter",
+  "status": "ready"
+ },
+ {
+  "order": 38,
+  "id": "G02",
+  "image": "aftergrow_pin_G02_how-to-photograph-your-part_v1.png",
+  "board": "Thinning hair",
+  "board_id": "1108448595728308241",
+  "title": "Is your hair thinning? How to photograph your part: 4 rules",
+  "description": "How to photograph your part so you can compare fairly: same place, same part, same angle, same settings. Four rules that turn three photos into real evidence over 90 days.",
+  "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=check-in&utm_content=G02",
+  "alt_text": "Illustration of a phone photographing a hair part from above, with four rules for consistent part photos and a week 0, 6 and 12 timeline.",
+  "field": "porcelain",
+  "status": "ready"
+ },
+ {
+  "order": 39,
+  "id": "F05",
+  "image": "aftergrow_pin_F05_heat-styling-during-a-shed_v1.png",
+  "board": "Hairstyles for thin hair",
+  "board_id": "1108448595728308247",
+  "title": "Hairstyles for thin hair: gentler heat styling that still works",
+  "description": "Heat styling during a hair shed: medium heat, fewer passes, heat protectant every time and air-drying most of the way first. Gentler settings that protect fine hair and still get the look. Get the free guide.",
+  "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=habits&utm_content=F05",
+  "alt_text": "List of four gentler heat styling tips for fine or shedding hair.",
+  "field": "espresso",
+  "status": "ready"
+ },
+ {
+  "order": 40,
+  "id": "E05",
+  "image": "aftergrow_pin_E05_how-to-read-a-scalp-serum-label_v1.png",
+  "board": "Hair care ingredients",
+  "board_id": "1108448595728308245",
+  "title": "How to read a scalp serum label in 4 steps",
+  "description": "How to read a scalp serum label: water first means a water-based formula, ingredients above 1% run from most to least, under 1% can be in any order, and fragrance or parfum means scent was added.",
+  "link": "https://getaftergrow.com/blogs/journal/how-to-read-a-scalp-serum-label?utm_source=pinterest&utm_medium=social&utm_campaign=ingredients&utm_content=E05",
+  "alt_text": "Diagram of an ingredient label with four numbered tips for reading a scalp serum label.",
+  "field": "porcelain",
+  "status": "ready"
+ },
+ {
+  "order": 41,
   "id": "C03",
   "image": "aftergrow_pin_C03_how-to-apply-scalp-serum-part-method_v1.png",
   "board": "Head spa at home",
@@ -435,7 +605,7 @@
   ]
  },
  {
-  "order": 29,
+  "order": 42,
   "id": "A05",
   "image": "aftergrow_pin_A05_telogen-effluvium-plain-english_v1.png",
   "board": "Thinning hair",
@@ -448,60 +618,7 @@
   "status": "ready"
  },
  {
-  "order": 30,
-  "id": "F05",
-  "image": "aftergrow_pin_F05_heat-styling-during-a-shed_v1.png",
-  "board": "Hairstyles for thin hair",
-  "board_id": "1108448595728308247",
-  "title": "Hairstyles for thin hair: gentler heat styling that still works",
-  "description": "Heat styling during a hair shed: medium heat, fewer passes, heat protectant every time and air-drying most of the way first. Gentler settings that protect fine hair and still get the look. Get the free guide.",
-  "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=habits&utm_content=F05",
-  "alt_text": "List of four gentler heat styling tips for fine or shedding hair.",
-  "field": "espresso",
-  "status": "ready"
- },
- {
-  "order": 31,
-  "id": "E05",
-  "image": "aftergrow_pin_E05_how-to-read-a-scalp-serum-label_v1.png",
-  "board": "Hair care ingredients",
-  "board_id": "1108448595728308245",
-  "title": "How to read a scalp serum label in 4 steps",
-  "description": "How to read a scalp serum label: water first means a water-based formula, ingredients above 1% run from most to least, under 1% can be in any order, and fragrance or parfum means scent was added.",
-  "link": "https://getaftergrow.com/blogs/journal/how-to-read-a-scalp-serum-label?utm_source=pinterest&utm_medium=social&utm_campaign=ingredients&utm_content=E05",
-  "alt_text": "Diagram of an ingredient label with four numbered tips for reading a scalp serum label.",
-  "field": "porcelain",
-  "status": "ready"
- },
- {
-  "order": 32,
-  "id": "B02",
-  "image": "aftergrow_pin_B02_postpartum-shedding-normal-or-not_v1.png",
-  "board": "Haircuts for thin hair",
-  "board_id": "1108448595728308242",
-  "title": "Postpartum hair shedding: what is normal and what is not",
-  "description": "Postpartum hair shedding checklist: what is normal in the fourth trimester and beyond, and the signs that mean you should see a dermatologist. Calm, clear and worth saving.",
-  "link": "https://getaftergrow.com/pages/how-it-works?utm_source=pinterest&utm_medium=social&utm_campaign=postpartum&utm_content=B02",
-  "alt_text": "Two-column checklist of normal postpartum shedding signs and signs to see a dermatologist.",
-  "field": "white",
-  "status": "held",
-  "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
- },
- {
-  "order": 33,
-  "id": "A06",
-  "image": "aftergrow_pin_A06_shedding-after-stress-illness-surgery_v1.png",
-  "board": "Thinning hair",
-  "board_id": "1108448595728308241",
-  "title": "Thinning hair after stress, illness or surgery: what's happening",
-  "description": "Hair shedding after stress, illness, surgery or a new baby is common and usually temporary. Why it arrives 2 to 4 months after the hard part, and when to get it checked. Get the free Month-Three Guide.",
-  "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=A06",
-  "alt_text": "Infographic on shedding after a hard season: many hairs rest at once, shed 2 to 4 months later, and it usually passes.",
-  "field": "espresso",
-  "status": "ready"
- },
- {
-  "order": 34,
+  "order": 43,
   "id": "E03",
   "image": "aftergrow_pin_E03_eucalyptus-for-scalp-fresh-feel_v1.png",
   "board": "Hair care ingredients",
@@ -514,7 +631,7 @@
   "status": "ready"
  },
  {
-  "order": 35,
+  "order": 44,
   "id": "D05",
   "image": "aftergrow_pin_D05_low-effort-hair-routine-over-40_v1.png",
   "board": "Fine thin hair over 50",
@@ -527,7 +644,7 @@
   "status": "ready"
  },
  {
-  "order": 36,
+  "order": 45,
   "id": "A07",
   "image": "aftergrow_pin_A07_why-your-part-looks-wider_v1.png",
   "board": "Thinning hair",
@@ -540,7 +657,7 @@
   "status": "ready"
  },
  {
-  "order": 37,
+  "order": 46,
   "id": "G03",
   "image": "aftergrow_pin_G03_three-photo-method-week-0-6-12_v1.png",
   "board": "Aftergrow Scalp Serum",
@@ -553,7 +670,7 @@
   "status": "ready"
  },
  {
-  "order": 38,
+  "order": 47,
   "id": "C07",
   "image": "aftergrow_pin_C07_edited-scalp-care-shelf-4-things_v1.png",
   "board": "Head spa at home",
@@ -566,7 +683,20 @@
   "status": "ready"
  },
  {
-  "order": 39,
+  "order": 48,
+  "id": "A06",
+  "image": "aftergrow_pin_A06_shedding-after-stress-illness-surgery_v1.png",
+  "board": "Thinning hair",
+  "board_id": "1108448595728308241",
+  "title": "Thinning hair after stress, illness or surgery: what's happening",
+  "description": "Hair shedding after stress, illness, surgery or a new baby is common and usually temporary. Why it arrives 2 to 4 months after the hard part, and when to get it checked. Get the free Month-Three Guide.",
+  "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=A06",
+  "alt_text": "Infographic on shedding after a hard season: many hairs rest at once, shed 2 to 4 months later, and it usually passes.",
+  "field": "espresso",
+  "status": "ready"
+ },
+ {
+  "order": 49,
   "id": "E04",
   "image": "aftergrow_pin_E04_4-plant-extracts-in-scalp-care_v1.png",
   "board": "Hair care ingredients",
@@ -579,7 +709,7 @@
   "status": "ready"
  },
  {
-  "order": 40,
+  "order": 50,
   "id": "B07",
   "image": "aftergrow_pin_B07_postpartum-hair-photo-habit-week-0-6-12_v1.png",
   "board": "Haircuts for thin hair",
@@ -593,7 +723,7 @@
   "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
  },
  {
-  "order": 41,
+  "order": 51,
   "id": "A10",
   "image": "aftergrow_pin_A10_5-questions-for-your-dermatologist_v1.png",
   "board": "Thinning hair",
@@ -606,7 +736,7 @@
   "status": "ready"
  },
  {
-  "order": 42,
+  "order": 52,
   "id": "H03",
   "image": "aftergrow_pin_H03_the-90-day-protocol_v1.png",
   "board": "Aftergrow Scalp Serum",
@@ -619,7 +749,7 @@
   "status": "ready"
  },
  {
-  "order": 43,
+  "order": 53,
   "id": "D06",
   "image": "aftergrow_pin_D06_judge-your-hair-by-photos-not-moods_v1.png",
   "board": "Fine thin hair over 50",
@@ -632,7 +762,7 @@
   "status": "ready"
  },
  {
-  "order": 44,
+  "order": 54,
   "id": "E07",
   "image": "aftergrow_pin_E07_free-from-list-explained_v1.png",
   "board": "Hair care ingredients",
