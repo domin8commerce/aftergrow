@@ -2,7 +2,7 @@
 
 Ad account 549770879093 (USD). Campaign A launched Oct 29, 2026, 8:07 PM ET (Oct 30, 00:07 UTC), on George's go.
 
-The scheduled task "Aftergrow Pinterest ads check (Tue & Fri)" reads this file on every run, follows "The check" below, and appends to "Check log" at the bottom.
+Checks are manual, at George's choice on Oct 29: he declined a scheduled task. When George asks for a check, follow "The check" below and append to "Check log" at the bottom. The planned rhythm is Tuesday and Friday.
 
 ## State of the account
 - **Campaign A (Search lab), 626760182006:** ACTIVE at $5/day.
@@ -144,6 +144,6 @@ Say so at the top of the report.
 5. **Next check:** the date, plus what the next check will look at.
 
 ## Check log
-(The scheduled check appends one dated entry per run: date, spend to date, impressions, clicks, CTR, CPC, Shopify orders, actions taken, and decisions asked.)
+(Each check appends one dated entry: date, spend to date, impressions, clicks, CTR, CPC, Shopify orders, actions taken, and decisions asked.)
 
 - 2026-10-29: launched. 3 ads pending review. $0 spent.
