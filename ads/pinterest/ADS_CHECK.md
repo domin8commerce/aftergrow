@@ -3,13 +3,15 @@
 Ad account 549770879093 (USD). Both campaigns launched on George's go:
 - Campaign A launched Oct 29, 2026, at 8:07 PM ET (Oct 30, 00:07 UTC).
 - Campaign B launched Oct 29, 2026, at 8:45 PM ET (Oct 30, 00:45 UTC).
+- Campaign C launched Oct 30, 2026, at 7:37 AM ET (11:37 UTC).
 
 Checks are manual, as George chose on Oct 29 (he declined a scheduled task). When George asks for a check, follow "The check" below and add an entry to "Check log" at the bottom. The planned rhythm is Tuesday and Friday.
 
 ## State of the account
 - **Campaign A (Search lab), 626760182006:** ACTIVE at $5/day.
 - **Campaign B (Buyer hunt), 626760182396:** ACTIVE at $10/day.
-- **Total Pinterest spend:** $15/day. Anything above that needs George's yes.
+- **Campaign C (Retargeting), 626760186484:** ACTIVE at $3/day. It only delivers once its audiences have enough matched people.
+- **Total Pinterest spend:** $18/day, the cap in the plan. Anything above that needs George's yes.
 - **Paused:** the three older campaigns, which George paused on Oct 29:
   - Sponsored Product | Test | Oct 2026 (626760143882)
   - Consideration Pins Campaign | Boosted Pins Batch 1 (626760180766)
@@ -81,6 +83,39 @@ Checks are manual, as George chose on Oct 29 (he declined a scheduled task). Whe
   - The hands B-roll George mentioned is not in the Drive.
   - The other VR and Pinterest images are kept as backups.
 
+## Campaign C: Retargeting
+- **Campaign** 626760186484 "AG | C | Retargeting | Consideration":
+  - objective Consideration;
+  - campaign budget $3/day;
+  - standard campaign, not Performance+.
+- **Ad group** 2680092815578 "C1 | Site visitors 60d + cart 180d + pin engagers | purchasers excluded | All placements":
+  - billed per click, automatic bid, all placements;
+  - expanded targeting off;
+  - US and English only, with no age or gender limits, because the audience already defines who sees it.
+- **Audiences** (created Oct 30 with `prefill: true`, which backfills from past tag data; status INITIALIZING at launch):
+
+  | Audience | ID | Rule | Use |
+  |---|---|---|---|
+  | AG \| Site visitors 60d | 2542623641406 | tag pagevisit, 60 days | include |
+  | AG \| Add to cart 180d | 2542623641408 | tag addtocart, 180 days | include |
+  | AG \| Pin engagers | 2542623641410 | anyone who engaged with getaftergrow.com pins | include |
+  | AG \| Purchasers 180d (exclude) | 2542623641409 | tag checkout, 180 days | exclude |
+
+  - Pin engagers is an addition to the plan. Every one of them is a Pinterest user, so it fills C faster than site visitors alone, most of whom came from Meta, TikTok and direct traffic.
+  - The plan also called for checkout starters, but the API's audience events don't include InitiateCheckout. Anyone who started checkout added to cart first, so the cart audience covers them.
+  - API format that works: `{"visitor_source_id": "2614320036145", "retention_days": 60, "event": "pagevisit", "prefill": true}`. The ID must be a string, not a list. Engagement audiences reject `retention_days`.
+
+### Ads (C)
+| Ad ID | Name | Pin ID | Creative | utm_content | Lands on |
+|---|---|---|---|---|---|
+| 687322899212 | C1 \| R1 Guarantee \| 2:3 | 1108448527072652806 | New pin: "Ninety days to decide. Don't love how your hair looks? We refund your first order." Fine print: claim within 120 days of delivery, shipping not refunded, one per customer | guarantee | product page |
+| 687322899213 | C1 \| R2 Offer 90-Day Protocol \| 2:3 | 1108448527072620974 | Same offer pin as B | offer90 | product page with `?plan=autorefill` |
+
+- **Paid destination:** `https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=paid_social&utm_campaign=retargeting&utm_content=<guarantee|offer90>`. R2 adds `plan=autorefill`.
+- **R1 copy:** checked against /pages/the-90-day-guarantee on Oct 30. The headline is the page's own ("Ninety days to decide.").
+  - The image is rendered by ads/pinterest/retargeting/render_guarantee.py from the Runway video's cover frame.
+  - The organic link on the pin goes to the guarantee page.
+
 ## Pins and creative rules
 - New pins go on the board "Aftergrow Scalp Serum" (1108448595728308248), with Pinterest's "AI modified" disclosure.
 - Organic links use `utm_source=pinterest&utm_medium=social&utm_campaign=organic&utm_content=<id>`. A saved ad sends people to the organic link, so earned traffic counts as organic.
@@ -140,10 +175,11 @@ All Pinterest calls go through `COMPOSIO_REMOTE_WORKBENCH`, using `proxy_execute
 
 1. **Status.**
    - `GET /ad_accounts/549770879093/campaigns` (page_size 50).
-   - `GET /ad_accounts/549770879093/ads` with `campaign_ids=626760182006,626760182396`: review_status and rejected_reasons for each ad.
+   - `GET /ad_accounts/549770879093/ads` with `campaign_ids=626760182006,626760182396,626760186484`: review_status and rejected_reasons for each ad.
+   - `GET /ad_accounts/549770879093/audiences`: the status and size of C's audiences. C can't deliver until they're READY with enough matched people (roughly 100 or more).
 2. **Numbers since launch, and for the last 7 days.**
    - Call `GET /ad_accounts/549770879093/ads/analytics` with:
-     - `ad_ids` = the seven ad IDs above;
+     - `ad_ids` = the nine ad IDs above;
      - `granularity=TOTAL`, or `DAY` for spend per day;
      - `start_date` no earlier than 2026-10-29.
    - Columns: `SPEND_IN_DOLLAR,PAID_IMPRESSION,CLICKTHROUGH_1,OUTBOUND_CLICK_1,CTR,OUTBOUND_CTR_1,ECPC_IN_DOLLAR,COST_PER_OUTBOUND_CLICK_IN_DOLLAR,TOTAL_PAGE_VISIT,TOTAL_CHECKOUT,TOTAL_CHECKOUT_VALUE_IN_MICRO_DOLLAR`.
@@ -160,7 +196,7 @@ All Pinterest calls go through `COMPOSIO_REMOTE_WORKBENCH`, using `proxy_execute
 ### What a check may do without asking
 Only an emergency pause of the affected campaign, sent as `PATCH /ad_accounts/549770879093/campaigns` with `[{"id":"<campaign id>","status":"PAUSED"}]`. Pause when:
 - the product page doesn't load;
-- one day's spend is over 2x the campaign's budget ($10 for A, $20 for B);
+- one day's spend is over 2x the campaign's budget ($10 for A, $20 for B, $6 for C);
 - Pinterest reports a domain or spam block;
 - an ad's destination URL has changed.
 
@@ -184,6 +220,8 @@ Propose these with a one-word reply. Never do them unasked.
 - **Kill lines** (zero Shopify purchases from that utm_campaign):
   - A: $105 spent, which is 3x a $35 target.
   - B: $120 spent, which is 3x the $40 blended target.
+  - C: $60 spent. Retargeting should buy cheaper than prospecting, so its line is lower.
+  - C's audiences: if they're still too small to deliver on Nov 6, report it and propose shifting C's $3 into B.
   - When a campaign hits its line, wait one more week for late buyers, then propose a rebuild or a kill.
 - **Scale:** only after 10 purchases at or under target, and not before Dec 26. Propose a 20-30% budget step, or a duplicate at the higher budget.
 - **B's protocol share:** track it alongside cost per order. A Protocol order ($108) pays back at about twice the cost per order of a single bottle.
@@ -200,3 +238,12 @@ Propose these with a one-word reply. Never do them unasked.
 
 - 2026-10-29: A launched. 3 ads pending review. $0 spent.
 - 2026-10-29: B launched. 4 ads pending review. $0 spent. Total Pinterest spend is now $15/day.
+- 2026-10-30, 7:40 AM ET:
+  - All 7 ads in A and B are APPROVED.
+  - C launched with 2 ads pending review and 4 audiences INITIALIZING. Total Pinterest spend is now $18/day.
+  - First delivery, B only: $3.24, 196 impressions, 1 outbound click.
+    - Heavy: 120 impressions, 1 click.
+    - Rinse: 48 impressions.
+    - Offer: 24 impressions.
+    - Video: 4 impressions.
+  - A: no delivery reported yet. Too early to read.
