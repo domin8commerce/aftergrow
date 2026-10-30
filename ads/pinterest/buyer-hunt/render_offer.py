@@ -4,7 +4,7 @@ Source photo: Drive PINTEREST/Aftergrow Scalp Serum Trio (1).png, captured at 10
 Facts checked against getaftergrow.com on Oct 29, 2026: $108 for 3 bottles, "$36 per bottle",
 free US standard shipping, "Skip or cancel anytime", "Renews $108 every 3 months until canceled".
 
-Usage: python3 -I render_offer.py   (run from this folder; writes AG_B_offer90_2000x3000.png)
+Usage: python3 -I render_offer.py   (run from this folder; writes AG_B_offer90_2000x3000.jpg, the file the pin uses)
 """
 import base64, io, pathlib, sys
 
@@ -58,6 +58,8 @@ with sync_playwright() as p:
     pg.wait_for_timeout(300)
     pg.screenshot(path=str(out), full_page=False)
     b.close()
-img = Image.open(out)
-print(out.name, img.size)
-img.resize((236, 354), Image.LANCZOS).save(HERE / "preview_236.png")
+img = Image.open(out).convert("RGB")
+img.save(HERE / "AG_B_offer90_2000x3000.jpg", quality=92, optimize=True, progressive=True)
+out.unlink()
+print("AG_B_offer90_2000x3000.jpg", img.size)
+img.resize((236, 354), Image.LANCZOS).save(HERE / "preview_236.png")  # feed-size check; not committed
