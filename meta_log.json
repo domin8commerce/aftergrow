@@ -334,7 +334,8 @@
    "at": "2026-10-26T09:52",
    "metricool_id": "400002171",
    "uuid": "2643800684848366483",
-   "logged": "2026-10-19T13:05"
+   "logged": "2026-10-19T13:05",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG16",
@@ -343,7 +344,8 @@
    "at": "2026-10-26T19:17",
    "metricool_id": "400002327",
    "uuid": "-8746248430547611667",
-   "logged": "2026-10-19T13:05"
+   "logged": "2026-10-19T13:05",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG18",
@@ -352,7 +354,8 @@
    "at": "2026-10-27T09:52",
    "metricool_id": "400002498",
    "uuid": "1468713549326011817",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG18",
@@ -361,7 +364,8 @@
    "at": "2026-10-27T19:17",
    "metricool_id": "400002639",
    "uuid": "7048749573416044345",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG19",
@@ -370,7 +374,8 @@
    "at": "2026-10-28T11:52",
    "metricool_id": "400002857",
    "uuid": "-4423839513582746600",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG19",
@@ -379,7 +384,8 @@
    "at": "2026-10-28T19:17",
    "metricool_id": "400002951",
    "uuid": "-2743509957328417448",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG17",
@@ -388,7 +394,8 @@
    "at": "2026-10-29T09:52",
    "metricool_id": "400003116",
    "uuid": "8049074202295420278",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG17",
@@ -397,7 +404,8 @@
    "at": "2026-10-29T19:17",
    "metricool_id": "400003168",
    "uuid": "-748565739059524519",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG20",
@@ -406,7 +414,8 @@
    "at": "2026-10-30T09:52",
    "metricool_id": "400003364",
    "uuid": "-5899305280260387454",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG20",
@@ -415,7 +424,8 @@
    "at": "2026-10-30T19:17",
    "metricool_id": "400003419",
    "uuid": "9133045074940349105",
-   "logged": "2026-10-19T13:06"
+   "logged": "2026-10-19T13:06",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG21",
@@ -424,7 +434,8 @@
    "at": "2026-10-31T09:52",
    "metricool_id": "400003627",
    "uuid": "7257536008836632337",
-   "logged": "2026-10-19T13:07"
+   "logged": "2026-10-19T13:07",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-02; not re-sent, waiting on George)"
   },
   {
    "id": "AG21",
@@ -452,6 +463,132 @@
    "metricool_id": "400003838",
    "uuid": "-2491549368092702613",
    "logged": "2026-10-19T13:07"
+  },
+  {
+   "id": "AG23",
+   "network": "facebook",
+   "kind": "reel",
+   "at": "2026-11-02T09:52",
+   "metricool_id": "414052121",
+   "uuid": "-6866138643459389013",
+   "logged": "2026-11-02T14:32"
+  },
+  {
+   "id": "AG23",
+   "network": "instagram",
+   "kind": "reel",
+   "at": "2026-11-02T19:17",
+   "metricool_id": "414052156",
+   "uuid": "608066948753739658",
+   "logged": "2026-11-02T14:32"
+  },
+  {
+   "id": "AG27",
+   "network": "facebook",
+   "kind": "reel",
+   "at": "2026-11-03T09:52",
+   "metricool_id": "414052733",
+   "uuid": "4519415475722864303",
+   "logged": "2026-11-02T14:32"
+  },
+  {
+   "id": "AG27",
+   "network": "instagram",
+   "kind": "reel",
+   "at": "2026-11-03T19:17",
+   "metricool_id": "414052752",
+   "uuid": "7394960557002539974",
+   "logged": "2026-11-02T14:32"
+  },
+  {
+   "id": "AG25",
+   "network": "facebook",
+   "kind": "reel",
+   "at": "2026-11-04T11:52",
+   "metricool_id": "414052780",
+   "uuid": "-3663209144893095049",
+   "logged": "2026-11-02T14:32"
+  },
+  {
+   "id": "AG25",
+   "network": "instagram",
+   "kind": "reel",
+   "at": "2026-11-04T19:17",
+   "metricool_id": "414052814",
+   "uuid": "8454571994082394417",
+   "logged": "2026-11-02T14:32"
+  },
+  {
+   "id": "AG24",
+   "network": "facebook",
+   "kind": "reel",
+   "at": "2026-11-05T09:52",
+   "metricool_id": "414053295",
+   "uuid": "-3077208807153122552",
+   "logged": "2026-11-02T14:33"
+  },
+  {
+   "id": "AG24",
+   "network": "instagram",
+   "kind": "reel",
+   "at": "2026-11-05T19:17",
+   "metricool_id": "414053327",
+   "uuid": "5022458238611377629",
+   "logged": "2026-11-02T14:33"
+  },
+  {
+   "id": "AG26",
+   "network": "facebook",
+   "kind": "reel",
+   "at": "2026-11-06T09:52",
+   "metricool_id": "414053347",
+   "uuid": "-6609536738328688285",
+   "logged": "2026-11-02T14:33"
+  },
+  {
+   "id": "AG26",
+   "network": "instagram",
+   "kind": "reel",
+   "at": "2026-11-06T19:17",
+   "metricool_id": "414053382",
+   "uuid": "3952097519908309142",
+   "logged": "2026-11-02T14:33"
+  },
+  {
+   "id": "AG29",
+   "network": "facebook",
+   "kind": "reel",
+   "at": "2026-11-07T09:52",
+   "metricool_id": "414053879",
+   "uuid": "-576318256592434412",
+   "logged": "2026-11-02T14:33"
+  },
+  {
+   "id": "AG29",
+   "network": "instagram",
+   "kind": "reel",
+   "at": "2026-11-07T19:17",
+   "metricool_id": "414053911",
+   "uuid": "5332890827701438244",
+   "logged": "2026-11-02T14:33"
+  },
+  {
+   "id": "AG28",
+   "network": "facebook",
+   "kind": "reel",
+   "at": "2026-11-08T17:52",
+   "metricool_id": "414053946",
+   "uuid": "4969090992797011032",
+   "logged": "2026-11-02T14:33"
+  },
+  {
+   "id": "AG28",
+   "network": "instagram",
+   "kind": "reel",
+   "at": "2026-11-08T19:17",
+   "metricool_id": "414053996",
+   "uuid": "8143880039175700988",
+   "logged": "2026-11-02T14:33"
   }
  ]
 }
