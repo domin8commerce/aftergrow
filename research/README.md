@@ -27,3 +27,11 @@
 
 ## Re-run it
 The monthly trend layer in RUNBOOK.md re-runs the same calls and saves `pinterest-trends-YYYY-MM-DD.csv` here, so changes can be compared month to month.
+
+## Nov 2, 2026 pull (`pinterest-trends-2026-11-02.csv`)
+Same audience filter (US, female, 35-44 to 55-64, normalized, demographics on), one query each for `monthly` (N1) and `growing` (N2), with `include_keywords`: thin hair, thinning hair, fine hair, hair over 50, dry scalp, itchy scalp, head spa, scalp massage, rosemary, scalp, hair routine, hair color. Shares here are computed from the age distribution (35-44, 45-49, 50-54, 55-64), so they are not directly comparable with the Oct 23 file. Hair color terms crowded out the scalp clusters in a 50-row cap; next month, run the scalp cluster as its own query.
+- "fine thin hair over 50" +3,000% year over year (56% of searchers 35 to 64).
+- New cut phrases rising with our buyer: "shag haircut for thin hair" +1,500% (53%), "mid length haircut for thin hair" +40% YoY and +60% MoM (69%), "medium length haircut for thin fine hair" +50% (68%, growing list), "updos for fine thin hair" +80% (64%), "haircuts for thin fine hair short over 50" +100% MoM.
+- We can't name a cut on a pin until a page states it, so this is more weight behind `best-haircuts-for-thin-hair`.
+- "Hairstyles for thin hair" is still the biggest thin-hair phrase and peaks in November.
+- "Gray hair color ideas" skews old (67% aged 35 to 64), and winter hair color is up 90 to 100% month over month. Our color-treated-hair-care page can serve gentle-color angles, but we can't make shade or style claims.
