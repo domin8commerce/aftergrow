@@ -32,7 +32,8 @@ LIVE_PAGES = {HIW, GUIDE, ING_P, CHK_P, PDP} | {J + p for p in (
     "oily-scalp-dry-hair", "types-of-scalp-treatments", "scalp-serum-or-scalp-oil", "fragrance-free-hair-routine",
     "natural-scalp-serum", "scalp-serum-or-hair-supplement", "scalp-serum-for-dry-scalp",
     "what-to-look-for-in-a-scalp-serum", "how-to-use-a-scalp-serum",
-    "can-dry-scalp-cause-hair-loss")}  # last one verified 2026-10-23 through the Shopify connector
+    "can-dry-scalp-cause-hair-loss",  # verified 2026-10-23 through the Shopify connector
+    "color-treated-hair-care", "simple-hair-care-routine", "is-my-hair-thinning")}  # last three verified 2026-11-02 through the Shopify connector
 
 # Pins kept out of the schedule until George decides. They stay validated and ready to release:
 # delete a line here and the pin goes back to "ready" on the next build. (2026-10-23)
@@ -228,6 +229,8 @@ PRIORITY = ["A01", "C01", "B01", "A02", "E01", "D04", "A04", "B04", "E02", "A03"
             "K01", "K02", "K03", "K04",
             "F01",
             "K05", "K06", "K07", "K08", "K09", "K10",
+            # batch 5 (2026-11-02): dry scalp in season, then over-50 and thinning from new pages, then hooks
+            "L01", "L02", "L05", "L03", "L07", "L04", "L09", "L06", "L08",
             "A08", "G02", "E06", "D01", "H02", "A05", "B02", "C03", "E05", "A06", "F05", "D05",
             "E03", "A07", "G03", "C07", "E04", "B07", "A10", "H03", "D06", "E07"]
 
