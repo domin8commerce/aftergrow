@@ -678,7 +678,7 @@
   "link": "https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=scalp-care&utm_content=C03",
   "alt_text": "Diagram of three hair parts with drops along each and three steps for applying a scalp serum.",
   "field": "espresso",
-  "status": "ready",
+  "status": "scheduled",
   "history": [
    {
     "at": "2026-10-11T17:51:55Z",
@@ -686,7 +686,9 @@
     "post_id": "6acbc8c9vhWPn0Nq3-ClD",
     "reason": "deleted to keep one canary in flight (RUNBOOK rule)"
    }
-  ]
+  ],
+  "post_id": "6aec97bf1ApEDDgHmp8gl",
+  "send_at_utc": "2026-11-06T19:16:00Z"
  },
  {
   "order": 46,
@@ -699,7 +701,9 @@
   "link": "https://getaftergrow.com/blogs/journal/simple-hair-care-routine?utm_source=pinterest&utm_medium=social&utm_campaign=thinning&utm_content=L06",
   "alt_text": "Card on detangling: let straight hair dry partway before a wide-tooth comb, comb curly hair in the shower, start at the ends.",
   "field": "butter",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec97caqg15uf-7imarK",
+  "send_at_utc": "2026-11-06T22:24:00Z"
  },
  {
   "order": 47,
@@ -726,7 +730,9 @@
   "link": "https://getaftergrow.com/blogs/journal/how-to-read-a-scalp-serum-label?utm_source=pinterest&utm_medium=social&utm_campaign=ingredients&utm_content=E05",
   "alt_text": "Diagram of an ingredient label with four numbered tips for reading a scalp serum label.",
   "field": "porcelain",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec97d5Q4o_WALoBnDBg",
+  "send_at_utc": "2026-11-07T02:13:00Z"
  },
  {
   "order": 49,
@@ -739,7 +745,9 @@
   "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=A06",
   "alt_text": "Infographic on shedding after a hard season: many hairs rest at once, shed 2 to 4 months later, and it usually passes.",
   "field": "espresso",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec97e0HQ1376mRaUbZq",
+  "send_at_utc": "2026-11-07T18:52:00Z"
  },
  {
   "order": 50,
@@ -774,7 +782,9 @@
   "link": "https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=over-40&utm_content=D05",
   "alt_text": "Weekly schedule graphic: daily scalp care, washing every 2 to 3 days, a weekly mask and a part photo every 6 weeks.",
   "field": "espresso",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec97ed2Q6vR8xdZ5UUX",
+  "send_at_utc": "2026-11-07T22:09:00Z"
  },
  {
   "order": 52,
@@ -787,7 +797,9 @@
   "link": "https://getaftergrow.com/pages/how-it-works?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=A05",
   "alt_text": "Explainer card defining telogen as the resting phase and effluvium as an outflow, noting the shed is usually temporary.",
   "field": "porcelain",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec97f8SN2rMvx_KzLsI",
+  "send_at_utc": "2026-11-08T02:40:00Z"
  },
  {
   "order": 53,
@@ -800,7 +812,9 @@
   "link": "https://getaftergrow.com/pages/month-three-guide?utm_source=pinterest&utm_medium=social&utm_campaign=habits&utm_content=F05",
   "alt_text": "List of four gentler heat styling tips for fine or shedding hair.",
   "field": "espresso",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec98036V2_TFHF7vHb_",
+  "send_at_utc": "2026-11-08T18:35:00Z"
  },
  {
   "order": 54,
@@ -813,7 +827,9 @@
   "link": "https://getaftergrow.com/pages/ingredients?utm_source=pinterest&utm_medium=social&utm_campaign=ingredients&utm_content=E03",
   "alt_text": "Ledger-style card about eucalyptus leaf extract and its role in scalp care.",
   "field": "butter",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec980eSistofTbs-_wl",
+  "send_at_utc": "2026-11-08T23:25:00Z"
  },
  {
   "order": 55,
@@ -826,7 +842,9 @@
   "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=shedding&utm_content=A07",
   "alt_text": "Infographic explaining why a part can look wider during a shed and when to see a dermatologist.",
   "field": "white",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec9819e0Ykf0Lkv94vk",
+  "send_at_utc": "2026-11-09T02:46:00Z"
  },
  {
   "order": 56,
@@ -839,7 +857,9 @@
   "link": "https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=social&utm_campaign=scalp-care&utm_content=C07",
   "alt_text": "Four line icons for a simple scalp care shelf: cleanser, leave-on serum, wide-tooth comb and towel.",
   "field": "butter",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec98236eO_mm8b0bu5T",
+  "send_at_utc": "2026-11-09T19:46:00Z"
  },
  {
   "order": 57,
@@ -852,7 +872,9 @@
   "link": "https://getaftergrow.com/pages/ingredients?utm_source=pinterest&utm_medium=social&utm_campaign=ingredients&utm_content=E04",
   "alt_text": "Grid of four plant extracts and their roles in scalp care, with soy and wheat allergen notes.",
   "field": "white",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec982e0oV_juufkwtjR",
+  "send_at_utc": "2026-11-09T22:21:00Z"
  },
  {
   "order": 58,
@@ -865,7 +887,9 @@
   "link": "https://getaftergrow.com/pages/the-check-in?utm_source=pinterest&utm_medium=social&utm_campaign=check-in&utm_content=G03",
   "alt_text": "Timeline with three points labeled week 0, week 6 and week 12 for tracking hair with photos.",
   "field": "espresso",
-  "status": "ready"
+  "status": "scheduled",
+  "post_id": "6aec983cDe7fuvxBzpnDH",
+  "send_at_utc": "2026-11-10T03:53:00Z"
  },
  {
   "order": 59,
