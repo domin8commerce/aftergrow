@@ -247,3 +247,25 @@ Propose these with a one-word reply. Never do them unasked.
     - Offer: 24 impressions.
     - Video: 4 impressions.
   - A: no delivery reported yet. Too early to read.
+- 2026-11-06, 9:30 AM ET: **first Pinterest order, plus a conversion-tracking investigation.**
+  - **Order** #AG71002, $56 (single bottle plus $8 shipping), Connecticut.
+    - Created Nov 6, 01:54:42 UTC (Nov 5, 8:54 PM ET).
+    - Shopify journey: one session from a Pinterest ad click at 01:52:59 UTC with `utm_campaign=buyer-hunt&utm_content=offer90`. About 2 minutes from landing to order.
+    - The buyer clicked the 90-Day offer ad but bought the single bottle, not the Protocol.
+  - **What Pinterest received** (Ads Manager > Conversions > Events overview):
+    - Checkout arrived from both the Conversions API and the tag (2614320036145) at 01:54 UTC.
+    - Deduplication worked: 2 events before, 1 after.
+    - The kept event (Conversions API) had email, IP, user agent and external ID at 100%, and the Pinterest click ID at 100%.
+    - The tag copy had no click ID (0%), which is expected inside Shopify's sandboxed checkout pixel.
+    - `ocpm_eligible` listed CHECKOUT at 06:31 UTC.
+  - **Attribution:** not yet in campaign analytics at 9:30 AM ET, under either report time mode or with 30/30/30 windows.
+    - The event has every match key, so this is processing lag: Pinterest attribution typically settles within 24-48 hours.
+    - Re-check B's TOTAL_CHECKOUT for Nov 5-6 on Nov 7-8. If it's still 0 on Nov 8, open a Pinterest support ticket with the order time and the event's existence.
+  - **Spend since launch:**
+    - **B:** $74.98, 3,082 impressions, 20 outbound clicks, 1 order (cost per order about $75; the kill line is $120).
+      - Offer ad: $29.31, 13 clicks (it produced the order).
+      - Heavy: $20.65, 7 clicks.
+      - Video: $21.23, 0 clicks.
+      - Rinse: $3.79.
+    - **C:** $16.31, 7 clicks.
+    - **A:** no delivery at all in 7 days. Needs a diagnosis.
