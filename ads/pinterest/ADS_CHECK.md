@@ -28,7 +28,9 @@ Checks are manual, as George chose on Oct 29 (he declined a scheduled task). Whe
   - US, English, women 35-65+, all devices;
   - automatic targeting off;
   - automatic bid, billed per click, standard pacing.
-- **Keywords** (72): 29 phrase, 4 exact and 39 phrase negatives.
+- **Keywords** (108 since Nov 6): 29 phrase, 29 broad, 4 exact and 46 phrase negatives.
+  - The original 72 (phrase, exact and negatives) reached only 13,700-22,900 people (audience_sizing for SEARCH, women 35-65+), and A served zero paid impressions from Oct 29 to Nov 6.
+  - On Nov 6, broad versions of the 29 phrase keywords were added, plus 7 negatives (near me, salon, hair dye, hair color, dandruff, psoriasis, lice). Reach rose to 4.8M-8.1M.
   - Phrase: thin hair products, products for thin hair, hair products for thin hair, best products for thin hair, thin fine hair, fine thin hair products, hair products for fine thin hair, fine hair products, volumizing products for fine hair, hair thickening products, hair thickening serum, thickening serum, hair serum for thin hair, hair serum for fine hair, scalp serum, scalp serum for thin hair, peptide serum for hair, peptide hair serum, lightweight hair serum, leave in scalp serum, scalp care products, scalp care routine, fragrance free hair products, head spa at home, how to make thin hair look thicker, how to make fine hair look fuller, fuller looking hair, fine thin hair over 50, hair care over 50.
   - Exact: thin hair products, scalp serum, hair thickening products, products for thin hair.
   - Negatives: men, mens, male, beard, boys, kids, toddler, baby, diy, recipe, homemade, wig, wigs, extensions, topper, braids, dog, cat, thick hair, long hair, weight loss, ozempic, glp-1, wegovy, mounjaro, minoxidil, rogaine, finasteride, transplant, prp, chemo, drawing, anime, tattoo, hair loss, alopecia, regrowth, regrow, postpartum.
@@ -62,7 +64,7 @@ Checks are manual, as George chose on Oct 29 (he declined a scheduled task). Whe
 |---|---|---|---|---|---|
 | 687322855849 | B1 \| Heavy isn't the brief \| 9:16 | 1108448527072600098 | "Heavy isn't the brief." Cast-iron dropper next to the bottle. Existing pin on George's "Hair Scalp Serum" board | heavy | product page |
 | 687322855850 | B1 \| Rinse step \| 9:16 | 1108448527072584503 | "The rinse step? Not in these directions." Routine icons. Existing pin, approved once as an ad in the paused Boosted campaign | rinse | product page |
-| 687322855851 | B1 \| VIDEO01 \| Dropper 15s \| 9:16 | 1108448527072618581 | Same video pin as A | video01 | product page |
+| 687322855851 | B1 \| VIDEO01 \| Dropper 15s \| 9:16 | 1108448527072618581 | Same video pin as A. **PAUSED Nov 6:** $21.23, 765 impressions, 0 clicks, while the other B ads clicked at 0.7-1.2% | video01 | product page |
 | 687322855902 | B1 \| Offer \| 90-Day Protocol \| 2:3 | 1108448527072620974 | New offer pin: "Three bottles. Ninety days. $36 a bottle, free shipping. Skip or cancel anytime." Fine print: "Renews at $108 every 3 months until canceled." | offer90 | product page with `?plan=autorefill`, which preselects the Protocol |
 
 - **Paid destination:** `https://getaftergrow.com/products/scalp-serum?utm_source=pinterest&utm_medium=paid_social&utm_campaign=buyer-hunt&utm_content=<heavy|rinse|video01|offer90>`. The offer ad adds `plan=autorefill`.
@@ -269,3 +271,18 @@ Propose these with a one-word reply. Never do them unasked.
       - Rinse: $3.79.
     - **C:** $16.31, 7 clicks.
     - **A:** no delivery at all in 7 days. Needs a diagnosis.
+- 2026-11-06, 10:00 AM ET: **account sweep on George's "GO, work on anything that needs work".**
+  - **A, root cause of zero delivery:**
+    - Phrase and exact keywords plus women 35-65+ left a searchable audience of only 13.7K-22.9K people, so A won no auctions on auto bid at $5/day.
+    - Fix: added 29 broad-match versions and 7 guard negatives. Reach is now 4.8M-8.1M.
+    - Targeting, bid and budget are unchanged. A had no learning to reset.
+    - Re-check that A delivers within 48 hours.
+  - **B:** paused the video ad (687322855851): $21.23, 765 impressions, 0 clicks.
+    - At the 0.86% CTR of the other B ads, about 6.6 clicks were expected, so zero is about a 0.1% chance.
+    - The video still runs in A.
+    - Live in B: Heavy, Rinse and Offer.
+  - **C:** delivering ($16.31, 7 clicks; R1 Guarantee $13.47 and 6 clicks, R2 $2.84 and 1 click).
+    - Audiences: site visitors READY (314), pin engagers READY (732), add to cart TOO_SMALL (3), purchasers INITIALIZING (0).
+  - **Landing:** `?plan=autorefill` preselects Subscribe & Save at $108 (checked in Chrome). The first buyer switched to Try Once on purpose.
+  - **Homepage:** the banner still says "get your money back". Every other line now says "90-day first-order guarantee". Flagged to George. The site is his to change.
+  - **Attribution of order #AG71002:** still pending. Re-check Nov 7-8.
