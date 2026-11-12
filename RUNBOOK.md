@@ -86,6 +86,7 @@ Pinterest denied the appeal about 4 hours after George filed it. The reply was a
    - Pull `list_top_pins` with `contentType: ORGANIC` over the last 90 days, three times: by `SAVE`, by `OUTBOUND_CLICK` and by `IMPRESSION`.
    - Use `get_pin_analytics` (the Pinterest pin ID, not the Tailwind post ID) for any pin you need full numbers on.
    - Match pins to queue rows by `utm_content` in the link.
+   - **ID clash (found 2026-11-12):** older product pins on board 1108448595728361281 (not one of our 8, not in `queue.json`) use `utm_content` P01 to P09 with `utm_campaign=product` and `/products/scalp-serum` links. Batch 8 also uses P01 to P10, on Journal links. Match P-pins by `utm_content` and path together. Next batch: start at Q01.
 3. **Decide** with the rules in **The reload engine** below.
 4. **Make** new pins (see **Make**). Stop at 10 per run; quality beats volume.
 5. **Quality gate** on every new pin. If a pin fails, it doesn't ship.
