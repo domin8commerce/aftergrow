@@ -1233,5 +1233,68 @@
   "action": "scheduled",
   "post_id": "6afb184fN5rjtGG_KVycr",
   "send_at_utc": "2026-11-23T19:46:00Z"
+ },
+ {
+  "at": "2026-11-19T14:45:09Z",
+  "id": "A10",
+  "action": "resolved sent",
+  "post_id": "6af1de79-ifiPI5d1H8qZ",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:09Z",
+  "id": "H03",
+  "action": "resolved sent",
+  "post_id": "6af1de86Si7w7EodBP9Ph",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:09Z",
+  "id": "D06",
+  "action": "resolved sent",
+  "post_id": "6af1de8fxnTPQHhGdzEqD",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:09Z",
+  "id": "E07",
+  "action": "resolved sent",
+  "post_id": "6af1de98tk2xAlkbmHWKw",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:10Z",
+  "id": "P04",
+  "action": "resolved sent",
+  "post_id": "6af5d3d6Vy_-RxIoS740b",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:10Z",
+  "id": "P01",
+  "action": "resolved sent",
+  "post_id": "6af5d3e1d8jZQYryepG9I",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:10Z",
+  "id": "P05",
+  "action": "resolved sent",
+  "post_id": "6af5d3ed12jAt5AqPzzzI",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:10Z",
+  "id": "P02",
+  "action": "resolved sent",
+  "post_id": "6af5d3f8TBJ0xey451zDe",
+  "reason": ""
+ },
+ {
+  "at": "2026-11-19T14:45:10Z",
+  "id": "P06",
+  "action": "resolved sent",
+  "post_id": "6af5d405h9l1_0Qeo8ImY",
+  "reason": ""
  }
 ]
