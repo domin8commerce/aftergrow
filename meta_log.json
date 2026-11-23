@@ -633,7 +633,8 @@
    "at": "2026-11-11T11:52",
    "metricool_id": "421866631",
    "uuid": "4729963621075536011",
-   "logged": "2026-11-09T14:02"
+   "logged": "2026-11-09T14:02",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   },
   {
    "id": "AG33",
@@ -642,7 +643,8 @@
    "at": "2026-11-11T19:17",
    "metricool_id": "421866676",
    "uuid": "3124855510997617185",
-   "logged": "2026-11-09T14:02"
+   "logged": "2026-11-09T14:02",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   },
   {
    "id": "AG31",
@@ -651,7 +653,8 @@
    "at": "2026-11-12T09:52",
    "metricool_id": "421867376",
    "uuid": "-3361441482492653777",
-   "logged": "2026-11-09T14:03"
+   "logged": "2026-11-09T14:03",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   },
   {
    "id": "AG31",
@@ -660,7 +663,8 @@
    "at": "2026-11-12T19:17",
    "metricool_id": "421867412",
    "uuid": "-6532400131959599774",
-   "logged": "2026-11-09T14:03"
+   "logged": "2026-11-09T14:03",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   },
   {
    "id": "AG35",
@@ -669,7 +673,8 @@
    "at": "2026-11-13T09:52",
    "metricool_id": "421867445",
    "uuid": "-901029203123224516",
-   "logged": "2026-11-09T14:03"
+   "logged": "2026-11-09T14:03",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   },
   {
    "id": "AG35",
@@ -678,7 +683,8 @@
    "at": "2026-11-13T19:17",
    "metricool_id": "421867481",
    "uuid": "-7523354335406305602",
-   "logged": "2026-11-09T14:03"
+   "logged": "2026-11-09T14:03",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   },
   {
    "id": "AG36",
@@ -687,7 +693,8 @@
    "at": "2026-11-14T09:52",
    "metricool_id": "421867523",
    "uuid": "3374093174569324447",
-   "logged": "2026-11-09T14:03"
+   "logged": "2026-11-09T14:03",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   },
   {
    "id": "AG36",
@@ -696,7 +703,8 @@
    "at": "2026-11-14T19:17",
    "metricool_id": "421867562",
    "uuid": "-4505997073245453400",
-   "logged": "2026-11-09T14:03"
+   "logged": "2026-11-09T14:03",
+   "error": "Metricool: You have reached your Metricool account limit. (seen 2026-11-23; not re-sent, waiting on George)"
   }
  ]
 }
