@@ -36,7 +36,8 @@ LIVE_PAGES = {HIW, GUIDE, ING_P, CHK_P, PDP} | {J + p for p in (
     "color-treated-hair-care", "simple-hair-care-routine", "is-my-hair-thinning",  # these three verified 2026-11-02 through the Shopify connector
     "how-to-clean-your-scalp", "why-is-my-hair-greasy",  # these two verified 2026-11-09 through the Shopify connector
     "how-to-tame-flyaways", "why-has-my-hair-texture-changed",  # these two verified 2026-11-12 through the Shopify connector
-    "sun-protection-hair-scalp", "why-scalp-care-matters", "how-many-hairs-a-day")}  # these three verified 2026-11-19 through the Shopify connector
+    "sun-protection-hair-scalp", "why-scalp-care-matters", "how-many-hairs-a-day",  # these three verified 2026-11-19 through the Shopify connector
+    "thin-hairline-styling", "stress-and-hair-shedding")}  # these two verified 2026-11-23 through the Shopify connector
 
 # Pins kept out of the schedule until George decides. They stay validated and ready to release:
 # delete a line here and the pin goes back to "ready" on the next build. (2026-10-23)
