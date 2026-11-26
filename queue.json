@@ -1743,6 +1743,19 @@
  },
  {
   "order": 116,
+  "id": "T06",
+  "image": "aftergrow_pin_T06_flakes-that-wont-go-away-3-signs_v1.png",
+  "board": "Dry scalp care",
+  "board_id": "1108448595728308246",
+  "title": "Dry scalp flakes that won’t go away? 3 signs to see a dermatologist",
+  "description": "Dry scalp flakes that won’t go away? See a board-certified dermatologist if dandruff doesn’t go away or is severe, if changing your hair care doesn’t help, or if you’re worried about thinning. Read why scalp care matters.",
+  "link": "https://getaftergrow.com/blogs/journal/why-scalp-care-matters?utm_source=pinterest&utm_medium=social&utm_campaign=dry-scalp&utm_content=T06",
+  "alt_text": "Checklist of three signs to see a dermatologist about flakes: dandruff that won’t go away or is severe, changing hair care hasn’t helped, worry about thinning.",
+  "field": "white",
+  "status": "ready"
+ },
+ {
+  "order": 117,
   "id": "B01",
   "image": "aftergrow_pin_B01_postpartum-shedding-peaks-around-month-4_v1.png",
   "board": "Haircuts for thin hair",
@@ -1756,7 +1769,33 @@
   "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
  },
  {
-  "order": 117,
+  "order": 118,
+  "id": "T04",
+  "image": "aftergrow_pin_T04_stuck-at-one-length-ends-breaking_v1.png",
+  "board": "Hairstyles for thin hair",
+  "board_id": "1108448595728308247",
+  "title": "Hairstyles for thin hair stuck at one length? The ends may be breaking",
+  "description": "Hairstyles for thin hair stuck at one length? Hair can keep growing at the root while the ends break off just as fast. The AAD lists conditioner after washing, gentle combing with a wide-tooth comb and less heat to keep the length you have. Read more.",
+  "link": "https://getaftergrow.com/blogs/journal/how-fast-does-hair-grow?utm_source=pinterest&utm_medium=social&utm_campaign=hairstyles&utm_content=T04",
+  "alt_text": "Card: hair can keep growing at the root while the ends can snap off just as fast; keep your length with conditioner, a gentle comb and less heat.",
+  "field": "espresso",
+  "status": "ready"
+ },
+ {
+  "order": 119,
+  "id": "T07",
+  "image": "aftergrow_pin_T07_shampoo-your-scalp-not-the-length_v1.png",
+  "board": "Dry scalp care",
+  "board_id": "1108448595728308246",
+  "title": "Flakes or buildup? Put shampoo on your scalp, not the length",
+  "description": "Flakes or buildup? The AAD says shampoo on the scalp washes away built-up products, dead skin and excess oil, while rubbing it into the length can damage hair. Regular washing usually helps mild dandruff. Read why scalp care matters.",
+  "link": "https://getaftergrow.com/blogs/journal/why-scalp-care-matters?utm_source=pinterest&utm_medium=social&utm_campaign=dry-scalp&utm_content=T07",
+  "alt_text": "Swap list: rubbing shampoo into the length becomes putting it on the scalp; washing less for flakes becomes regular washing, which usually helps mild dandruff; a fixed schedule becomes washing as hair gets oily.",
+  "field": "porcelain",
+  "status": "ready"
+ },
+ {
+  "order": 120,
   "id": "B04",
   "image": "aftergrow_pin_B04_5-gentle-habits-postpartum-hair_v1.png",
   "board": "Haircuts for thin hair",
@@ -1778,7 +1817,33 @@
   "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
  },
  {
-  "order": 118,
+  "order": 121,
+  "id": "T08",
+  "image": "aftergrow_pin_T08_seasonal-shedding-two-studies_v1.png",
+  "board": "Thinning hair",
+  "board_id": "1108448595728308241",
+  "title": "Hair shedding after summer? What two studies found about the seasons",
+  "description": "Hair shedding more after summer? Two studies found the most resting hairs, the ones that shed next, in summer or early autumn. Neither study summary gives a number of weeks for a seasonal shed. If it doesn’t ease, ask a dermatologist. Read more.",
+  "link": "https://getaftergrow.com/blogs/journal/seasonal-hair-shedding?utm_source=pinterest&utm_medium=social&utm_campaign=thinning&utm_content=T08",
+  "alt_text": "Definition card: two studies found the most resting hairs in summer or early autumn; resting hairs shed next; neither study summary gives a number of weeks.",
+  "field": "espresso",
+  "status": "ready"
+ },
+ {
+  "order": 122,
+  "id": "T01",
+  "image": "aftergrow_pin_T01_braids-on-thin-hair-3-rules_v1.png",
+  "board": "Hairstyles for thin hair",
+  "board_id": "1108448595728308247",
+  "title": "Hairstyles for thin hair and braids: 3 rules from dermatologists",
+  "description": "Hairstyles for thin hair and braids: the AAD suggests thicker braids kept short, taken out within 6 to 8 weeks, and after a tight style, loose braids or natural hair for a few months. A painful style is too tight. Read how to style around a thinner hairline.",
+  "link": "https://getaftergrow.com/blogs/journal/thin-hairline-styling?utm_source=pinterest&utm_medium=social&utm_campaign=hairstyles&utm_content=T01",
+  "alt_text": "List of three braid rules for thin hair: thicker braids kept short, out within 6 to 8 weeks, and after a tight style, loose braids or natural hair for a few months.",
+  "field": "butter",
+  "status": "ready"
+ },
+ {
+  "order": 123,
   "id": "B02",
   "image": "aftergrow_pin_B02_postpartum-shedding-normal-or-not_v1.png",
   "board": "Haircuts for thin hair",
@@ -1792,7 +1857,33 @@
   "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
  },
  {
-  "order": 119,
+  "order": 124,
+  "id": "T09",
+  "image": "aftergrow_pin_T09_seasonal-shed-or-something-else_v1.png",
+  "board": "Thinning hair",
+  "board_id": "1108448595728308241",
+  "title": "Seasonal hair shedding or something else? 3 checks first",
+  "description": "Seasonal hair shedding? The season alone can’t tell you. Look back a few months for a trigger like illness with a high fever, an operation or lots of stress (AAD), check if short hairs are broken and compare photos. Not easing or past six months? Ask a dermatologist.",
+  "link": "https://getaftergrow.com/blogs/journal/seasonal-hair-shedding?utm_source=pinterest&utm_medium=social&utm_campaign=thinning&utm_content=T09",
+  "alt_text": "Checklist: look back a few months for a trigger, check whether short hairs are broken, compare photos not memory; not easing or past 6 months, ask a dermatologist.",
+  "field": "butter",
+  "status": "ready"
+ },
+ {
+  "order": 125,
+  "id": "T05",
+  "image": "aftergrow_pin_T05_leave-in-for-static-and-flyaways_v1.png",
+  "board": "Hairstyles for thin hair",
+  "board_id": "1108448595728308247",
+  "title": "Hairstyles for thin hair full of static? What a leave-in does",
+  "description": "Hairstyles for thin hair full of static? The AAD says a leave-in conditioner can diminish frizz, static and flyaway strands. Use the smallest amount on damp hair, mid strands to ends, off the scalp, and wash it out within a week. Read more.",
+  "link": "https://getaftergrow.com/blogs/journal/how-to-tame-flyaways?utm_source=pinterest&utm_medium=social&utm_campaign=hairstyles&utm_content=T05",
+  "alt_text": "Definition card: a leave-in can diminish frizz, static and flyaways; use a small amount on damp hair from mid strands to ends; fine, straight hair needs a lighter one.",
+  "field": "butter",
+  "status": "ready"
+ },
+ {
+  "order": 126,
   "id": "B07",
   "image": "aftergrow_pin_B07_postpartum-hair-photo-habit-week-0-6-12_v1.png",
   "board": "Haircuts for thin hair",
@@ -1804,5 +1895,31 @@
   "field": "butter",
   "status": "held",
   "hold_reason": "Pinterest's own search data: postpartum hair searchers are 67-70% aged 25 to 34, outside the buyer (research/pinterest-trends-2026-10-23.csv). Held until George decides the postpartum board."
+ },
+ {
+  "order": 127,
+  "id": "T02",
+  "image": "aftergrow_pin_T02_new-cut-thinner-hairline-look-not-cause_v1.png",
+  "board": "Haircuts for thin hair",
+  "board_id": "1108448595728308242",
+  "title": "Haircuts for a thinning hairline: what a new cut can and can’t do",
+  "description": "Haircuts for a thinning hairline change the look, and so can color, colored sprays and fiber powder. The AAD says changing where the scalp shows rarely gets to the cause, and it’s never too early to see a dermatologist. Read how to style around it.",
+  "link": "https://getaftergrow.com/blogs/journal/thin-hairline-styling?utm_source=pinterest&utm_medium=social&utm_campaign=haircuts&utm_content=T02",
+  "alt_text": "Split card: a new cut, color, spray or fiber powder changes the look of a thinner hairline; the cause needs a dermatologist.",
+  "field": "white",
+  "status": "ready"
+ },
+ {
+  "order": 128,
+  "id": "T03",
+  "image": "aftergrow_pin_T03_how-much-hair-grows-in-a-year_v1.png",
+  "board": "Haircuts for thin hair",
+  "board_id": "1108448595728308242",
+  "title": "Haircuts for thin hair: how much hair grows in 3, 6 and 12 months",
+  "description": "Haircuts for thin hair, planned ahead: at about half an inch a month (MedlinePlus), hair grows about 1.5 inches in 3 months, 3 in 6 months and 6 in a year. That’s simple arithmetic, not a measurement, and trims take some away. Read more.",
+  "link": "https://getaftergrow.com/blogs/journal/how-fast-does-hair-grow?utm_source=pinterest&utm_medium=social&utm_campaign=haircuts&utm_content=T03",
+  "alt_text": "Grid of hair growth at about half an inch a month: half an inch in 1 month, 1.5 inches in 3, 3 inches in 6, 6 inches in 12.",
+  "field": "porcelain",
+  "status": "ready"
  }
 ]
